@@ -12,7 +12,7 @@
   };
   imports =
     [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
+      # ./hardware-configuration.nix
     # (import "${builtins.fetchTarball https://github.com/nix-community/home-manager/archive/release-23.05.tar.gz}/nixos")
     ];
 
