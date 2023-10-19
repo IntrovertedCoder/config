@@ -3,5 +3,5 @@
 with lib;
 with lib.plusultra;
 {
-  imports = [ /etc/nixos/hardware.nix /etc/nixos/configuration.nix];
+  imports = [ ./hardware.nix /etc/nixos/configuration.nix];
 }
