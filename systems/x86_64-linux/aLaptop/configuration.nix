@@ -177,8 +177,8 @@
     wget
     curl
     pciutils
-    # rocgdb
-    rocmPackages.rocgdb
+    rocgdb
+    # rocmPackages.rocgdb
     killall
     clinfo
     comma
