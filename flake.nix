@@ -134,6 +134,11 @@
         vault-service.nixosModules.nixos-vault-service
       ];
 
+      checks =
+        builtins.mapAttrs
+        (system: deploy-lib:
+          deploy-lib.deployChecks inputs.self.deply)
+        inputs.deploy-rs.lib;
     };
 }
   # outputs = { self, nixpkgs }: {
