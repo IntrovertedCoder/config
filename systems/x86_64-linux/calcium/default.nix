@@ -1,4 +1,4 @@
-b, nixos-hardware, ... }:
+{ pkgs, lib, nixos-hardware, ... }:
 
 with lib;
 with lib.plusultra;
