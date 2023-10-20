@@ -8,6 +8,13 @@
     # NixPkgs Unstable (nixos-unstable)
     unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
+    # Plusultra
+    plusultra = {
+      url = "github:jakehamilton/config";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.unstable.follows = "unstable";
+    };
+
     # Home Manager (release-22.05)
     home-manager.url = "github:nix-community/home-manager/release-23.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
@@ -134,6 +141,8 @@
         vault-service.nixosModules.nixos-vault-service
       ];
 
+      deploy = lib.mkDeploy {inherit (inputs) self;};
+
       checks =
         builtins.mapAttrs
         (system: deploy-lib:
@@ -141,13 +150,3 @@
         inputs.deploy-rs.lib;
     };
 }
-  # outputs = { self, nixpkgs }: {
-    # nixosConfigurations = {
-      # aLaptop = nixpkgs.lib.nixosSystem {
-        # system = "x86_64-linux";
-        # modules = [
-          # /etc/nixos/configuration.nix
-        # ];
-      # };
-    # };
-  # };
