@@ -2,7 +2,7 @@
   description = "flake for aLaptop";
 
   inputs = {
-    # NixPkgs (nixos-22.11)
+    # NixPkgs (nixos-23.05)
     nixpkgs.url = "github:nixos/nixpkgs/nixos-23.05";
 
     # NixPkgs Unstable (nixos-unstable)
