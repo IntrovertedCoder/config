@@ -5,7 +5,7 @@ with lib;
   imports = [ ./hardware.nix ./configuration.nix];
   lib.plusultra = {
     apps = {
-      blender.enable = true;
+      blender.enable = false;
     };
   };
   lib.home-manager = {};
