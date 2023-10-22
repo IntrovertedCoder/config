@@ -6,7 +6,7 @@ with lib;
   lib.plusultra = {
     apps = {
       blender.enable = false;
-      obs.enabled;
+      obs.enable = true;
     };
     suites = {
       art.enable = true;
