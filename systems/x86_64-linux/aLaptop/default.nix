@@ -6,6 +6,10 @@ with lib;
   lib.plusultra = {
     apps = {
       blender.enable = false;
+      obs.enabled;
+    };
+    suites = {
+      art.enable = true;
     };
   };
   lib.home-manager = {};
