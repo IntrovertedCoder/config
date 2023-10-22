@@ -11,9 +11,10 @@ in
   };
 
   config = mkIf cfg.enable {
-    environment.systemPackages = [
-      (pkgs.wrapOBS {
-        plugins = with pkgs.obs-studio-plugins; [
+    environment.systemPackages = with pkgs; [
+      obs-studio;
+      (.wrapOBS {
+        plugins = with obs-studio-plugins; [
           wlrobs
           obs-multi-rtmp
           obs-move-transition
