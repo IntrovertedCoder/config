@@ -13,7 +13,7 @@ in
   config = mkIf cfg.enable {
     environment.systemPackages = with pkgs; [
       obs-studio;
-      (.wrapOBS {
+      (wrapOBS {
         plugins = with obs-studio-plugins; [
           wlrobs
           obs-multi-rtmp
