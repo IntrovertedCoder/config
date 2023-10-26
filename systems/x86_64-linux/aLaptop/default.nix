@@ -7,6 +7,7 @@ with lib;
     apps = {
       blender.enable = false;
       obs.enable = true;
+      element.enable = true;
     };
     suites = {
       art.enable = true;
