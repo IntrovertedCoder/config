@@ -13,8 +13,8 @@ in
   config = mkIf cfg.enable {
     plusultra = {
       apps = {
-        # gimp = enabled;
-        # inkscape = enabled;
+        gimp = enabled;
+        inkscape = enabled;
         blender = enabled;
       };
     };
