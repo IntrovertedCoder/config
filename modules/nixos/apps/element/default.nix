@@ -7,7 +7,7 @@ let
 in
 {
   options.plusultra.apps.element = with types; {
-    enable = mkBoolOpt true "Whether or not to enable Element.";
+    enable = mkBoolOpt false "Whether or not to enable Element.";
   };
 
   config = mkIf cfg.enable {
