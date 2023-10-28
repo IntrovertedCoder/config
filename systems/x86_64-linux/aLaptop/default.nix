@@ -7,7 +7,7 @@ with lib.plusultra;
   lib.plusultra = {
     apps = {
       blender = enabled;
-      obs.enable = true;
+      obs.enable = false;
       element = enabled;
     };
     suites = {
