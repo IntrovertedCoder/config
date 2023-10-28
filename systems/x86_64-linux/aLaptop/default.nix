@@ -4,7 +4,7 @@ with lib;
 with lib.plusultra;
 {
   imports = [ ./hardware.nix ./configuration.nix];
-  lib.plusultra = {
+  plusultra = {
     apps = {
       blender = enabled;
       obs.enable = false;
