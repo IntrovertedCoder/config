@@ -133,7 +133,8 @@ in
       home = "/home/${cfg.name}";
       group = "users";
 
-      shell = pkgs.fish;
+      # shell = pkgs.fish;
+      shell = "/home/arik/.nix-profile/bin/fish";
 
       # Arbitrary user ID to use for the user. Since I only
       # have a single user on my machines this won't ever collide.
