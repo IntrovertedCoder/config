@@ -65,6 +65,7 @@ in
         }".source = cfg.icon;
       };
 
+      # Home manager options
       extraOptions = {
         home.shellAliases = {
           lc = "${pkgs.colorls}/bin/colorls --sd";
