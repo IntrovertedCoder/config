@@ -4,7 +4,7 @@ with lib;
 with lib.plusultra;
 let
   cfg = config.plusultra.user;
-  # defaultIconFileName = "profile.png";
+  defaultIconFileName = "profile.png";
   defaultIcon = pkgs.stdenvNoCC.mkDerivation {
     name = "default-icon";
     src = ./. + "/${defaultIconFileName}";
