@@ -20,20 +20,20 @@ in
 
   config = mkIf cfg.enable {
     # Desktop additions
-    plusultra.desktop.addons = {
-      gtk = enabled;
-      foot = enabled;
-      mako = enabled;
-      rofi = enabled;
-      wofi = enabled;
-      swappy = enabled;
-      kanshi = enabled;
-      waybar = enabled;
-      keyring = enabled;
-      nautilus = enabled;
-      xdg-portal = enabled;
-      electron-support = enabled;
-    };
+    # plusultra.desktop.addons = {
+      # gtk = enabled;
+      # foot = enabled;
+      # mako = enabled;
+      # rofi = enabled;
+      # wofi = enabled;
+      # swappy = enabled;
+      # kanshi = enabled;
+      # waybar = enabled;
+      # keyring = enabled;
+      # nautilus = enabled;
+      # xdg-portal = enabled;
+      # electron-support = enabled;
+    # };
 
     plusultra.home.configFile."hypr/hyprland.conf".source = ./hyprland.conf;
 
