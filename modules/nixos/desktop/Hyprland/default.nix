@@ -35,7 +35,7 @@ in
       electron-support = enabled;
     };
 
-    plusultra.home.configFile."hypr/hyprland.conf".source = ./hyprland.conf
+    plusultra.home.configFile."hypr/hyprland.conf".source = ./hyprland.conf;
 
     # programs.sway = {
       # enable = true;
