@@ -6,7 +6,7 @@
  - [ ] zathura
  - [ ] starship
  - [ ] Groups
- - [ ]
+ - [ ] figure out how to access colors in other files
  - [ ]
  - [ ]
 
@@ -36,4 +36,4 @@
  - [ ] move pkgs from wayland section to hyprland file from home.nix
  - [ ] grab all the stuff for hyprland from configuration.nix
  - [ ] swaylock (include toggle?)
- - [ ]
+ - [ ] eww
