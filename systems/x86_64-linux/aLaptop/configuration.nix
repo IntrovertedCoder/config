@@ -133,28 +133,28 @@
       # storageDriver = "btrfs";
     # }; # }}}
     oci-containers.backend = "docker";
-    oci-containers.containers = {
-      SearxNG = {
-        image = "searxng/searxng:latest";
-        # extraOptions = [ "--restart=unless-stopped" ];
-        extraOptions = [ "--cap-add=SYS_ADMIN" ];
-        # autoStart = true;
-        ports = [ "8888:8080" ];
-        environment = {
-          BASE_URL = "http://localhost:8888";
-          INSTANCE_NAME = "aLaptop SearxNG";
-          container="docker";
-        };
-        volumes = [
-          "/etc/nixos/SearxNG.yml:/etc/searxng/settings.yml"
-        ];
-      };
-    };
+    # oci-containers.containers = {
+      # SearxNG = {
+        # image = "searxng/searxng:latest";
+        # # extraOptions = [ "--restart=unless-stopped" ];
+        # extraOptions = [ "--cap-add=SYS_ADMIN" ];
+        # # autoStart = true;
+        # ports = [ "8888:8080" ];
+        # environment = {
+          # BASE_URL = "http://localhost:8888";
+          # INSTANCE_NAME = "aLaptop SearxNG";
+          # container="docker";
+        # };
+        # volumes = [
+          # "/etc/nixos/SearxNG.yml:/etc/searxng/settings.yml"
+        # ];
+      # };
+    # };
   }; # }}}
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.arik = {
-    shell = "/home/arik/.nix-profile/bin/fish";
+    # shell = "/home/arik/.nix-profile/bin/fish";
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" "video" "audio" "docker" ];
     packages = with pkgs; [
