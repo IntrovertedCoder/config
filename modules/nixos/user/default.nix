@@ -970,5 +970,8 @@ in
 
       };
     };
+    users.users.${cfg.name} = {
+      # shell = pkgs.fish;
+    };
   };
 }
