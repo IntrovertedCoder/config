@@ -56,10 +56,10 @@
     # Window managers
       # Hyprland
       programs.xwayland.enable = true;
-      programs.hyprland = {
-        enable = false;
-        xwayland.enable = true;
-      };
+      # programs.hyprland = {
+        # enable = false;
+        # xwayland.enable = true;
+      # };
       programs.wshowkeys.enable = true;
       programs.steam = {
         enable = true;
@@ -80,8 +80,8 @@
   ];
   # Enable the display manager, yes xserver.enable needs to be set to true for gdm
   services.xserver.enable = true;
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.displayManager.gdm.wayland = true;
+  # services.xserver.displayManager.gdm.enable = true;
+  # services.xserver.displayManager.gdm.wayland = true;
   services.xserver.videoDrivers = [ "amdgpu" ];
   # services.xserver.displayManager.sddm.enable = true;
   # Hyprland does not launch with lightdm
