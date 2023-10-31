@@ -11,6 +11,9 @@
  - [ ]
 
 # System
+ - [ ] Move bootloader
+    - [ ] Add toggle for grub?
+    - [ ] Change configurationLimit in systemd-boot
 ## Display Managers
  - [ ] greetd
  - [ ] vial
