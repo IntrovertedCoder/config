@@ -35,6 +35,9 @@ in
       # electron-support = enabled;
     # };
 
+    plusultra.home.configFile."foobar".text = ''
+      the quick brown fox jumped over the lazy dog
+    '';
     plusultra.home.configFile."hypr/hyprland.conf".source = ./hyprland.conf;
 
     # programs.sway = {
@@ -58,9 +61,13 @@ in
       # '';
     # };
 
-    wayland.windowManager.hyprland = {
+    # wayland.windowManager.hyprland = {
+      # enable = true;
+      # systemdIntegration = true;
+      # xwayland.enable = true;
+    # };
+    programs.hyprland = {
       enable = true;
-      systemdIntegration = true;
       xwayland.enable = true;
     };
 
