@@ -588,7 +588,7 @@ in
 
         programs = { # {{{
           starship = {
-            # enable = true;
+            enable = true;
             settings = {
               character = {
                 success_symbol = "[➜](bold green)";
@@ -970,8 +970,9 @@ in
 
       };
     };
+    programs.fish.enable = true;
     users.users.${cfg.name} = {
-      # shell = pkgs.fish;
+      shell = pkgs.fish;
     };
   };
 }
