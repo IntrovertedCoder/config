@@ -3,89 +3,51 @@
 with lib;
 with lib.plusultra;
 let
-  cfg = config.plusultra.user;
-  defaultIconFileName = "profile.png";
-  defaultIcon = pkgs.stdenvNoCC.mkDerivation {
-    name = "default-icon";
-    src = ./. + "/${defaultIconFileName}";
-
-    dontUnpack = true;
-
-    installPhase = ''
-      cp $src $out
-    '';
-
-    passthru = { fileName = defaultIconFileName; };
-  };
-  propagatedIcon = pkgs.runCommandNoCC "propagated-icon"
-    { passthru = { fileName = cfg.icon.fileName; }; }
-    ''
-      local target="$out/share/plusultra-icons/user/${cfg.name}"
-      mkdir -p "$target"
-
-      cp ${cfg.icon} "$target/${cfg.icon.fileName}"
-    '';
-
-# Define colors for configurations {{{
-# Examples
-# format = "[ $duration](${Yellow})" ;
-# background = Black;
-  darkBlack = "#040404";
-  Black = "#060606";
-  brightBlack = "#3B3B3B";
-
-  darkRed = "#9C000A";
-  Red = "#C7000C";
-  brightRed = "#FF0B1B";
-
-  darkerGreen = "#235A00";
-  darkGreen = "#3C9C00";
-  Green = "#4CC700";
-  brightGreen = "#68FF0B";
-
-  darkYellow = "#AAA206";
-  Yellow = "#D8C308";
-  brightYellow = "#F7ED26";
-
-  darkBlue = "#0050D0";
-  Blue = "#0B68FF";
-  brightBlue = "#3F88FF";
-
-  darkMagenta = "#63457B";
-  Magenta = "#7E599D";
-  brightMagenta = "#6A7AB4";
-
-  darkCyan = "#006DC0";
-  Cyan = "#008CF7";
-  brightCyan = "#0BBAFF";
-
-  darkWhite = "#949494";
-  White = "#BCBCBC";
-  brightWhite = "#EFEFEF";
-
-  darkOrange = "#A55108";
-  Orange = "#D0670A";
-  brightOrange = "#F58825";
-
-  darkGray = "#4C4C4C";
-  Gray = "#616161";
-  brightGray = "#838383";
-
-  Font = "Hack Regular Nerd Font Complete Mono";
-  #}}}
+  cfg = config.plusultra.color;
 in
 {
-  options.plusultra.user = with types; {
-    orange = mkOpt str "arik" "The name to use for the user account.";
-    # fullName = mkOpt str "Arik Trotnic" "The full name of the user.";
-    # email = mkOpt str "NATrotnic@gmail.com" "The email of the user.";
-    # initialPassword = mkOpt str "password"
-      # "The initial password to use when the user is first created.";
-    # icon = mkOpt (nullOr package) defaultIcon
-      # "The profile picture to use for the user.";
-    # prompt-init = mkBoolOpt true "Whether or not to show an initial message when opening a new shell.";
-    # extraGroups = mkOpt (listOf str) [ ] "Groups for the user to be assigned.";
-    # extraOptions = mkOpt attrs { }
-      # (mdDoc "Extra options passed to `users.users.<name>`.");
+  options.plusultra.color = with types; {
+    darkBlack = mkOpt str "#040404" "darkBlack";
+    Black = mkOpt str "#060606" "Black";
+    brightBlack = mkOpt str "#3B3B3B" "brightBlack";
+
+    darkRed = mkOpt str "#9C000A" "darkRed";
+    Red = mkOpt str "#C7000C" "Red";
+    brightRed = mkOpt str "#FF0B1B" "brightRed";
+
+    darkerGreen = mkOpt str "#235A00" "darkerGreen";
+    darkGreen = mkOpt str "#3C9C00" "darkGreen";
+    Green = mkOpt str "#4CC700" "Green";
+    brightGreen = mkOpt str "#68FF0B" "brightGreen";
+
+    darkYellow = mkOpt str "#AAA206" "darkYellow";
+    Yellow = mkOpt str "#D8C308" "Yellow";
+    brightYellow = mkOpt str "#F7ED26" "brightYellow";
+
+    darkBlue = mkOpt str "#0050D0" "darkBlue";
+    Blue = mkOpt str "#0B68FF" "Blue";
+    brightBlue = mkOpt str "#3F88FF" "brightBlue";
+
+    darkMagenta = mkOpt str "#63457B" "darkMagenta";
+    Magenta = mkOpt str "#7E599D" "Magenta";
+    brightMagenta = mkOpt str "#6A7AB4" "brightMagenta";
+
+    darkCyan = mkOpt str "#006DC0" "darkCyan";
+    Cyan = mkOpt str "#008CF7" "Cyan";
+    brightCyan = mkOpt str "#0BBAFF" "brightCyan";
+
+    darkWhite = mkOpt str "#949494" "darkWhite";
+    White = mkOpt str "#BCBCBC" "White";
+    brightWhite = mkOpt str "#EFEFEF" "brightWhite";
+
+    darkOrange = mkOpt str "#A55108" "darkOrange";
+    Orange = mkOpt str "#D0670A" "Orange";
+    brightOrange = mkOpt str "#F58825" "brightOrange";
+
+    darkGray = mkOpt str "#4C4C4C" "darkGray";
+    Gray = mkOpt str "#616161" "Gray";
+    brightGray = mkOpt str "#838383" "brightGray";
+
+    Font = mkOpt str "Hack Regular Nerd Font Complete Mono" "Font";
   };
 }
