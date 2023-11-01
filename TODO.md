@@ -14,6 +14,7 @@
  - [ ] Move bootloader
     - [ ] Add toggle for grub?
     - [ ] Change configurationLimit in systemd-boot
+    - [ ] set systemd-boot.editor to false?
 ## Display Managers
  - [ ] greetd
  - [ ] vial
@@ -22,7 +23,6 @@
     - [ ] maybe also include toggle for pulseaudio
  - [ ] GPU configurations
     - [ ] Vulkan
-
     - [ ] again include options for nvidia/intel?
  - [ ] Docker
     - [ ] SearxNG
