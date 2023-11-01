@@ -47,7 +47,5 @@ in
     darkGray = mkOpt str "#4C4C4C" "darkGray";
     Gray = mkOpt str "#616161" "Gray";
     brightGray = mkOpt str "#838383" "brightGray";
-
-    Font = mkOpt str "Hack Regular Nerd Font Complete Mono" "Font";
   };
 }
