@@ -577,7 +577,6 @@ in
 
       # Home manager options
       extraOptions = {
-
         programs = { # {{{
           starship = {
             enable = true;
