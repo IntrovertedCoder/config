@@ -9,8 +9,15 @@ in
   options.plusultra.font = with types; {
     Font = mkOpt str "Hack Regular Nerd Font Complete Mono" "Font";
   };
-  config.environment.systemPackages = with pkgs;
-  [
-    (nerdfonts.override { fonts = [ "Hack" ]; })
-  ];
+  config  = {
+    environment.variables = {
+      # Enable icons in tooling since we have nerdfonts
+      LOG_ICONS = "true";
+    };
+    environment.systemPackages = with pkgs; [ font-manager ];
+    fonts.fonts = with pkgs;
+    [
+      (nerdfonts.override { fonts = [ "Hack" ]; })
+    ];
+  };
 }
