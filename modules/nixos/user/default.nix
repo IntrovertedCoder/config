@@ -794,57 +794,6 @@ in
             '';
           }; # }}}
 
-          alacritty = { # {{{
-            enable = true;
-            settings = {
-              colors = {
-                # Default colors
-                primary = {
-                  background = Black;
-                  foreground = White;
-                };
-                # Normal colors
-                normal = {
-                  black =   Black;
-                  red =     Red;
-                  green =   Green;
-                  yellow =  Yellow;
-                  blue =    Blue;
-                  magenta = Magenta;
-                  cyan =    Cyan;
-                  white =   White;
-                };
-                # Bright colors
-                bright = {
-                  black =   brightBlack;
-                  red =     brightRed;
-                  green =   brightGreen;
-                  yellow =  brightYellow;
-                  blue =    brightBlue;
-                  magenta = brightMagenta;
-                  cyan =    brightCyan;
-                  white =   brightWhite;
-                };
-                dim = {
-                  black =   darkBlack;
-                  red =     darkRed;
-                  green =   darkGreen;
-                  yellow =  darkYellow;
-                  blue =    darkBlue;
-                  magenta = darkMagenta;
-                  cyan =    darkCyan;
-                  white =   darkWhite;
-                };
-              };
-
-              fonts = {
-                normal = {
-                  family = "${Font}";
-                  style =  "Regular";
-                };
-              };
-            };
-          }; # }}}
 
           zoxide = { # {{{
             enable = true;
@@ -859,6 +808,7 @@ in
         fish.enable = true;
         starship.enable = true;
         discord.openASAR.enable = true;
+        alacritty.enable = true;
       };
     };
   };
