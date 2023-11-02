@@ -2,10 +2,10 @@
 
 with lib;
 with lib.plusultra;
-let cfg = config.plusultra.apps.starship;
+let cfg = config.plusultra.apps.home.starship;
 in
 {
-  options.plusultra.apps.starship = with types; {
+  options.plusultra.apps.home.starship = with types; {
     enable = mkBoolOpt false "Whether or not to enable starship.";
   };
 
