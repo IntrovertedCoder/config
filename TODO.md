@@ -4,7 +4,7 @@
  - [ ] Ncmpcpp/mpd
  - [ ] bat
  - [ ] zathura
- - [ ] starship
+ - [x] starship
  - [ ] Groups
  - [x] figure out how to access colors in other files
  - [ ]
