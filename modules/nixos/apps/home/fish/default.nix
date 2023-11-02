@@ -2,10 +2,10 @@
 
 with lib;
 with lib.plusultra;
-let cfg = config.plusultra.apps.fish;
+let cfg = config.plusultra.apps.home.fish;
 in
 {
-  options.plusultra.apps.fish = with types; {
+  options.plusultra.apps.home.fish = with types; {
     enable = mkBoolOpt false "Whether or not to enable fish.";
   };
 
