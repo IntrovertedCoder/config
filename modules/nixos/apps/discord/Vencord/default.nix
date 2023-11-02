@@ -2,10 +2,10 @@
 
 with lib;
 with lib.plusultra;
-let cfg = config.plusultra.apps.Vencord;
+let cfg = config.plusultra.apps.discord.Vencord;
 in
 {
-  options.plusultra.apps.Vencord = with types; {
+  options.plusultra.apps.discord.Vencord = with types; {
     enable = mkBoolOpt false "Whether or not to enable Vencord.";
   };
 

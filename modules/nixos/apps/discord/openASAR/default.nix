@@ -2,10 +2,10 @@
 
 with lib;
 with lib.plusultra;
-let cfg = config.plusultra.apps.openASAR;
+let cfg = config.plusultra.apps.discord.openASAR;
 in
 {
-  options.plusultra.apps.openASAR= with types; {
+  options.plusultra.apps.discord.openASAR= with types; {
     enable = mkBoolOpt false "Whether or not to enable discord/openASAR.";
   };
 
