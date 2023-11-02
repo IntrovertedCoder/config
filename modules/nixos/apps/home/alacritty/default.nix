@@ -55,7 +55,7 @@ in
 
         fonts = {
           normal = {
-            family = "${config.plusultra.color.Font}";
+            family = "${config.plusultra.font.Font}";
             style =  "Regular";
           };
         };
