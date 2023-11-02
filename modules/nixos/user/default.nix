@@ -142,24 +142,13 @@ in
 
       # Home manager options
       extraOptions = {
-        programs = { # {{{
-
-          exa.enable = true;
-
-          git = { # {{{
+        programs = {
+          git = {
             enable = true;
             userName = "IntrovertedCoder";
             userEmail = "natrotnic@gmail.com";
-          }; # }}}
-
-
-
-
-          zoxide = { # {{{
-            enable = true;
-            enableFishIntegration = true;
-          }; # }}}
-        }; # }}}
+          };
+        };
 
       };
     };
