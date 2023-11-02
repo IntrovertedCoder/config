@@ -19,8 +19,8 @@ in
          right_format = "$status $memory_usage $cmd_duration $sudo";
 
          character = {
-           success_symbol = "[➜](${Green})";
-           error_symbol = "[✗](${Red})";
+           success_symbol = "[➜](${config.plusultra.color.Green})";
+           error_symbol = "[✗](${config.plusultra.color.Red})";
          };
 
          git_commit = {
@@ -39,17 +39,17 @@ in
         };
 
         git_status = {
-          conflicted = "[=/($count\)](${Red})";
-          ahead = "[⇡\($count\)](${Magenta})";
-          behind = "[⇣\($count\)](${darkRed})";
-          diverged = "[⇕\($count\)](${darkWhite})";
-          up_to_date = "[✓\($count\)](${Blue})";
-          untracked = "[?\($count\)](${brightMagenta})";
-          stashed = "[$\($count\)](${Magenta})";
-          modified = "[!\($count\)](${Yellow})";
-          staged = "[+\($count\)](${Green})";
-          renamed = "[»\($count\)](${Orange})";
-          deleted = "[✘\($count\)](${brightRed})";
+          conflicted = "[=/($count\)](${config.plusultra.color.Red})";
+          ahead = "[⇡\($count\)](${config.plusultra.color.Magenta})";
+          behind = "[⇣\($count\)](${config.plusultra.color.darkRed})";
+          diverged = "[⇕\($count\)](${config.plusultra.color.darkWhite})";
+          up_to_date = "[✓\($count\)](${config.plusultra.color.Blue})";
+          untracked = "[?\($count\)](${config.plusultra.color.brightMagenta})";
+          stashed = "[$\($count\)](${config.plusultra.color.Magenta})";
+          modified = "[!\($count\)](${config.plusultra.color.Yellow})";
+          staged = "[+\($count\)](${config.plusultra.color.Green})";
+          renamed = "[»\($count\)](${config.plusultra.color.Orange})";
+          deleted = "[✘\($count\)](${config.plusultra.color.brightRed})";
         };
 
         python = {
@@ -58,34 +58,34 @@ in
 
         directory = {
           read_only = "";
-          format = "[$path ](${Blue})[$read_only](${Red}) ";
+          format = "[$path ](${config.plusultra.color.Blue})[$read_only](${config.plusultra.color.Red}) ";
           truncation_length = 16;
           truncation_symbol = "…/";
         };
 
         sudo = {
-          format = "[](${Orange})";
+          format = "[](${config.plusultra.color.Orange})";
           disabled = false ;
         };
 
         cmd_duration = {
           min_time = 500;
-          format = "[ $duration](${Yellow})" ;
+          format = "[ $duration](${config.plusultra.color.Yellow})" ;
         };
 
         container = {
-          format = "[ \\[$name\\]](${Magenta})" ;
+          format = "[ \\[$name\\]](${config.plusultra.color.Magenta})" ;
         };
 
         hostname = {
-          format = "[$hostname](${Magenta}) in ";
+          format = "[$hostname](${config.plusultra.color.Magenta}) in ";
           disabled = false ;
         };
 
         memory_usage = {
           disabled = false;
           threshold = -1;
-          format = "[ $ram](${darkerGreen})";
+          format = "[ $ram](${config.plusultra.color.darkerGreen})";
         };
 
         status = {
