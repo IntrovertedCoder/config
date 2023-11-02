@@ -578,16 +578,6 @@ in
       # Home manager options
       extraOptions = {
         programs = { # {{{
-          starship = {
-            enable = true;
-            settings = {
-              character = {
-                success_symbol = "[➜](bold green)";
-                error_symbol = "[✗](bold red) ";
-                vicmd_symbol = "[](bold blue) ";
-              };
-            };
-          };
 
           exa.enable = true;
 
@@ -866,6 +856,7 @@ in
     };
     plusultra.apps = {
       fish.enable = true;
+      starship.enable = true;
     };
   };
 }
