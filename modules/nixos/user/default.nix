@@ -158,6 +158,9 @@ in
         starship.enable = true;
         discord.openASAR.enable = true;
         alacritty.enable = true;
+        vim.enable = true;
+        zoxide.enable = true;
+        exa.enable = true;
       };
     };
   };
