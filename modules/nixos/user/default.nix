@@ -25,54 +25,6 @@ let
 
       cp ${cfg.icon} "$target/${cfg.icon.fileName}"
     '';
-
-# Define colors for configurations {{{
-# Examples
-# format = "[ $duration](${Yellow})" ;
-# background = Black;
-  darkBlack = "#040404";
-  Black = "#060606";
-  brightBlack = "#3B3B3B";
-
-  darkRed = "#9C000A";
-  Red = "#C7000C";
-  brightRed = "#FF0B1B";
-
-  darkerGreen = "#235A00";
-  darkGreen = "#3C9C00";
-  Green = "#4CC700";
-  brightGreen = "#68FF0B";
-
-  darkYellow = "#AAA206";
-  Yellow = "#D8C308";
-  brightYellow = "#F7ED26";
-
-  darkBlue = "#0050D0";
-  Blue = "#0B68FF";
-  brightBlue = "#3F88FF";
-
-  darkMagenta = "#63457B";
-  Magenta = "#7E599D";
-  brightMagenta = "#6A7AB4";
-
-  darkCyan = "#006DC0";
-  Cyan = "#008CF7";
-  brightCyan = "#0BBAFF";
-
-  darkWhite = "#949494";
-  White = "#BCBCBC";
-  brightWhite = "#EFEFEF";
-
-  darkOrange = "#A55108";
-  Orange = "#D0670A";
-  brightOrange = "#F58825";
-
-  darkGray = "#4C4C4C";
-  Gray = "#616161";
-  brightGray = "#838383";
-
-  Font = "Hack Regular Nerd Font Complete Mono";
-  #}}}
 in
 {
   options.plusultra.user = with types; {
@@ -183,8 +135,6 @@ in
 
     plusultra.home = {
       file = { # {{{
-        "work/.keep".text = "";
-        ".face".source = cfg.icon;
         "Pictures/${
           cfg.icon.fileName or (builtins.baseNameOf cfg.icon)
         }".source = cfg.icon;
