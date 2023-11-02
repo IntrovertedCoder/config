@@ -1,12 +1,12 @@
 # User
- - [ ] Fonts
+ - [x] Fonts
  - [ ] Firefox
  - [ ] Ncmpcpp/mpd
  - [ ] bat
  - [ ] zathura
  - [ ] starship
  - [ ] Groups
- - [ ] figure out how to access colors in other files
+ - [x] figure out how to access colors in other files
  - [ ]
  - [ ]
 
@@ -28,7 +28,7 @@
     - [ ] SearxNG
  - [ ] move btrfs mounts to hardware.conf
  - [ ] include optional mount for share (enable/ip would be the options)
- - [ ] Move fish from home-manager to flake and set shell to pkgs.fish in home-manager
+ - [x] Move fish from home-manager to flake and set shell to pkgs.fish in home-manager
  - [ ]
 
 ## Display
