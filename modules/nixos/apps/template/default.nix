@@ -9,6 +9,7 @@ in
     enable = mkBoolOpt false "Whether or not to enable template.";
   };
 
-  config =
-    mkIf cfg.enable { environment.systemPackages = with pkgs; [ template]; };
+  config = mkIf cfg.enable {
+    environment.systemPackages = with pkgs; [ template];
+  };
 }
