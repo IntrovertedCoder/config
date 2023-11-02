@@ -855,8 +855,11 @@ in
       };
     };
     plusultra.apps = {
-      fish.enable = true;
-      starship.enable = true;
+      home = {
+        fish.enable = true;
+        starship.enable = true;
+        discord.enable = true;
+      };
     };
   };
 }
