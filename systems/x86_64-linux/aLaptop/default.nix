@@ -13,7 +13,7 @@ with lib.plusultra;
       # Discord
         # discord = enabled;
         # Vencord = enabled;
-        openASAR = enabled;
+        # discord.openASAR = enabled;
         # ASAR-Vencord = enabled;
     };
     suites = {
