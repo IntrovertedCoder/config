@@ -858,7 +858,7 @@ in
       home = {
         fish.enable = true;
         starship.enable = true;
-        discord.enable = true;
+        discord.openASAR.enable = true;
       };
     };
   };
