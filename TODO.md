@@ -2,7 +2,7 @@
  - [x] Fonts
  - [ ] Firefox
  - [ ] Ncmpcpp/mpd
- - [ ] bat
+ - [x] bat
  - [ ] zathura
  - [x] starship
  - [ ] Groups
