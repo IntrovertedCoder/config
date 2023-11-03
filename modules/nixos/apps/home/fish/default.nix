@@ -106,7 +106,6 @@ in
         tree = "exa -a --icons --tree --level 3 -F -I='.git.' --color=always $argv | less -r +g";
         lg = "ssh-add ~/.ssh/github && gitui";
         cp = "xcp $argv";
-        cat = "bat $argv";
       };
     }; # }}}
   };
