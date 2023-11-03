@@ -161,6 +161,7 @@ in
         vim.enable = true;
         zoxide.enable = true;
         exa.enable = true;
+        bat.enable = true;
       };
     };
   };
