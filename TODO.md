@@ -9,7 +9,6 @@
  - [x] figure out how to access colors in other files
  - [ ]
  - [ ]
- - [ ] Switch fish functions to https://rycee.gitlab.io/home-manager/options.html#opt-home.shellAliases?
 
 # System
  - [ ] Move bootloader
