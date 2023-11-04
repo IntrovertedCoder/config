@@ -162,6 +162,7 @@ in
         zoxide.enable = true;
         exa.enable = true;
         bat.enable = true;
+        firefox.enable = true;
       };
     };
   };
