@@ -19,6 +19,10 @@
     home-manager.url = "github:nix-community/home-manager/release-23.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
+
+    # Nix user repository
+    nur.url = "github:nix-community/NUR";
+
     # macOS Support (master)
     darwin.url = "github:lnl7/nix-darwin";
     darwin.inputs.nixpkgs.follows = "nixpkgs";
@@ -133,6 +137,7 @@
       };
 
       overlays = with inputs; [
+        nur.overlay
       ];
       systems.modules.nixos = with inputs; [
         home-manager.nixosModules.home-manager
