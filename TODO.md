@@ -1,6 +1,6 @@
 # User
  - [x] Fonts
- - [ ] Firefox
+ - [x] Firefox
  - [ ] Ncmpcpp/mpd
  - [x] bat
  - [ ] zathura
