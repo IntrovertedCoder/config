@@ -1,7 +1,7 @@
 # User
  - [x] Fonts
  - [x] Firefox
- - [ ] Ncmpcpp/mpd
+ - [x] Ncmpcpp/mpd
  - [x] bat
  - [ ] zathura
  - [x] starship
