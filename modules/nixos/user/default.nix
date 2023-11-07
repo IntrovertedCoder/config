@@ -164,6 +164,7 @@ in
         bat.enable = true;
         firefox.enable = true;
         mpd.enable = true;
+        ncmpcpp.enable = true;
       };
     };
   };
