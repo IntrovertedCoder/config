@@ -163,6 +163,7 @@ in
         exa.enable = true;
         bat.enable = true;
         firefox.enable = true;
+        mpd.enable = true;
       };
     };
   };
