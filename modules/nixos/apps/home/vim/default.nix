@@ -398,6 +398,9 @@ in
   endif
         ''; # }}}
       };
+      extraOptions.home.sessionVariables = {
+        EDITOR = "vim";
+      };
       extraOptions.programs = {
         vim = { # {{{
           enable = true;
