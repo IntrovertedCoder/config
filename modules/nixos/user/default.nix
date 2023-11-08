@@ -65,7 +65,6 @@ in
         # Terminal Tools
           fend            # Calculator            # fend
           bottom          # Terminal task manager # btm
-          gitui           # Git tui manager       # gitui
           gh              # Github CLI            # gh
           fd              # Rust file finder      # fd
           neofetch        # Showoff               # neofetch
@@ -165,6 +164,7 @@ in
         firefox.enable = true;
         mpd.enable = true;
         ncmpcpp.enable = true;
+        gitui.enable = true;
       };
     };
   };
