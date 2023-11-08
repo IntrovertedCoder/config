@@ -46,31 +46,31 @@ in
             abort_merge: Some(( code: Char('M'), modifiers: ( bits: 1,),)),
           )
         '';
-        theme = ''
-          (
-            selected_tab: ${config.plusultra.color.Gray},
-            command_fg: ${config.plusultra.color.White},
-            selection_bg: ${config.plusultra.color.Blue},
-            selection_fg: ${config.plusultra.color.White},
-            cmdbar_bg: ${config.plusultra.color.Blue},
-            cmdbar_extra_lines_bg: ${config.plusultra.color.Blue},
-            disabled_fg: ${config.plusultra.color.darkGray},
-            diff_line_add: ${config.plusultra.color.Green},
-            diff_line_delete: ${config.plusultra.color.Red},
-            diff_file_added: ${config.plusultra.color.brightGreen},
-            diff_file_removed: ${config.plusultra.color.brightRed},
-            diff_file_moved: ${config.plusultra.color.brightMagenta},
-            diff_file_modified: ${config.plusultra.color.Yellow},
-            commit_hash: ${config.plusultra.color.Magenta},
-            commit_time: ${config.plusultra.color.brightCyan},
-            commit_author: ${config.plusultra.color.Green},
-            danger_fg: ${config.plusultra.color.Red},
-            push_gauge_bg: ${config.plusultra.color.Blue},
-            push_gauge_fg: ${config.plusultra.color.Gray},
-            tag_fg: ${config.plusultra.color.brightMagenta},
-            branch_fg: ${config.plusultra.color.brightYellow},
-          )
-        '';
+        # theme = ''
+          # (
+            # selected_tab: ${config.plusultra.color.Gray},
+            # command_fg: ${config.plusultra.color.White},
+            # selection_bg: ${config.plusultra.color.Blue},
+            # selection_fg: ${config.plusultra.color.White},
+            # cmdbar_bg: ${config.plusultra.color.Blue},
+            # cmdbar_extra_lines_bg: ${config.plusultra.color.Blue},
+            # disabled_fg: ${config.plusultra.color.darkGray},
+            # diff_line_add: ${config.plusultra.color.Green},
+            # diff_line_delete: ${config.plusultra.color.Red},
+            # diff_file_added: ${config.plusultra.color.brightGreen},
+            # diff_file_removed: ${config.plusultra.color.brightRed},
+            # diff_file_moved: ${config.plusultra.color.brightMagenta},
+            # diff_file_modified: ${config.plusultra.color.Yellow},
+            # commit_hash: ${config.plusultra.color.Magenta},
+            # commit_time: ${config.plusultra.color.brightCyan},
+            # commit_author: ${config.plusultra.color.Green},
+            # danger_fg: ${config.plusultra.color.Red},
+            # push_gauge_bg: ${config.plusultra.color.Blue},
+            # push_gauge_fg: ${config.plusultra.color.Gray},
+            # tag_fg: ${config.plusultra.color.brightMagenta},
+            # branch_fg: ${config.plusultra.color.brightYellow},
+          # )
+        # '';
       };
       fish.shellAliases = mkIf config.plusultra.apps.home.fish.enable {
         lg = "ssh-add ~/.ssh/github && gitui";
