@@ -7,6 +7,8 @@
  - [x] starship
  - [ ] Groups
  - [x] figure out how to access colors in other files
+ - [ ] Move fish ex function to own file and include all other required programs
+ - [ ] Replace fish cd function for one with exa in the exa file and figure out how to disable default when exa is enabled
  - [ ]
  - [ ]
 
