@@ -55,7 +55,7 @@
     };
     # Window managers
       # Hyprland
-      programs.xwayland.enable = true;
+      # programs.xwayland.enable = true;
       # programs.hyprland = {
         # enable = false;
         # xwayland.enable = true;
