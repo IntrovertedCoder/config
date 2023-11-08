@@ -19,6 +19,10 @@ in
   };
 
   config = mkIf cfg.enable {
+    # Other needed apps
+    plusultra.apps = {
+      home.mako.enable = true;
+    };
     # Desktop additions
     # plusultra.desktop.addons = {
       # gtk = enabled;
