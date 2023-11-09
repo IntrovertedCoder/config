@@ -14,20 +14,24 @@ in
       polkit_gnome
     ];
     security.polkit.enable = true;
-    systemd = {
-      user.services.polkit-gnome-authentication-agent-1 = {
-        description = "polkit-gnome-authentication-agent-1";
-        wantedBy = [ "graphical-session.target" ];
-        wants = [ "graphical-session.target" ];
-        after = [ "graphical-session.target" ];
-        serviceConfig = {
-          Type = "simple";
-          ExecStart = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
-          Restart = "on-failure";
-          RestartSec = 1;
-          TimeoutStopSec = 10;
-        };
-      };
-    };
+    plusultra.desktop.Hyprland.extraConfig2 = mkIf config.plusultra.desktop.Hyprland.enable ''
+      exec-once = ${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1
+    '';
+    # This doesn't work because graphical-session.target isn't being reached in Hyprland
+    # systemd = {
+      # user.services.polkit-gnome-authentication-agent-1 = {
+        # description = "polkit-gnome-authentication-agent-1";
+        # wantedBy = [ "graphical-session.target" ];
+        # wants = [ "graphical-session.target" ];
+        # after = [ "graphical-session.target" ];
+        # serviceConfig = {
+          # Type = "simple";
+          # ExecStart = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
+          # Restart = "on-failure";
+          # RestartSec = 1;
+          # TimeoutStopSec = 10;
+        # };
+      # };
+    # };
   };
 }
