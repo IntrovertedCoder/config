@@ -10,7 +10,7 @@ in
   };
 
   config = mkIf cfg.enable {
-    plusultra.desktop.Hyprland.extraConfig = ''
+    plusultra.desktop.Hyprland.extraConfig = mkIf config.plusultra.desktop.Hyprland.enable ''
       ## Notification control
       bind = $mainMod, n, exec, makoctl restore
       bind = $mainMod, m, exec, makoctl dismiss
