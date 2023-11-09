@@ -40,5 +40,5 @@
 ### Hyprland
  - [ ] move pkgs from wayland section to hyprland file from home.nix
  - [ ] grab all the stuff for hyprland from configuration.nix
- - [ ] swaylock (include toggle?)
+ - [x] swaylock (include toggle?)
  - [ ] eww
