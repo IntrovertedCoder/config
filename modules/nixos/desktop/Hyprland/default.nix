@@ -190,11 +190,6 @@ in
       bind = $mainMod, F11, exec, brightnessctl s 17-
       bind = $mainMod, F12, exec, brightnessctl s +17
 
-      ## Notification control
-      bind = $mainMod, n, exec, makoctl restore
-      bind = $mainMod, m, exec, makoctl dismiss
-      bind = $mainMod SHIFT, n, exec, makoctl dismiss -a
-
       ## Floating windows
       bind = $mainMod, F1, exec, alacritty -o window.opacity=0.5 --class floating,ranger -e ranger
       bind = $mainMod, F2, exec, alacritty -o window.opacity=0.5 --class floating,btop -e btop

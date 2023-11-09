@@ -10,6 +10,12 @@ in
   };
 
   config = mkIf cfg.enable {
+    plusultra.desktop.Hyprland.extraConfig = ''
+      ## Notification control
+      bind = $mainMod, n, exec, makoctl restore
+      bind = $mainMod, m, exec, makoctl dismiss
+      bind = $mainMod SHIFT, n, exec, makoctl dismiss -a
+    '';
     plusultra.home.extraOptions.services = {
       mako = { # {{{
         enable = true;
