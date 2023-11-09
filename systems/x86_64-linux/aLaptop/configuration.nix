@@ -64,7 +64,6 @@
       programs.steam = {
         enable = true;
       };
-      security.polkit.enable = true;
       # Allow swaylock to unlock the laptop
       # security.pam.services.swaylock = {};
   # xdg.portal = {
