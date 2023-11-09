@@ -13,14 +13,17 @@ in
   options.plusultra.desktop.Hyprland = with types; {
     enable = mkBoolOpt false "Whether or not to enable Hyprland.";
     wallpaper = mkOpt (nullOr package) null "The wallpaper to display.";
-    extraConfig =
-      mkOpt str "" "Additional configuration for the Hyprland config file.";
+    extraConfig = mkOpt str "" "Additional configuration for the Hyprland config file.";
+    extraConfig1 = mkOpt str "" "Additional configuration for the Hyprland config file.";
+    extraConfig2 = mkOpt str "" "Additional configuration for the Hyprland config file.";
+    extraConfig3 = mkOpt str "" "Additional configuration for the Hyprland config file.";
   };
 
   config = mkIf cfg.enable {
     # Other needed apps
     plusultra.desktop.addons= {
       mako.enable = true;
+      swaylock.enable = true;
     };
 
     # Adding the hyprland config
@@ -43,11 +46,6 @@ in
       # Execute your favorite apps at launch
       # exec-once = waybar & hyprpaper & firefox
       exec-once = eww open mainMonitor & easyeffects --gapplication-service
-
-      # Turn monitors off if locked (swaylock running) and idle for 10 seconds
-      exec-once = swayidle -w timeout 10 'if pgrep -x swaylock; then hyprctl dispatch dpms off; fi' resume 'hyprctl dispatch dpms on'
-      # Lock screen after idle for 300 seconds and turn off monitors after 330
-      exec-once = swayidle -w timeout 300 'swaylock --screenshots --clock --indicator --effect-blur 10x10 --ring-color=${config.plusultra.color.BlueNum} --text-color=${config.plusultra.color.brightGreenNum} --ring-clear-color=${config.plusultra.color.MagentaNum} --text-wrong-color=${config.plusultra.color.RedNum} --text-color=${config.plusultra.color.WhiteNum} --text-wrong-color=${config.plusultra.color.MagentaNum} --fade-in=3 --grace=3' timeout 330 'hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on'
 
       # Some default env vars.
       env = XCURSOR_SIZE,24
@@ -258,6 +256,9 @@ in
 
       # Extra config from flakes
       ${cfg.extraConfig}
+      ${cfg.extraConfig1}
+      ${cfg.extraConfig2}
+      ${cfg.extraConfig3}
     '';
 
     programs.hyprland = {

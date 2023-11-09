@@ -124,9 +124,6 @@ in
             radeontop
           # Brightnessc ontrol
             brightnessctl
-          # Screenlocker
-            # swaylock-effects
-            swayidle
           # Obs?
             xdg-desktop-portal-hyprland
           wl-clipboard

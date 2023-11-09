@@ -66,7 +66,7 @@
       };
       security.polkit.enable = true;
       # Allow swaylock to unlock the laptop
-      security.pam.services.swaylock = {};
+      # security.pam.services.swaylock = {};
   # xdg.portal = {
     # enable = false;
     # wlr.enable = false;
@@ -184,7 +184,7 @@
     comma
 
     # Hyprland packages
-    swaylock-effects
+    # swaylock-effects
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
