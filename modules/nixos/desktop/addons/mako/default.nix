@@ -2,10 +2,10 @@
 
 with lib;
 with lib.plusultra;
-let cfg = config.plusultra.apps.home.mako;
+let cfg = config.plusultra.desktop.addons.mako;
 in
 {
-  options.plusultra.apps.home.mako = with types; {
+  options.plusultra.desktop.addons.mako = with types; {
     enable = mkBoolOpt false "Whether or not to enable mako.";
   };
 

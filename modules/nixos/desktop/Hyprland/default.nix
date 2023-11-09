@@ -19,8 +19,8 @@ in
 
   config = mkIf cfg.enable {
     # Other needed apps
-    plusultra.apps = {
-      home.mako.enable = true;
+    plusultra.desktop.addons= {
+      mako.enable = true;
     };
 
     # Adding the hyprland config
