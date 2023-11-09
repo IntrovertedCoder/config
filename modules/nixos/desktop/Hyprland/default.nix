@@ -24,6 +24,7 @@ in
     plusultra.desktop.addons= {
       mako.enable = true;
       swaylock.enable = true;
+      gnomePolkit.enable = true;
     };
 
     # Adding the hyprland config
