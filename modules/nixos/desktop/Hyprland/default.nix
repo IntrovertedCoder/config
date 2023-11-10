@@ -26,6 +26,7 @@ in
       swaylock.enable = true;
       gnomePolkit.enable = true;
       pipewire.enable = true;
+      AMDDriver.enable = true;
     };
 
     # Adding the hyprland config {{{

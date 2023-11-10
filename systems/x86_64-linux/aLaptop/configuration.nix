@@ -41,17 +41,6 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  # AMD GPU configuration and installation of extra packages
-    # Get OpenCL
-      hardware.opengl.extraPackages = with pkgs; [
-        rocm-opencl-icd
-        rocm-opencl-runtime
-        amdvlk
-      ];
-    # Get Vulkan
-      hardware.opengl.driSupport = true;
-      hardware.opengl.driSupport32Bit = true;
-
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
