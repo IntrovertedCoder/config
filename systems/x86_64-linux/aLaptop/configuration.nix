@@ -130,53 +130,6 @@
   };
 
 
-  # BTRFS mount options
-  fileSystems."/" = {
-    options = [
-      "compress=zstd:1"
-      "noatime"
-      "datacow"
-      "datasum"
-      "ssd"
-    ];
-  };
-  fileSystems."/home" = {
-    options = [
-      "compress=zstd:1"
-      "noatime"
-      "datacow"
-      "datasum"
-      "ssd"
-    ];
-  };
-  fileSystems."/log" = {
-    options = [
-      "compress=zstd:1"
-      "noatime"
-      "datacow"
-      "datasum"
-      "ssd"
-    ];
-  };
-  fileSystems."/nix" = {
-    options = [
-      "compress=zstd:1"
-      "noatime"
-      "datacow"
-      "datasum"
-      "ssd"
-    ];
-  };
-  fileSystems."/persist" = {
-    options = [
-      "compress=zstd:1"
-      "noatime"
-      "datacow"
-      "datasum"
-      "ssd"
-    ];
-  };
-
   # fileSystems."/home/arik/data" = {
     # device = "//192.168.0.37/data";
     # fsType = "cifs";

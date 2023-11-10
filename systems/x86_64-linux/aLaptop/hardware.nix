@@ -16,31 +16,31 @@
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/0e40a043-63ed-4df1-8bcc-8b8d3c266453";
       fsType = "btrfs";
-      options = [ "subvol=root" ];
+      options = [ "subvol=root" "compress=zstd:1" "noatime" "datacow" "datasum" "ssd" ];
     };
 
   fileSystems."/home" =
     { device = "/dev/disk/by-uuid/0e40a043-63ed-4df1-8bcc-8b8d3c266453";
       fsType = "btrfs";
-      options = [ "subvol=home" ];
+      options = [ "subvol=home" "compress=zstd:1" "noatime" "datacow" "datasum" "ssd" ];
     };
 
   fileSystems."/nix" =
     { device = "/dev/disk/by-uuid/0e40a043-63ed-4df1-8bcc-8b8d3c266453";
       fsType = "btrfs";
-      options = [ "subvol=nix" ];
+      options = [ "subvol=nix" "compress=zstd:1" "noatime" "datacow" "datasum" "ssd" ];
     };
 
   fileSystems."/persist" =
     { device = "/dev/disk/by-uuid/0e40a043-63ed-4df1-8bcc-8b8d3c266453";
       fsType = "btrfs";
-      options = [ "subvol=persist" ];
+      options = [ "subvol=persist" "compress=zstd:1" "noatime" "datacow" "datasum" "ssd" ];
     };
 
   fileSystems."/log" =
     { device = "/dev/disk/by-uuid/0e40a043-63ed-4df1-8bcc-8b8d3c266453";
       fsType = "btrfs";
-      options = [ "subvol=log" ];
+      options = [ "subvol=log" "compress=zstd:1" "noatime" "datacow" "datasum" "ssd" ];
     };
 
   fileSystems."/boot" =
