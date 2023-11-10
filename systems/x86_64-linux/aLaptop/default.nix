@@ -6,6 +6,7 @@ with lib.plusultra;
   imports = [ ./hardware.nix ./configuration.nix];
   plusultra = {
     desktop.Hyprland.enable = true;
+    desktop.addons.greetd.enable = true;
     apps = {
       # Obs is still busted for some reason
       obs = disabled;

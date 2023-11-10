@@ -29,19 +29,6 @@
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # GUI interfaces
-    # Display managers
-    # Enable the display manager, yes xserver.enable needs to be set to true for gdm
-    services.xserver.enable = true;
-    services.xserver.videoDrivers = [ "amdgpu" ];
-    services.greetd = {
-      enable = true;
-      settings = {
-        default_session = {
-          command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd Hyprland";
-          user = "arik";
-        };
-      };
-    };
     # Window managers
       programs.wshowkeys.enable = true;
       programs.steam = {
