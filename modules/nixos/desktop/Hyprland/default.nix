@@ -28,7 +28,7 @@ in
       pipewire.enable = true;
     };
 
-    # Adding the hyprland config
+    # Adding the hyprland config {{{
     plusultra.home.configFile."hypr/hyprland.conf".text = ''
       # See https://wiki.hyprland.org/Configuring/Monitors/
       # Desktop Displays
@@ -261,11 +261,20 @@ in
       ${cfg.extraConfig1}
       ${cfg.extraConfig2}
       ${cfg.extraConfig3}
-    '';
+    ''; # }}}
 
     programs.hyprland = {
       enable = true;
       xwayland.enable = true;
+    };
+
+    xdg.portal = {
+      enable = true;
+      wlr.enable = true;
+      extraPortals = with pkgs; [
+        xdg-desktop-portal-hyprland
+        xdg-desktop-portal-gtk
+      ];
     };
   };
 }

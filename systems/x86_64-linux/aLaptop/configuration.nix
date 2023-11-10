@@ -34,13 +34,6 @@
       programs.steam = {
         enable = true;
       };
-  # xdg.portal = {
-    # enable = false;
-    # wlr.enable = false;
-    # extraPortals = with pkgs; [
-       # xdg-desktop-portal-hyprland
-    # ];
-  # };
 
   services.udev.packages = with pkgs ; [
     vial
