@@ -176,9 +176,6 @@
     killall
     clinfo
     comma
-
-    # Hyprland packages
-    # swaylock-effects
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -198,7 +195,6 @@
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
-  networking.firewall.allowedUDPPorts = [ 51820 ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
