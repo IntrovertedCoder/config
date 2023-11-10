@@ -11,11 +11,7 @@ with lib.plusultra;
       # Obs is still busted for some reason
       obs = disabled;
       element = disabled;
-      # Discord
-        # discord = enabled;
-        # Vencord = enabled;
-        # discord.openASAR = enabled;
-        # ASAR-Vencord = enabled;
+      CUPS = enabled;
     };
     suites = {
       art.enable = true;
