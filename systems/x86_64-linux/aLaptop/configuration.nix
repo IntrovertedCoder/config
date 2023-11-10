@@ -28,17 +28,11 @@
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
-  # Select internationalisation properties.
-  # i18n.defaultLocale = "en_US.UTF-8";
-  # console = {
-  #   font = "Lat2-Terminus16";
-  #   keyMap = "us";
-  #   useXkbConfig = true; # use xkbOptions in tty.
-  # };
-
-
   # GUI interfaces
     # Display managers
+    # Enable the display manager, yes xserver.enable needs to be set to true for gdm
+    services.xserver.enable = true;
+    services.xserver.videoDrivers = [ "amdgpu" ];
     services.greetd = {
       enable = true;
       settings = {
@@ -49,18 +43,10 @@
       };
     };
     # Window managers
-      # Hyprland
-      # programs.xwayland.enable = true;
-      # programs.hyprland = {
-        # enable = false;
-        # xwayland.enable = true;
-      # };
       programs.wshowkeys.enable = true;
       programs.steam = {
         enable = true;
       };
-      # Allow swaylock to unlock the laptop
-      # security.pam.services.swaylock = {};
   # xdg.portal = {
     # enable = false;
     # wlr.enable = false;
@@ -72,21 +58,6 @@
   services.udev.packages = with pkgs ; [
     vial
   ];
-  # Enable the display manager, yes xserver.enable needs to be set to true for gdm
-  services.xserver.enable = true;
-  # services.xserver.displayManager.gdm.enable = true;
-  # services.xserver.displayManager.gdm.wayland = true;
-  services.xserver.videoDrivers = [ "amdgpu" ];
-  # services.xserver.displayManager.sddm.enable = true;
-  # Hyprland does not launch with lightdm
-  # services.xserver.displayManager.lightdm.enable = true;
-
-  # Keep disabled because it messes with hyprland launching speeds
-  # services.xserver.desktopManager.gnome.enable = true;
-
-  # Configure keymap in X11
-  # services.xserver.layout = "us";
-  # services.xserver.xkbOptions = "eurosign:e,caps:escape";
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
@@ -156,63 +127,6 @@
       # alacritty
       kitty
     ];
-  };
-
-  # home-manager.users.arik = import /home/arik/.config/nixpkgs/home.nix;
-
-  # Adding the fish shell to /etc/shells?
-  # I am not happy about needing this, or setting the shell in users.users.arik
-  environment.shells = [ "/home/arik/.nix-profile/bin/fish" ];
-
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    wget
-    curl
-    pciutils
-    rocgdb
-    # rocmPackages.rocgdb
-    killall
-    clinfo
-    comma
-  ];
-
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
-
-  # List services that you want to enable:
-
-  # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
-  services = {
-  };
-
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
-
-  # Copy the NixOS configuration file and link it from the resulting system
-  # (/run/current-system/configuration.nix). This is useful in case you
-  # accidentally delete configuration.nix.
-  system.copySystemConfiguration = false;
-
-  # This value determines the NixOS release from which the default
-  # settings for stateful data, like file locations and database versions
-  # on your system were taken. It's perfectly fine and recommended to leave
-  # this value at the release version of the first install of this system.
-  # Before changing this value read the documentation for this option
-  # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "23.05"; # Did you read the comment?
-  system.autoUpgrade.channel = "https://nixos.org/channels/nixos-23.05";
-  nixpkgs.config = {
-    allowUnfree = true;
   };
 
 
