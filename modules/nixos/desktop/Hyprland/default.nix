@@ -25,6 +25,7 @@ in
       mako.enable = true;
       swaylock.enable = true;
       gnomePolkit.enable = true;
+      pipewire.enable = true;
     };
 
     # Adding the hyprland config

@@ -48,15 +48,6 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  # Enable pipewire.
-  hardware.pulseaudio.enable = false;
-  security.rtkit.enable = true;
-  services.pipewire = {
-     enable = true;
-     alsa.enable = true;
-     pulse.enable = true;
-  };
-
   # AMD GPU configuration and installation of extra packages
     # Get OpenCL
       hardware.opengl.extraPackages = with pkgs; [
