@@ -164,5 +164,9 @@ in
         gitui.enable = true;
       };
     };
+
+    users.users.${cfg.name} = {
+      extraGroups = [ ] ++ cfg.extraGroups;
+    };
   };
 }
