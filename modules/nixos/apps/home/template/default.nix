@@ -10,6 +10,7 @@ in
   };
 
   config = mkIf cfg.enable {
-    environment.systemPackages = with pkgs; [ template ];
+    # environment.systemPackages = with pkgs; [ template ];
+    plusultra.home.extraOptions.home.packages = with pkgs; [ template ];
   };
 }
