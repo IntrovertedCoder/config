@@ -93,8 +93,6 @@ in
           helvum
           mpc-cli
           pavucontrol
-        # QMK
-          vial
         # Replay Gain
           r128gain
         # Games
@@ -162,6 +160,7 @@ in
         mpd.enable = true;
         ncmpcpp.enable = true;
         gitui.enable = true;
+        vial.enable = true;
       };
     };
 
