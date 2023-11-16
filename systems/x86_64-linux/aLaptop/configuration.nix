@@ -18,8 +18,6 @@
 
   networking.hostName = "aLaptop"; # Define your hostname.
   # Pick only one of the below networking options.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-  networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
 
   # Set your time zone.
   time.timeZone = "America/Chicago";
@@ -75,7 +73,7 @@
   users.users.arik = {
     # shell = "/home/arik/.nix-profile/bin/fish";
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" "video" "audio" "docker" ];
+    extraGroups = [ "wheel" "video" "audio" "docker" ];
     packages = with pkgs; [
       firefox
       # alacritty

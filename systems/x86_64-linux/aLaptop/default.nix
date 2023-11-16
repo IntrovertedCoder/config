@@ -31,6 +31,13 @@ with lib.plusultra;
     comma
   ];
 
+  # Networking
+    # WPA_Supplicant
+      # networking.wireless.enable = true;
+    # Network Manager
+      networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
+      plusultra.user.extraGroups = [ "networkmanager" ];
+
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It's perfectly fine and recommended to leave
