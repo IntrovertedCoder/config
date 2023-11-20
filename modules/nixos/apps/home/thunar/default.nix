@@ -11,6 +11,23 @@ in
 
   config = mkIf cfg.enable {
     # environment.systemPackages = with pkgs; [
+    plusultra.home.extraOptions = {
+      gtk = {
+        enable = true;
+        # iconTheme = {
+          # package = pkgs.gnome.adwaita-icon-theme;
+          # name = "Adwaita";
+        # };
+        theme = {
+          package = pkgs.gnome.adwaita-icon-theme;
+          name = "Adwaita";
+        };
+        gtk3.bookmarks = [
+          "file:///home/arik/Documents"
+          "file:///home/arik/Downloads"
+        ];
+      };
+    };
     plusultra.home.extraOptions.home.packages = with pkgs; [
       xfce.thunar
       xfce.thunar-archive-plugin
