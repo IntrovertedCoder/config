@@ -77,16 +77,8 @@ in
           mdcat           # Rust cat for markdown # mdcat
         # Phone stuff
           scrcpy
-        # Communications
-          # gomuks
-          # (discord.override { withOpenASAR = false; withVencord = false; })
         # Video
           vlc
-          # davinci-resolve
-        # Image Manipulation
-          inkscape
-          gimp
-          # blender
           libsForQt5.koko
         # Audio
           audacity
@@ -105,13 +97,6 @@ in
         # Network debugging
           speedtest-cli
           trippy
-        # Thunar
-          xfce.thunar
-          gvfs
-          xfce.thunar-archive-plugin
-          xfce.thunar-media-tags-plugin
-          xfce.thunar-volman
-          xfce.tumbler
         # Wayland
           # Screenshot
             grim
@@ -162,6 +147,7 @@ in
         gitui.enable = true;
         vial.enable = true;
         gomuks.enable = true;
+        thunar.enable = true;
       };
     };
 
