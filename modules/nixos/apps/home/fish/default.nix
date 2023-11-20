@@ -100,9 +100,6 @@ in
 
         set NIX_PATH /home/arik/.nix-defexpr/channels $NIX_PATH
       ''; # }}}
-      functions = {
-        cp = "xcp $argv";
-      };
     }; # }}}
   };
 }

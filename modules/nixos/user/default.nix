@@ -71,7 +71,6 @@ in
           tealdeer        # Rust tldr             # tldr
           wthrr           # Rust weather          # wthrr
           ranger          # TUI file manager      # ranger
-          xcp             # Better rust cp        # xcp
           fortune         # Random quote          # fortune
           btop            # Terminal task manager # btop
         # Phone stuff
@@ -140,6 +139,7 @@ in
         zoxide.enable = true;
         exa.enable = true;
         bat.enable = true;
+        xcp.enable = true;
         firefox.enable = true;
         mpd.enable = true;
         ncmpcpp.enable = true;
