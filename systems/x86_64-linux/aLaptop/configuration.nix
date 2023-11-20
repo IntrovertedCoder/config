@@ -5,19 +5,12 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      # ./hardware-configuration.nix
-    # (import "${builtins.fetchTarball https://github.com/nix-community/home-manager/archive/release-23.05.tar.gz}/nixos")
-    ];
-
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.supportedFilesystems = [ "ntfs" ];
 
   networking.hostName = "aLaptop"; # Define your hostname.
-  # Pick only one of the below networking options.
 
   # Set your time zone.
   time.timeZone = "America/Chicago";
@@ -25,13 +18,6 @@
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
-  # GUI interfaces
-    # Window managers
-      programs.wshowkeys.enable = true;
-      programs.steam = {
-        enable = true;
-      };
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
