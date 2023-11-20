@@ -81,7 +81,6 @@ in
         # Audio
           audacity
           helvum
-          mpc-cli
           pavucontrol
         # Replay Gain
           r128gain
