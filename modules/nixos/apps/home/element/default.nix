@@ -3,14 +3,14 @@
 with lib;
 with lib.plusultra;
 let
-  cfg = config.plusultra.apps.element;
+  cfg = config.plusultra.apps.home.element;
 in
 {
-  options.plusultra.apps.element = with types; {
+  options.plusultra.apps.home.element = with types; {
     enable = mkBoolOpt false "Whether or not to enable Element.";
   };
 
   config = mkIf cfg.enable {
-    environment.systemPackages = with pkgs; [ element-desktop ];
+    plusultra.home.extraOptions.home.packages = with pkgs; [ element-desktop ];
   };
 }
