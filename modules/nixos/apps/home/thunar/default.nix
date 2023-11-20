@@ -10,14 +10,14 @@ in
   };
 
   config = mkIf cfg.enable {
-    # environment.systemPackages = with pkgs; [ thunar ];
+    # environment.systemPackages = with pkgs; [
     plusultra.home.extraOptions.home.packages = with pkgs; [
       xfce.thunar
-      gvfs
       xfce.thunar-archive-plugin
       xfce.thunar-media-tags-plugin
       xfce.thunar-volman
       xfce.tumbler
     ];
+    services.gvfs.enable = true;
   };
 }
