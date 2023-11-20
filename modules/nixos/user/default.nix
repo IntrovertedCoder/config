@@ -50,10 +50,10 @@ in
         kickoff
         gparted
         xorg.xhost # Allow for gparted sudo "xhost +SI:localuser:root"
-        pipx
         libnotify
         # Python Stuff
           python311
+          pipx
           python311Packages.pip
         # AI Stuff
           openai-whisper  # Audio to test
