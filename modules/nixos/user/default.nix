@@ -74,7 +74,6 @@ in
           xcp             # Better rust cp        # xcp
           fortune         # Random quote          # fortune
           btop            # Terminal task manager # btop
-          mdcat           # Rust cat for markdown # mdcat
         # Phone stuff
           scrcpy
         # Video
