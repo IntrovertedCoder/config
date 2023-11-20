@@ -78,7 +78,7 @@ in
         # Phone stuff
           scrcpy
         # Communications
-          gomuks
+          # gomuks
           # (discord.override { withOpenASAR = false; withVencord = false; })
         # Video
           vlc
@@ -161,6 +161,7 @@ in
         ncmpcpp.enable = true;
         gitui.enable = true;
         vial.enable = true;
+        gomuks.enable = true;
       };
     };
 
