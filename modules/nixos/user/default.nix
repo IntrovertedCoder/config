@@ -106,7 +106,6 @@ in
           # Brightnessc ontrol
             brightnessctl
           # Obs?
-            xdg-desktop-portal-hyprland
           wl-clipboard
     ];
 
