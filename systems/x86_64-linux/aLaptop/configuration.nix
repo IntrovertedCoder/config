@@ -39,12 +39,12 @@
   # services.xserver.libinput.enable = true;
 
   # Docker
-  virtualisation = { # {{{
+  # virtualisation = { # {{{
     # docker = { # {{{
       # enable = true;
       # storageDriver = "btrfs";
     # }; # }}}
-    oci-containers.backend = "docker";
+    # oci-containers.backend = "docker";
     # oci-containers.containers = {
       # SearxNG = {
         # image = "searxng/searxng:latest";
@@ -62,7 +62,7 @@
         # ];
       # };
     # };
-  }; # }}}
+  # }; # }}}
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.arik = {
