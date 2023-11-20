@@ -8,10 +8,8 @@ with lib.plusultra;
     desktop.Hyprland.enable = true;
     desktop.addons.greetd.enable = true;
     apps = {
-      # Obs is still busted for some reason
-      obs = disabled;
-      element = disabled;
       CUPS = enabled;
+      waydroid = enabled;
     };
     suites = {
       art.enable = true;

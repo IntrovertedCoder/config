@@ -40,7 +40,6 @@
 
   # Docker
   virtualisation = { # {{{
-    waydroid.enable = true;
     # docker = { # {{{
       # enable = true;
       # storageDriver = "btrfs";
