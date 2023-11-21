@@ -43,9 +43,6 @@ in
 
   config = {
     environment.systemPackages = with pkgs; [
-      cowsay
-      fortune
-      lolcat
       propagatedIcon
         kickoff
         gparted
@@ -73,6 +70,9 @@ in
           ranger          # TUI file manager      # ranger
           fortune         # Random quote          # fortune
           btop            # Terminal task manager # btop
+          cowsay
+          fortune
+          lolcat
         # Phone stuff
           scrcpy
         # Video
