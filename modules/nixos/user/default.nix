@@ -44,7 +44,6 @@ in
   config = {
     environment.systemPackages = with pkgs; [
       propagatedIcon
-        kickoff
         gparted
         xorg.xhost # Allow for gparted sudo "xhost +SI:localuser:root"
         libnotify
