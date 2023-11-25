@@ -10,6 +10,7 @@ in
   };
 
   config = mkIf cfg.enable {
+    plusultra.apps.home.git.enable = true;
     plusultra.home.extraOptions.programs = {
       gitui = {
         enable = true;

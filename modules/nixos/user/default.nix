@@ -118,11 +118,6 @@ in
       # Home manager options
       extraOptions = {
         programs = {
-          git = {
-            enable = true;
-            userName = "IntrovertedCoder";
-            userEmail = "natrotnic@gmail.com";
-          };
         };
 
       };
