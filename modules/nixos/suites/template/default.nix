@@ -13,8 +13,8 @@ in
   config = mkIf cfg.enable {
     plusultra = {
       apps = {
-      };
-      home = {
+        home = {
+        };
       };
     };
   };
