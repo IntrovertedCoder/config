@@ -21,6 +21,7 @@ in
           exa = enabled;
           bat = enabled;
           xcp = enabled;
+          zoxide = enabled;
         };
       };
     };
