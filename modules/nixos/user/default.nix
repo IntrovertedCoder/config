@@ -121,24 +121,21 @@ in
 
       };
     };
-    plusultra.apps = {
-      home = {
-        fish.enable = true;
-        starship.enable = true;
-        discord.openASAR.enable = true;
-        alacritty.enable = true;
-        vim.enable = true;
-        zoxide.enable = true;
-        exa.enable = true;
-        bat.enable = true;
-        xcp.enable = true;
-        firefox.enable = true;
-        mpd.enable = true;
-        ncmpcpp.enable = true;
-        gitui.enable = true;
-        vial.enable = true;
-        gomuks.enable = true;
-        thunar.enable = true;
+    plusultra = {
+      apps = {
+        home = {
+          discord.openASAR.enable = true;
+          firefox.enable = true;
+          mpd.enable = true;
+          ncmpcpp.enable = true;
+          gitui.enable = true;
+          vial.enable = true;
+          gomuks.enable = true;
+          thunar.enable = true;
+        };
+      };
+      suites = {
+        terminal = enabled;
       };
     };
 
