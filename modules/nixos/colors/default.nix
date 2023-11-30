@@ -16,8 +16,8 @@ in
       RedNum            = mkOpt str "C7000C" "#C7000C";
       brightRedNum      = mkOpt str "FF0B1B" "#FF0B1B";
 
-      darkerGreenNum    = mkOpt str "235A00" "#3C9C00";
-      darkGreenNum      = mkOpt str "3C9C00" "#4CC700";
+      darkerGreenNum    = mkOpt str "235A00" "#235A00";
+      darkGreenNum      = mkOpt str "3C9C00" "#3C9C00";
       GreenNum          = mkOpt str "4CC700" "#4CC700";
       brightGreenNum    = mkOpt str "68FF0B" "#68FF0B";
 
