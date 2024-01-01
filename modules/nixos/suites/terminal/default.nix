@@ -18,7 +18,7 @@ in
           fish = enabled;
           starship = enabled;
           vim = enabled;
-          exa = enabled;
+          eza = enabled;
           bat = enabled;
           xcp = enabled;
           zoxide = enabled;

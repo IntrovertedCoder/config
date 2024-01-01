@@ -3,7 +3,7 @@
 
   inputs = {
     # NixPkgs (nixos-23.05)
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-23.05";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
 
     # NixPkgs Unstable (nixos-unstable)
     unstable.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -16,7 +16,7 @@
     };
 
     # Home Manager (release-22.05)
-    home-manager.url = "github:nix-community/home-manager/release-23.05";
+    home-manager.url = "github:nix-community/home-manager/release-23.11";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
 
@@ -131,6 +131,7 @@
         allowUnfree = true;
         permittedInsecurePackages = [
           "electron-20.3.11"
+          "electron-25.9.0"
           "nodejs-16.20.0"
           "python-2.7.18.6"
         ];

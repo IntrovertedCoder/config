@@ -15,7 +15,7 @@ in
       LOG_ICONS = "true";
     };
     environment.systemPackages = with pkgs; [ font-manager ];
-    fonts.fonts = with pkgs;
+    fonts.packages = with pkgs;
     [
       (nerdfonts.override { fonts = [ "Hack" ]; })
     ];
