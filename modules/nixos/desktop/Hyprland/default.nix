@@ -138,7 +138,7 @@ in
       # Example windowrule v1
       # windowrule = float, ^(alacritty)$
       windowrule = float, floating
-      windowrule = size 720 433, floating
+      windowrule = size 711 453, floating
       windowrule = center, floating
       windowrule = float, xfce-polkit
       # Example windowrule v2
