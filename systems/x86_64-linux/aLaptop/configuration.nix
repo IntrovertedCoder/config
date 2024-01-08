@@ -50,17 +50,6 @@
     # };
   # }; # }}}
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.arik = {
-    # shell = "/home/arik/.nix-profile/bin/fish";
-    isNormalUser = true;
-    extraGroups = [ "wheel" "video" "audio" "docker" ];
-    packages = with pkgs; [
-      firefox
-      # alacritty
-      kitty
-    ];
-  };
 
 
   # fileSystems."/home/arik/data" = {
