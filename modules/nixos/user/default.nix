@@ -130,6 +130,7 @@ in
           gitui.enable = true;
           vial.enable = true;
           thunar.enable = true;
+          zathura.enable = true;
         };
       };
       suites = {

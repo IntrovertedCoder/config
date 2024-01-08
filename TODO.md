@@ -3,7 +3,7 @@
  - [x] Firefox
  - [x] Ncmpcpp/mpd
  - [x] bat
- - [ ] zathura
+ - [x] zathura
  - [x] starship
  - [x] Groups
  - [x] figure out how to access colors in other files
