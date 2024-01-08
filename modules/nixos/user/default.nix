@@ -67,10 +67,8 @@ in
           tealdeer        # Rust tldr             # tldr
           wthrr           # Rust weather          # wthrr
           ranger          # TUI file manager      # ranger
-          fortune         # Random quote          # fortune
           btop            # Terminal task manager # btop
           cowsay
-          fortune
           lolcat
         # Phone stuff
           scrcpy
