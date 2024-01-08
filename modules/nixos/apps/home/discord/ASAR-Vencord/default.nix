@@ -15,5 +15,10 @@ in
         (discord.override {withOpenASAR = true; withVencord = true;})
       ];
     };
+    environment.systemPackages = [
+      (pkgs.writeShellScriptBin "wdiscord" ''
+        exec ${pkgs.discord}/bin/discord --enable-features=UseOzonePlatform --ozone-platform=wayland
+      '')
+    ];
   };
 }
