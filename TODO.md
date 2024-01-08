@@ -34,9 +34,9 @@
  - [ ]
 
 ## Display
- - [ ] dunst
+ - [x] dunst
  - [x] mako
- - [ ] Kickoff
+ - [x] Kickoff
 ### Hyprland
  - [ ] move pkgs from wayland section to hyprland file from home.nix
  - [ ] grab all the stuff for hyprland from configuration.nix
