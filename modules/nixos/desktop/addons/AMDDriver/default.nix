@@ -14,6 +14,7 @@ in
       rocm-opencl-icd
       rocm-opencl-runtime
       amdvlk
+      libvdpau-va-gl # Hardare Accelerated Video Playback
     ];
     hardware.opengl.driSupport = true;
     hardware.opengl.driSupport32Bit = true;

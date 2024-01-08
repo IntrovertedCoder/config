@@ -195,6 +195,9 @@ in
                     "privacy.window.maxInnerHeight" =                              "900";
                     "privacy.resistFingerprinting.block_mozAddonManager" =         "true";
                     "browser.display.use_system_colors" =                          "false";
+                  # Hardware Video Acceleration
+                    "gfx.webrender.all"                                            "true";
+                    "media.ffmpeg.vaapi.enabled"                                   "true";
               }; # }}}
               search = {
                 force = true;
