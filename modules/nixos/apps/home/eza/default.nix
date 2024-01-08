@@ -23,7 +23,7 @@ in
     plusultra.apps.home.fish.extraConfig = mkIf config.plusultra.apps.home.zoxide.enable ''
       function cd
         set cwd $PWD
-        zoxide $argv
+        z $argv
         if [ $PWD != $cwd ]
           eza -ax --icons --git
         end
