@@ -14,7 +14,7 @@ in
       eza = {
         enable = true;
       };
-      fish.shellAliases= mkIf config.plusultra.apps.home.fish.enable {
+      fish.shellAliases = mkIf config.plusultra.apps.home.fish.enable {
         ls = "eza -ax --icons --git $argv";
         ll = "eza -alhg --icons --git --octal-permissions $argv";
         tree = "eza -a --icons --tree --level 3 -F -I='.git.' --color=always $argv | less -r +g";
