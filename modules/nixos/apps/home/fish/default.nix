@@ -7,6 +7,9 @@ in
 {
   options.plusultra.apps.home.fish = with types; {
     enable = mkBoolOpt false "Whether or not to enable fish.";
+    extraConfig = mkOpt str "" "Additional configuration for fish shell.";
+    extraConfig1 = mkOpt str "" "Additional configuration for fish shell.";
+    extraConfig2 = mkOpt str "" "Additional configuration for fish shell.";
   };
 
   config = mkIf cfg.enable {
@@ -96,14 +99,9 @@ in
             end
           end
 
-          function cd
-            set cwd $PWD
-            # builtin cd $argv
-            z $argv
-            if [ $PWD != $cwd ]
-              exa -ax --icons --git
-            end
-          end
+          ${cfg.extraConfig}
+          ${cfg.extraConfig1}
+          ${cfg.extraConfig2}
 
           set NIX_PATH /home/arik/.nix-defexpr/channels $NIX_PATH
         ''; # }}}

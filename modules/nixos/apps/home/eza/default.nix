@@ -20,5 +20,14 @@ in
         tree = "eza -a --icons --tree --level 3 -F -I='.git.' --color=always $argv | less -r +g";
       };
     };
+    plusultra.apps.home.fish.extraConfig = mkIf config.plusultra.apps.home.zoxide.enable ''
+      function cd
+        set cwd $PWD
+        zoxide $argv
+        if [ $PWD != $cwd ]
+          eza -ax --icons --git
+        end
+      end
+    '';
   };
 }
