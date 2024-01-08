@@ -124,7 +124,6 @@ in
     plusultra = {
       apps = {
         home = {
-          discord.openASAR.enable = true;
           firefox.enable = true;
           mpd.enable = true;
           ncmpcpp.enable = true;
@@ -136,6 +135,7 @@ in
       };
       suites = {
         terminal = enabled;
+        communication = enabled;
       };
     };
 
