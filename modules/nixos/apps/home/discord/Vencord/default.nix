@@ -17,7 +17,7 @@ in
     };
     environment.systemPackages = [
       (pkgs.writeShellScriptBin "wdiscord" ''
-        exec ${pkgs.discord}/bin/discord --enable-features=UseOzonePlatform --ozone-platform=wayland
+        exec ${pkgs.discord{withOpenASAR = false; withVencord = true;}}/bin/discord --enable-features=UseOzonePlatform --ozone-platform=wayland
       '')
     ];
   };
