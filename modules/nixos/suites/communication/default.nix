@@ -16,6 +16,7 @@ in
         home = {
           discord.ASAR-Vencord = enabled;
           element = enabled;
+          signal = enabled;
         };
       };
     };
