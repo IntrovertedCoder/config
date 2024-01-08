@@ -129,7 +129,6 @@ in
           ncmpcpp.enable = true;
           gitui.enable = true;
           vial.enable = true;
-          gomuks.enable = true;
           thunar.enable = true;
         };
       };

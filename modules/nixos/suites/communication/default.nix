@@ -17,6 +17,7 @@ in
           discord.ASAR-Vencord = enabled;
           element = enabled;
           signal = enabled;
+          gomuks = enabled;
         };
       };
     };
