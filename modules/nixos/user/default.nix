@@ -55,7 +55,6 @@ in
           openai-whisper  # Audio to test
         # GUI Text editors
           sublime
-          obsidian
         # Office Stuff
           onlyoffice-bin
         # Terminal Tools
@@ -129,6 +128,7 @@ in
           vial.enable = true;
           thunar.enable = true;
           zathura.enable = true;
+          obsidian.enable = true;
         };
       };
       suites = {
