@@ -40,7 +40,7 @@ in
       workspace=DP-2,1
       monitor=DP-2,transform,3
       # Laptop Display
-      monitor=eDP-1,1920x1080@60,0x0,0.9
+      monitor=eDP-1,1920x1080@60,0x0,1
       # For running hypr in a x11 session
       monitor=X11-1,1900x1036,0x0,1
 
@@ -138,7 +138,7 @@ in
       # Example windowrule v1
       # windowrule = float, ^(alacritty)$
       windowrule = float, floating
-      windowrule = size 711 453, floating
+      windowrule = size 720 450, floating
       windowrule = center, floating
       windowrule = float, xfce-polkit
       # Example windowrule v2
