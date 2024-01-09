@@ -21,10 +21,10 @@
  - [x] greetd
  - [x] vial
  - [x] cups
- - [ ] pipewire
+ - [x] pipewire
     - [ ] maybe also include toggle for pulseaudio
  - [ ] GPU configurations
-    - [ ] Vulkan
+    - [?] Vulkan
     - [ ] again include options for nvidia/intel?
  - [ ] Docker
     - [ ] SearxNG
