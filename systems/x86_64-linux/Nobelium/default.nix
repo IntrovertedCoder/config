@@ -10,6 +10,9 @@ with lib.plusultra;
       CUPS = enabled;
       waydroid = enabled;
       obs = enabled;
+      home = {
+        steam = enabled;
+      };
     };
     suites = {
       art.enable = true;
