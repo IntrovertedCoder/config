@@ -24,6 +24,18 @@
       fsType = "vfat";
     };
 
+  fileSystems."/mnt/arch" = {
+    device = "/dev/disk/by-uuid/2d1da940-d863-496b-8664-970acdded644";
+    fsType = "btrfs";
+    options = [ "rw" "relatime" "ssd" "discard=async" "space_cache=v2"];
+  };
+
+  fileSystems."/mnt/Storage" = {
+    device = "/dev/disk/by-uuid/a4731065-6480-4c3a-85b4-6d2c16b5d350";
+    fsType = "btrfs";
+    options = [ "acl" "autodefrag" "nossd" "usebackuproot" "datacow" ];
+  };
+
   swapDevices =
     [ { device = "/dev/disk/by-uuid/171215ac-67e1-4f39-aa3e-85d296d7ecb0"; }
     ];
