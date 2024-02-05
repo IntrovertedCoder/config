@@ -24,6 +24,10 @@ with lib.plusultra;
     desktop = {
       Hyprland = {
         enable = true;
+        masterConfig = ''
+          orientation = center
+          mfact = 0.5
+        '';
         extraConfig3  = ''
           workspace=1, monitor:DP-1
           workspace=2, monitor:DP-2

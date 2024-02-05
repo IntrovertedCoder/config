@@ -17,6 +17,7 @@ in
     extraConfig1 = mkOpt str "" "Additional configuration for the Hyprland config file.";
     extraConfig2 = mkOpt str "" "Additional configuration for the Hyprland config file.";
     extraConfig3 = mkOpt str "" "Additional configuration for the Hyprland config file.";
+    masterConfig = mkOpt str "" "Additional configuration for the Hyprland config file.";
   };
 
   config = mkIf cfg.enable {
@@ -122,6 +123,7 @@ in
       master {
           # See https://wiki.hyprland.org/Configuring/Master-Layout/ for more
           new_is_master = false
+          ${cfg.masterConfig}
       }
 
       gestures {
