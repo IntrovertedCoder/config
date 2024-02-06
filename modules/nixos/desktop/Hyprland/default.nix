@@ -138,13 +138,13 @@ in
       }
 
       # Example windowrule v1
-      # windowrule = float, ^(alacritty)$
+      # windowrule = float, ^(foot)$
       windowrule = float, floating
       windowrule = size 720 450, floating
       windowrule = center, floating
       windowrule = float, xfce-polkit
       # Example windowrule v2
-      # windowrulev2 = float,class:^(alacritty)$,title:^(alacritty)$
+      # windowrulev2 = float,class:^(foot)$,title:^(foot)$
       # See https://wiki.hyprland.org/Configuring/Window-Rules/ for more
 
 
@@ -155,7 +155,7 @@ in
       # Custom keybinds
       # bind = $mainMOD, , exec,
       ## General
-      bind = $mainMod, return, exec, alacritty
+      bind = $mainMod, return, exec, foot
       bind = $mainMod, T, exec, firefox
       bind = $mainMod SHIFT, T , exec, firefox --private-window
       bind = $mainMod SHIFT, Q, killactive
@@ -195,9 +195,9 @@ in
       bind = $mainMod, F12, exec, brightnessctl s +17
 
       ## Floating windows
-      bind = $mainMod, F1, exec, alacritty -o window.opacity=0.5 --class floating,ranger -e ranger
-      bind = $mainMod, F2, exec, alacritty -o window.opacity=0.5 --class floating,btop -e btop
-      bind = $mainMod, F3, exec, alacritty -o window.opacity=0.5 --class floating,ncmpcpp -e ncmpcpp
+      bind = $mainMod, F1, exec, foot -o colors.alpha=0.5 --app-id floating,ranger -e ranger
+      bind = $mainMod, F2, exec, foot -o colors.alpha=0.5 --app-id floating,btop -e btop
+      bind = $mainMod, F3, exec, foot -o colors.alpha=0.5 --app-id floating,ncmpcpp -e ncmpcpp
       bind = $mainMod, F4, exec, eww open --toggle dock && eww open --toggle dock-closer
 
       ### Screenkey

@@ -14,7 +14,7 @@ in
     plusultra = {
       apps = {
         home = {
-          alacritty = enabled;
+          foot = enabled;
           fish = enabled;
           starship = enabled;
           vim = enabled;
