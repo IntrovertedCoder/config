@@ -9,7 +9,7 @@
  - [x] set generation limit
  - [x] Try searxng
     - [ ] Fix SearxNG
- - [ ] Put current network usage on eww bar
+ - [x] Put current network usage on eww bar
  - [ ] fix gpu usage on bar, radeontop doesn't use the right gpu
  - [ ] Setup qemu
     - [ ] passthrough cpu igpu?
