@@ -1,3 +1,17 @@
+# Desktop
+ - [ ] Easyeffects config
+ - [ ] eww config
+ - [ ] heroic games / gaming suite
+ - [ ] Add g workspace?
+ - [ ] MangoHud
+ - [x] Install foot/yazi
+ - [ ] Fix flake missing
+ - [ ] set generation limit
+ - [ ] Try searxng
+ - [ ] Put current network usage on eww bar
+ - [ ] fix gpu usage on bar, radeontop doesn't use the right gpu
+ - [ ]
+
 # User
  - [x] Fonts
  - [x] Firefox
