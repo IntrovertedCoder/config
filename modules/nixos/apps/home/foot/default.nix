@@ -18,6 +18,7 @@ in
           dpi-aware = "yes";
         };
         colors = {
+          flash-alpha=0.0;
           background = config.plusultra.color.BlackNum;
           foreground = config.plusultra.color.WhiteNum;
 
