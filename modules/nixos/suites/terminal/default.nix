@@ -22,6 +22,7 @@ in
           bat = enabled;
           xcp = enabled;
           zoxide = enabled;
+          icat = enabled;
         };
       };
     };
