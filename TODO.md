@@ -7,9 +7,13 @@
  - [x] Install foot/yazi
  - [ ] Fix flake missing
  - [ ] set generation limit
- - [ ] Try searxng
+ - [x] Try searxng
+    - [ ] Fix SearxNG
  - [ ] Put current network usage on eww bar
  - [ ] fix gpu usage on bar, radeontop doesn't use the right gpu
+ - [ ] Setup qemu
+    - [ ] passthrough cpu igpu?
+ - [ ] setup 2 vms for linux stuff
  - [ ]
 
 # User
