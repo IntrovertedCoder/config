@@ -2,7 +2,7 @@
  - [ ] Easyeffects config
  - [ ] eww config
  - [ ] heroic games / gaming suite
- - [ ] Add g workspace?
+ - [x] Add g workspace?
  - [ ] MangoHud
  - [x] Install foot/yazi
  - [ ] Fix flake missing

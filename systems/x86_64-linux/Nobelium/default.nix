@@ -39,6 +39,9 @@ with lib.plusultra;
           workspace=8, monitor:DP-2
           workspace=9, monitor:DP-1
           workspace=0, monitor:DP-2
+          workspace = 11, monitor=DP-1
+          bind = $mainMod, g, workspace, 11
+          bind = $mainMod SHIFT, g, movetoworkspacesilent, 11
         '';
       };
     };
