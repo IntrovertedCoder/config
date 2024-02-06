@@ -11,11 +11,11 @@ with lib.plusultra;
       waydroid = enabled;
       obs = enabled;
       home = {
-        steam = enabled;
       };
     };
     suites = {
       art.enable = true;
+      gaming = enabled;
     };
     user = {
       name = "arik";
