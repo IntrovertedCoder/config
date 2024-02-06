@@ -6,7 +6,7 @@
  - [x] MangoHud
  - [x] Install foot/yazi
  - [ ] Fix flake missing
- - [ ] set generation limit
+ - [x] set generation limit
  - [x] Try searxng
     - [ ] Fix SearxNG
  - [ ] Put current network usage on eww bar

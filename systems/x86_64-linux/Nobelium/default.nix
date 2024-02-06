@@ -68,9 +68,13 @@ with lib.plusultra;
     comma
   ];
 
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 10d";
+  };
+
   # Networking
-    # WPA_Supplicant
-      # networking.wireless.enable = true;
     # Network Manager
       networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
       plusultra.user.extraGroups = [ "networkmanager" ];
