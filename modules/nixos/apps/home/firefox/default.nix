@@ -201,7 +201,7 @@ in
               }; # }}}
               search = {
                 force = true;
-                default = "SearXNG_Local";
+                default = "Google";
                 engines = {
                   "SearXNG_Rubidium" = {
                     urls = [{
