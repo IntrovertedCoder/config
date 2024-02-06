@@ -16,6 +16,7 @@ in
         home = {
           steam = enabled;
           heroic = enabled;
+          mangohud = enabled;
         };
       };
     };
