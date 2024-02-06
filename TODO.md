@@ -1,9 +1,9 @@
 # Desktop
  - [ ] Easyeffects config
  - [ ] eww config
- - [ ] heroic games / gaming suite
+ - [x] heroic games / gaming suite
  - [x] Add g workspace?
- - [ ] MangoHud
+ - [x] MangoHud
  - [x] Install foot/yazi
  - [ ] Fix flake missing
  - [ ] set generation limit
