@@ -85,7 +85,7 @@ in
         memory_usage = {
           disabled = false;
           threshold = -1;
-          format = "[ $ram](${config.plusultra.color.darkerGreen})";
+          format = "[󰍛 $ram](${config.plusultra.color.darkerGreen})";
         };
 
         status = {
