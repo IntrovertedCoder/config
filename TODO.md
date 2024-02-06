@@ -10,7 +10,7 @@
  - [x] Try searxng
     - [ ] Fix SearxNG
  - [x] Put current network usage on eww bar
- - [ ] fix gpu usage on bar, radeontop doesn't use the right gpu
+ - [x] fix gpu usage on bar, radeontop doesn't use the right gpu
  - [ ] Setup qemu
     - [ ] passthrough cpu igpu?
  - [ ] setup 2 vms for linux stuff
