@@ -65,7 +65,7 @@ in
           neofetch        # Showoff               # neofetch
           tealdeer        # Rust tldr             # tldr
           wthrr           # Rust weather          # wthrr
-          ranger          # TUI file manager      # ranger
+          yazi            # TUI file manager      # yazi
           btop            # Terminal task manager # btop
           cowsay
           lolcat

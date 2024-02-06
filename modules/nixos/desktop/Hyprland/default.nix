@@ -195,7 +195,7 @@ in
       bind = $mainMod, F12, exec, brightnessctl s +17
 
       ## Floating windows
-      bind = $mainMod, F1, exec, foot -o colors.alpha=0.5 --app-id floating,ranger -e ranger
+      bind = $mainMod, F1, exec, foot -o colors.alpha=0.5 --app-id floating,yazi -e yazi
       bind = $mainMod, F2, exec, foot -o colors.alpha=0.5 --app-id floating,btop -e btop
       bind = $mainMod, F3, exec, foot -o colors.alpha=0.5 --app-id floating,ncmpcpp -e ncmpcpp
       bind = $mainMod, F4, exec, eww open --toggle dock && eww open --toggle dock-closer
