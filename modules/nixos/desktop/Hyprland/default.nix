@@ -24,7 +24,6 @@ in
     # Other needed apps
     plusultra.desktop.addons= {
       mako.enable = true;
-      swaylock.enable = true;
       gnomePolkit.enable = true;
       kickoff.enable = true;
       pipewire.enable = true;
