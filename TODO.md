@@ -15,6 +15,7 @@
     - [ ] passthrough cpu igpu?
  - [ ] setup 2 vms for linux stuff
  - [ ] Parsec
+ - [ ] See how session manager from ulauncher suspended the system
  - [ ]
 
 # User
