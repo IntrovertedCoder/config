@@ -13,11 +13,12 @@ in
     plusultra.home.extraOptions = {
       home.packages = with pkgs; [
         (discord.override {withOpenASAR = false; withVencord = true;})
+        vesktop
       ];
     };
     environment.systemPackages = [
       (pkgs.writeShellScriptBin "wdiscord" ''
-        exec ${pkgs.discord{withOpenASAR = false; withVencord = true;}}/bin/discord --enable-features=UseOzonePlatform --ozone-platform=wayland
+        exec ${pkgs.discord.override {withOpenASAR = false; withVencord = true;}}/bin/discord --enable-features=UseOzonePlatform --ozone-platform=wayland
       '')
     ];
   };
