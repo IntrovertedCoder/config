@@ -15,6 +15,7 @@ in
       settings = {
         main = {
           # font = "${config.plusultra.font.Font}:size=9";
+          font = "monospace:size=9";
           dpi-aware = "yes";
         };
         colors = {
