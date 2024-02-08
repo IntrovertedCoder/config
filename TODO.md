@@ -14,6 +14,7 @@
  - [ ] Setup qemu
     - [ ] passthrough cpu igpu?
  - [ ] setup 2 vms for linux stuff
+ - [ ] Parsec
  - [ ]
 
 # User
