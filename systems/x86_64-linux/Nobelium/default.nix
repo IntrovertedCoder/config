@@ -10,6 +10,7 @@ with lib.plusultra;
       CUPS = enabled;
       waydroid = enabled;
       obs = enabled;
+      virtmanager = enabled;
       home = {
       };
     };
@@ -45,6 +46,11 @@ with lib.plusultra;
         '';
       };
     };
+    # virtualisation.kvm = {
+      # enable = true;
+      # vfioIds = [ "1002:164e" "1002:1640" ];
+      # platform = "amd";
+    # };
   };
   lib.home-manager = {};
 
