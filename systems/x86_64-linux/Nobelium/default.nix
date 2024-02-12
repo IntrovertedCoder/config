@@ -11,6 +11,7 @@ with lib.plusultra;
       waydroid = enabled;
       obs = enabled;
       virtmanager = enabled;
+      vial = enabled;
       home = {
       };
     };
