@@ -132,6 +132,7 @@ in
           parsec = enabled;
           easyeffects = enabled;
         };
+        flake = enabled;
       };
       suites = {
         terminal = enabled;

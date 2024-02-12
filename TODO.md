@@ -5,7 +5,7 @@
  - [x] Add g workspace?
  - [x] MangoHud
  - [x] Install foot/yazi
- - [ ] Fix flake missing
+ - [x] Fix flake missing
  - [x] set generation limit
  - [x] Try searxng
     - [ ] Fix SearxNG
