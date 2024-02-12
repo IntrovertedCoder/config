@@ -130,6 +130,7 @@ in
           zathura.enable = true;
           obsidian.enable = true;
           parsec = enabled;
+          easyeffects = enabled;
         };
       };
       suites = {

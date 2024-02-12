@@ -18,6 +18,7 @@ in
     extraConfig2 = mkOpt str "" "Additional configuration for the Hyprland config file.";
     extraConfig3 = mkOpt str "" "Additional configuration for the Hyprland config file.";
     masterConfig = mkOpt str "" "Additional configuration for the Hyprland config file.";
+    easyeffects = mkOpt str "" "Additional configuration for the Hyprland config file.";
   };
 
   config = mkIf cfg.enable {
@@ -49,7 +50,7 @@ in
 
       # Execute your favorite apps at launch
       # exec-once = waybar & hyprpaper & firefox
-      exec-once = eww open mainMonitor & easyeffects --gapplication-service
+      exec-once = eww open mainMonitor
 
       # Some default env vars.
       env = XCURSOR_SIZE,24
@@ -264,6 +265,7 @@ in
       ${cfg.extraConfig1}
       ${cfg.extraConfig2}
       ${cfg.extraConfig3}
+      ${cfg.easyeffects}
     ''; # }}}
 
     programs.hyprland = {

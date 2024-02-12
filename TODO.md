@@ -1,5 +1,5 @@
 # Desktop
- - [ ] Easyeffects config
+ - [x] Easyeffects config
  - [ ] eww config
  - [x] heroic games / gaming suite
  - [x] Add g workspace?
