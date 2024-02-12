@@ -129,6 +129,7 @@ in
           thunar.enable = true;
           zathura.enable = true;
           obsidian.enable = true;
+          parsec = enabled;
         };
       };
       suites = {
