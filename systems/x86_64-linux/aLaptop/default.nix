@@ -7,6 +7,7 @@ with lib.plusultra;
   plusultra = {
     desktop.Hyprland.enable = true;
     desktop.addons.greetd.enable = true;
+    desktop.addons.swaylock = enabled;
     apps = {
       CUPS = enabled;
       waydroid = enabled;
