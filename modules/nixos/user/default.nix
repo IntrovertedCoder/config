@@ -131,6 +131,7 @@ in
           obsidian.enable = true;
           parsec = enabled;
           easyeffects = enabled;
+          ssh = enabled;
         };
         flake = enabled;
       };

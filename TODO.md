@@ -13,11 +13,11 @@
  - [x] fix gpu usage on bar, radeontop doesn't use the right gpu
  - [ ] Setup qemu
     - [ ] passthrough cpu igpu?
- - [ ] setup 2 vms for linux stuff
+    - [ ] setup 2 vms for linux stuff
  - [x] Parsec
  - [x] See how session manager from ulauncher suspended the system
  - [ ] Set default apps
- - [ ] Have nixos make ~/.ssh/config
+ - [x] Have nixos make ~/.ssh/config
  - [ ] https://nixos.wiki/wiki/Accelerated_Video_Playback
  - [ ]
 
