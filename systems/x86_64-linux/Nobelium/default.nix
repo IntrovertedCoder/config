@@ -88,7 +88,8 @@ with lib.plusultra;
       # platform = "amd";
     # };
   };
-  lib.home-manager = {};
+  lib.home-manager = {
+  };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.arik = {

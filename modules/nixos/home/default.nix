@@ -15,6 +15,7 @@ in
     configFile = mkOpt attrs { }
       (mdDoc "A set of files to be managed by home-manager's `xdg.configFile`.");
     extraOptions = mkOpt attrs { } "Options to pass directly to home-manager.";
+    defaultApplications = mkOpt attrs { } "Options to pass directly to xdg.mimeApps.defaultApplications.";
   };
 
   config = {
@@ -23,6 +24,8 @@ in
       home.file = mkAliasDefinitions options.plusultra.home.file;
       xdg.enable = true;
       xdg.configFile = mkAliasDefinitions options.plusultra.home.configFile;
+      xdg.mimeApps.enable = true;
+      xdg.mimeApps.defaultApplications = mkAliasDefinitions options.plusultra.home.defaultApplications;
     };
 
     home-manager = {

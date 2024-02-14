@@ -72,7 +72,6 @@ in
         # Phone stuff
           scrcpy
         # Video
-          vlc
           libsForQt5.koko
         # Audio
           audacity
@@ -132,6 +131,7 @@ in
           parsec = enabled;
           easyeffects = enabled;
           ssh = enabled;
+          vlc = enabled;
         };
         flake = enabled;
       };
