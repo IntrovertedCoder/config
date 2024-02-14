@@ -10,10 +10,10 @@ in
   };
 
   config = mkIf cfg.enable {
-    environment.systemPackages = with pkgs; [ steam ];
+    # environment.systemPackages = with pkgs; [ steam ];
     # plusultra.home.extraOptions.home.packages = with pkgs; [ steam ];
-    # programs.steam = {
-      # enable = true;
-    # };
+    programs.steam = {
+      enable = true;
+    };
   };
 }
