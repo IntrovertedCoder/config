@@ -75,12 +75,6 @@ with lib.plusultra;
     comma
   ];
 
-  nix.gc = {
-    automatic = true;
-    dates = "weekly";
-    options = "--delete-older-than 10d";
-  };
-
   # Networking
     # Network Manager
       networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
