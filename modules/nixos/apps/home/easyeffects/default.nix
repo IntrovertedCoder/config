@@ -16,9 +16,9 @@ in
       enable = true;
       preset = "Harman IE 2019 V2 + Bass Bost";
     };
-    plusultra.home.file = {
+    plusultra.home.configFile = {
       # Harman {{{
-      ".config/easyeffects/output/Harman IE 2019 V2 + Bass Bost.json".text = ''
+      "easyeffects/output/Harman IE 2019 V2 + Bass Bost.json".text = ''
 {
     "output": {
         "autogain#0": {
@@ -328,7 +328,7 @@ in
 }
       ''; # }}}
       # IEF {{{
-      ".config/easyeffects/output/IEF Neutral + Bass Bost.json".text = ''
+      "easyeffects/output/IEF Neutral + Bass Bost.json".text = ''
         {
     "output": {
         "autogain": {
@@ -585,7 +585,7 @@ in
         }
         ''; # }}}
         # Microphone {{{
-      ".config/easyeffects/input/Microphone.json".text = ''
+      "easyeffects/input/Microphone.json".text = ''
         {
     "input": {
         "autogain": {

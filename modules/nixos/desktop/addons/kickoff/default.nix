@@ -12,8 +12,8 @@ in
   config = mkIf cfg.enable {
     # environment.systemPackages = with pkgs; [ kickoff ];
     plusultra.home.extraOptions.home.packages = with pkgs; [ kickoff ];
-    plusultra.home.file = {
-      ".config/kickoff/config.toml".text = ''
+    plusultra.home.configFile = {
+      "kickoff/config.toml".text = ''
       # Kickoff default config
 
       # space between window border and the content in pixel
