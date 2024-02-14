@@ -12,6 +12,7 @@
  - [x] Put current network usage on eww bar
  - [x] fix gpu usage on bar, radeontop doesn't use the right gpu
  - [ ] Setup qemu
+ - [x] Setup virt-manager
     - [ ] passthrough cpu igpu?
     - [ ] setup 2 vms for linux stuff
  - [x] Parsec
