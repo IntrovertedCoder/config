@@ -19,6 +19,7 @@
  - [ ] Set default apps
  - [x] Have nixos make ~/.ssh/config
  - [ ] https://nixos.wiki/wiki/Accelerated_Video_Playback
+ - [ ] Remove everything from configuration.nix
  - [ ]
 
 # User
