@@ -65,7 +65,6 @@ in
           neofetch        # Showoff               # neofetch
           tealdeer        # Rust tldr             # tldr
           wthrr           # Rust weather          # wthrr
-          yazi            # TUI file manager      # yazi
           btop            # Terminal task manager # btop
           cowsay
           lolcat
@@ -132,6 +131,7 @@ in
           easyeffects = enabled;
           ssh = enabled;
           vlc = enabled;
+          yazi = enabled;
         };
         flake = enabled;
       };
