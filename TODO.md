@@ -18,7 +18,7 @@
  - [x] See how session manager from ulauncher suspended the system
  - [ ] Set default apps
  - [x] Have nixos make ~/.ssh/config
- - [ ] https://nixos.wiki/wiki/Accelerated_Video_Playback
+ - [x] https://nixos.wiki/wiki/Accelerated_Video_Playback
  - [x] Remove everything from configuration.nix
  - [ ]
 
