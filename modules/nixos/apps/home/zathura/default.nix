@@ -24,5 +24,12 @@ in
         font = config.plusultra.font.Font;
       };
     };
+    plusultra.home.defaultApplications = {
+      "application/postcript" = [ "Zathura.desktop" ];
+      "application/x+fictionbook+xml" = [ "Zathura.desktop" ];
+      "application/epub+zip" = [ "Zathura.desktop" ];
+      "application/pdf" = [ "Zathura.desktop" ];
+      "application/x-tar" = [ "Zathura.desktop" ];
+    };
   };
 }
