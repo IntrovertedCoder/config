@@ -47,7 +47,7 @@ ueberzug_offset = [ 0, 0, 0, 0 ]
 
 [opener]
 edit = [
-	{ exec = '[ -n "$EDITOR" ] && $EDITOR "$@"', desc = "$EDITOR", block = true, for = "unix" },
+	{ exec = '[ -n "vim" ] && vim "$@"', desc = "vim", block = true, for = "unix" },
 	{ exec = 'code "%*"', orphan = true, for = "windows" },
 ]
 open = [
