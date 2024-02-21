@@ -14,7 +14,7 @@ in
     plusultra = {
       apps = {
         home = {
-          alacritty = enabled;
+          foot = enabled;
           fish = enabled;
           starship = enabled;
           vim = enabled;
@@ -22,6 +22,7 @@ in
           bat = enabled;
           xcp = enabled;
           zoxide = enabled;
+          icat = enabled;
         };
       };
     };

@@ -139,6 +139,7 @@
 
       overlays = with inputs; [
         nur.overlay
+        flake.overlays.default
       ];
       systems.modules.nixos = with inputs; [
         home-manager.nixosModules.home-manager

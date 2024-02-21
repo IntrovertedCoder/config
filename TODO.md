@@ -1,3 +1,27 @@
+# Desktop
+ - [x] Easyeffects config
+ - [ ] eww config
+ - [x] heroic games / gaming suite
+ - [x] Add g workspace?
+ - [x] MangoHud
+ - [x] Install foot/yazi
+ - [x] Fix flake missing
+ - [x] set generation limit
+ - [x] Try searxng
+    - [ ] Fix SearxNG
+ - [x] Put current network usage on eww bar
+ - [x] fix gpu usage on bar, radeontop doesn't use the right gpu
+ - [c] Setup virt-manager (This works without gpu passthrough)
+    - [ ] passthrough cpu igpu?
+    - [ ] setup 2 vms for linux stuff
+ - [x] Parsec
+ - [x] See how session manager from ulauncher suspended the system
+ - [ ] Set default apps
+ - [x] Have nixos make ~/.ssh/config
+ - [x] https://nixos.wiki/wiki/Accelerated_Video_Playback
+ - [x] Remove everything from configuration.nix
+ - [ ]
+
 # User
  - [x] Fonts
  - [x] Firefox

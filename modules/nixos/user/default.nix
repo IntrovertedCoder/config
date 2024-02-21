@@ -63,14 +63,12 @@ in
           neofetch        # Showoff               # neofetch
           tealdeer        # Rust tldr             # tldr
           wthrr           # Rust weather          # wthrr
-          ranger          # TUI file manager      # ranger
           btop            # Terminal task manager # btop
           cowsay
           lolcat
         # Phone stuff
           scrcpy
         # Video
-          vlc
           libsForQt5.koko
         # Audio
           audacity
@@ -127,8 +125,17 @@ in
           thunar.enable = true;
           zathura.enable = true;
           obsidian.enable = true;
+<<<<<<< HEAD
           gparted.enable = true;
+=======
+          parsec = enabled;
+          easyeffects = enabled;
+          ssh = enabled;
+          vlc = enabled;
+          yazi = enabled;
+>>>>>>> 1547fe31cac9aea71a537a987c7016a362ea40c3
         };
+        flake = enabled;
       };
       suites = {
         terminal = enabled;
