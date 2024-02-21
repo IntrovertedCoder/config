@@ -22,6 +22,9 @@
  - [x] Remove everything from configuration.nix
  - [ ]
 
+# Laptop
+ - [ ] Disable laptop keyboard when split is plugged in?
+
 # User
  - [x] Fonts
  - [x] Firefox
