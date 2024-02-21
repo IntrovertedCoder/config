@@ -125,15 +125,12 @@ in
           thunar.enable = true;
           zathura.enable = true;
           obsidian.enable = true;
-<<<<<<< HEAD
           gparted.enable = true;
-=======
           parsec = enabled;
           easyeffects = enabled;
           ssh = enabled;
           vlc = enabled;
           yazi = enabled;
->>>>>>> 1547fe31cac9aea71a537a987c7016a362ea40c3
         };
         flake = enabled;
       };
