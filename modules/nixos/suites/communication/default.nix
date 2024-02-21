@@ -18,6 +18,7 @@ in
           element = enabled;
           signal = enabled;
           gomuks = enabled;
+          teams = enabled;
         };
       };
     };
