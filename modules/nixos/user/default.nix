@@ -44,8 +44,6 @@ in
   config = {
     environment.systemPackages = with pkgs; [
       propagatedIcon
-        gparted
-        xorg.xhost # Allow for gparted sudo "xhost +SI:localuser:root"
         libnotify
         # Python Stuff
           python311
@@ -129,6 +127,7 @@ in
           thunar.enable = true;
           zathura.enable = true;
           obsidian.enable = true;
+          gparted.enable = true;
         };
       };
       suites = {
