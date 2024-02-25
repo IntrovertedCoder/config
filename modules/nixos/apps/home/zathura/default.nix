@@ -22,6 +22,8 @@ in
         completion-bg = config.plusultra.color.brightBlack;
         completion-fg = config.plusultra.color.Gray;
         font = config.plusultra.font.Font;
+
+        selection-clipboard = "clipboard";
       };
     };
     plusultra.home.defaultApplications = {
