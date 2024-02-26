@@ -12,6 +12,7 @@ in
   config = mkIf cfg.enable {
     # environment.systemPackages = with pkgs; [ wine ];
     plusultra.home.extraOptions.home.packages = with pkgs; [
+      wineWowPackages.stable
       winetricks
     ];
   };
