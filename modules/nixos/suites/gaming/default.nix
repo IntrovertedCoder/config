@@ -17,6 +17,7 @@ in
           steam = enabled;
           heroic = enabled;
           mangohud = enabled;
+          lutris = enabled;
         };
       };
     };
