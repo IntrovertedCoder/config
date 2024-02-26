@@ -18,6 +18,7 @@ in
           heroic = enabled;
           mangohud = enabled;
           lutris = enabled;
+          wine = enabled;
         };
       };
     };
