@@ -24,6 +24,8 @@ in
         font = config.plusultra.font.Font;
 
         selection-clipboard = "clipboard";
+
+        continuous-hist-save = "true";
       };
     };
     plusultra.home.defaultApplications = {
