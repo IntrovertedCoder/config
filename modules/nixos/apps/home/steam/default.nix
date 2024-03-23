@@ -11,7 +11,10 @@ in
 
   config = mkIf cfg.enable {
     # environment.systemPackages = with pkgs; [ steam ];
-    # plusultra.home.extraOptions.home.packages = with pkgs; [ steam ];
+    plusultra.home.extraOptions.home.packages = with pkgs; [
+      # steam
+      gamemode
+    ];
     programs.steam = {
       enable = true;
     };
