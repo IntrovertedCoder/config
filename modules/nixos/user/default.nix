@@ -98,6 +98,7 @@ in
             brightnessctl
           # Obs?
           wl-clipboard
+          ffmpeg
     ];
 
     plusultra.home = {
