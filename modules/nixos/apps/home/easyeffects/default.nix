@@ -22,7 +22,7 @@ in
 {
     "output": {
         "autogain#0": {
-            "bypass": false,
+            "bypass": true,
             "input-gain": 0.0,
             "maximum-history": 15,
             "output-gain": 0.0,
@@ -48,8 +48,8 @@ in
             "boost-threshold": -72.0,
             "bypass": false,
             "dry": -100.0,
-            "hpf-frequency": 10.0,
-            "hpf-mode": "off",
+            "hpf-frequency": 200.0,
+            "hpf-mode": "36 dB/oct",
             "input-gain": 0.0,
             "knee": -6.0,
             "lpf-frequency": 20000.0,
@@ -80,7 +80,7 @@ in
             "bypass": false,
             "dry": -100.0,
             "hpf-frequency": 200.0,
-            "hpf-mode": "12 dB/oct",
+            "hpf-mode": "36 dB/oct",
             "input-gain": 0.0,
             "knee": -6.0,
             "lpf-frequency": 20000.0,
@@ -326,6 +326,7 @@ in
         ]
     }
 }
+
       ''; # }}}
       # IEF {{{
       "easyeffects/output/IEF Neutral + Bass Bost.json".text = ''
