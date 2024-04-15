@@ -132,6 +132,7 @@ in
           ssh = enabled;
           vlc = enabled;
           yazi = enabled;
+          mullvad = enabled;
         };
         flake = enabled;
       };
