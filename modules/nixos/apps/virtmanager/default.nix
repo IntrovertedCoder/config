@@ -10,6 +10,7 @@ in
   };
 
   config = mkIf cfg.enable {
+    environment.systemPackages = with pkgs; [ virt-manager qemu ];
     virtualisation.libvirtd.enable = true;
     programs.virt-manager.enable = true;
     plusultra = {

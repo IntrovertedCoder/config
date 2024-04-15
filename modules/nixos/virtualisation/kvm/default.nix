@@ -22,7 +22,7 @@ in {
   config = mkIf cfg.enable {
     boot = {
       kernelModules = [
-        "kvm-${cfg.platform}"
+        # "kvm-${cfg.platform}"
         "vfio_virqfd"
         "vfio_pci"
         "vfio_iommu_type1"
@@ -30,9 +30,9 @@ in {
       ];
       kernelParams = [
         "${cfg.platform}_iommu=on"
-        "${cfg.platform}_iommu=pt"
+        # "${cfg.platform}_iommu=pt"
         "kvm.ignore_msrs=1"
-        # "vfio-pci.ids=${concatStringsSep "," cfg.vfioIds}"
+        "vfio-pci.ids=${concatStringsSep "," cfg.vfioIds}"
       ];
       extraModprobeConfig =
         optionalString (length cfg.vfioIds > 0)
@@ -42,10 +42,10 @@ in {
         '';
     };
 
-    systemd.tmpfiles.rules = [
-      "f /dev/shm/looking-glass 0660 ${user.name} qemu-libvirtd -"
-      "f /dev/shm/scream 0660 ${user.name} qemu-libvirtd -"
-    ];
+    # systemd.tmpfiles.rules = [
+      # "f /dev/shm/looking-glass 0660 ${user.name} qemu-libvirtd -"
+      # "f /dev/shm/scream 0660 ${user.name} qemu-libvirtd -"
+    # ];
 
     environment.systemPackages = with pkgs; [
       virt-manager
