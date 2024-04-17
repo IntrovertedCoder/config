@@ -43,7 +43,7 @@ with lib.plusultra;
     desktop.addons.greetd.enable = true;
     apps = {
       CUPS = enabled;
-      waydroid = enabled;
+      waydroid = disabled;
       obs = enabled;
       virtmanager = enabled;
       vial = enabled;
