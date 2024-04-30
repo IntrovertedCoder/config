@@ -91,6 +91,8 @@ with lib.plusultra;
   lib.home-manager = {
   };
 
+  virtualisation.docker.enable = true;
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.arik = {
     # shell = "/home/arik/.nix-profile/bin/fish";
