@@ -133,6 +133,7 @@ in
           vlc = enabled;
           yazi = enabled;
           mullvad = enabled;
+          RadarOmega = enabled;
         };
         flake = enabled;
       };
