@@ -7,7 +7,7 @@ let
 
   src = pkgs.fetchurl {
     url = "https://dl.todesktop.com/200402kk4yak2og/linux/appImage/x64";
-    sha256 = "1a706e95e09a100574b283a890fe6e19bcdaaf332de38758bbaf9bc83ab17ea6";
+    sha256 = "69c860166958c3856479c455b5730e26df0906f2f490ca74a1d4280ce0c0c9c8";
   };
 
   appimageContents = pkgs.appimageTools.extractType2 { inherit name src; };
