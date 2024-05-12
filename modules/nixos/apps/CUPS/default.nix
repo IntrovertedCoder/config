@@ -14,5 +14,6 @@ in
     services.avahi.enable = true;
     services.avahi.nssmdns = true;
     services.avahi.openFirewall = true;
+    services.printing.drivers = [ pkgs.brlaser ];
   };
 }
