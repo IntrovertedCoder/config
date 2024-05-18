@@ -48,6 +48,7 @@ with lib.plusultra;
       virtmanager = enabled;
       vial = enabled;
       home = {
+        piper = enabled;
       };
     };
     suites = {
