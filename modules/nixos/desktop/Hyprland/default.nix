@@ -170,7 +170,7 @@ in
       # G11
       bind = ,XF86Launch6, exec, mpc next
       # G12
-      bind = ,XF86Launch7, exec, echo hi
+      bind = ,XF86Launch7, exec, mpc toggle -p 6601
       # G13
       bind = ,XF86Launch8, exec, echo hi
       # G14
@@ -198,6 +198,7 @@ in
       bind = $mainMod, F1, exec, foot -o colors.alpha=0.5 --app-id floating,yazi -e yazi
       bind = $mainMod, F2, exec, foot -o colors.alpha=0.5 --app-id floating,btop -e btop
       bind = $mainMod, F3, exec, foot -o colors.alpha=0.5 --app-id floating,ncmpcpp -e ncmpcpp
+      bind = $mainMod SHIFT, F3, exec, foot -o colors.alpha=0.5 --app-id floating,ncmpcpp -e ncmpcpp -p 6601
       bind = $mainMod, F4, exec, eww open --toggle dock && eww open --toggle dock-closer
 
       ### Screenkey

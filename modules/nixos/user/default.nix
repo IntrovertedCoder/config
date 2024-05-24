@@ -120,6 +120,7 @@ in
         home = {
           firefox.enable = true;
           mpd.enable = true;
+          mpd-background.enable = true;
           ncmpcpp.enable = true;
           gitui.enable = true;
           vial.enable = true;
