@@ -172,19 +172,19 @@ in
       # G12
       bind = ,XF86Launch7, exec, mpc toggle -p 6601
       # G13
-      bind = ,XF86Launch8, exec, echo hi
+      # bind = ,XF86Launch8, exec, echo hi
       # G14
-      bind = ,XF86Launch9, exec, echo hi
+      # bind = ,XF86Launch9, exec, echo hi
       # G15
       # Unbindable unless changed wayland's verson of xmodmap
       # G16
-      bind = ,XF86AudioMicMute, exec, echo hi
+      # bind = ,XF86AudioMicMute, exec, echo hi
       # G17
-      bind = ,XF86TouchpadToggle, exec, echo hi
+      # bind = ,XF86TouchpadToggle, exec, echo hi
       # G18
-      bind = ,XF86TouchpadOn, exec, echo hi
+      # bind = ,XF86TouchpadOn, exec, echo hi
       # G19
-      bind = ,XF86TouchpadOff, exec, echo hi
+      # bind = ,XF86TouchpadOff, exec, echo hi
       # G20
       # Unbindable unless changed wayland's verson of xmodmap
       #
