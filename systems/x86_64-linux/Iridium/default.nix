@@ -11,6 +11,18 @@ with lib.plusultra;
   boot.supportedFilesystems = [ "ntfs" ];
 
   networking.hostName = "Iridium"; # Define your hostname.
+  networking.interfaces.enp87s0.ipv4.addresses = [ {
+    address = "192.168.0.77";
+    prefixLength = 24;
+  } ];
+  networking.interfaces.enp89s0.ipv4.addresses = [ {
+    address = "192.168.0.78";
+    prefixLength = 24;
+  } ];
+  networking.interfaces.wlp90s0.ipv4.addresses = [ {
+    address = "192.168.0.75";
+    prefixLength = 24;
+  } ];
 
   time.timeZone = "America/Chicago";
 
