@@ -16,6 +16,15 @@ in
       Host github.com
         HostName github.com
         IdentityFile ~/.ssh/github
+      Host iridium
+        HostName 192.168.0.77
+        IdentityFile ~/.ssh/nixos
+      Host iridiumwifi
+        HostName 192.168.0.75
+        IdentityFile ~/.ssh/nixos
+      Host iridiumother
+        HostName 192.168.0.78
+        IdentityFile ~/.ssh/nixos
     '';
   };
 }
