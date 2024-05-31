@@ -24,6 +24,12 @@
       options = [ "fmask=0022" "dmask=0022" ];
     };
 
+  fileSystems."/data" =
+    { device = "/dev/disk/by-uuid/044da7f5-c58c-473a-812b-ce8c20559570";
+      fsType = "btrfs";
+      options = [ "compress=zstd:1" "noatime" "datacow" "datasum" "ssd" "discard=async" ];
+    };
+
   swapDevices = [ ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
