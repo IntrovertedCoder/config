@@ -22,7 +22,7 @@ in
       Host iridiumwifi
         HostName 192.168.0.75
         IdentityFile ~/.ssh/nixos
-      Host iridiumother
+      Host Iridium
         HostName 192.168.0.78
         IdentityFile ~/.ssh/nixos
     '';

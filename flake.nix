@@ -152,7 +152,7 @@
       checks =
         builtins.mapAttrs
         (system: deploy-lib:
-          deploy-lib.deployChecks inputs.self.deply)
+          deploy-lib.deployChecks inputs.self.deploy)
         inputs.deploy-rs.lib;
     };
 }
