@@ -12,6 +12,11 @@ with lib.plusultra;
 
   networking.hostName = "Nobelium"; # Define your hostname.
 
+  networking.interfaces.enp14s0.ipv4.addresses = [ {
+    address = "192.168.0.102";
+    prefixLength = 24;
+  } ];
+
   time.timeZone = "America/Chicago";
 
   # virtualisation = { # {{{
