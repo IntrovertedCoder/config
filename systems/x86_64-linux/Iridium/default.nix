@@ -43,13 +43,8 @@ with lib.plusultra;
     desktop.addons.greetd.enable = true;
     apps = {
       CUPS = enabled;
-      waydroid = disabled;
-      obs = enabled;
-      virtmanager = enabled;
-      vial = enabled;
       ssh = enabled;
       home = {
-        piper = enabled;
       };
     };
     suites = {
@@ -59,9 +54,6 @@ with lib.plusultra;
       # home = "/home/${name}";
     };
     desktop = {
-      Hyprland = {
-        enable = true;
-      };
     };
   };
   lib.home-manager = {
