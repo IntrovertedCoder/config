@@ -47,6 +47,7 @@ with lib.plusultra;
       obs = enabled;
       virtmanager = enabled;
       vial = enabled;
+      ssh = enabled;
       home = {
         piper = enabled;
       };
