@@ -60,6 +60,9 @@ with lib.plusultra;
       ssh = enabled;
       home = {
       };
+      server = {
+        samba = enabled;
+      };
     };
     suites = {
     };
