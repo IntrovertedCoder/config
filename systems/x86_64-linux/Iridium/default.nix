@@ -89,6 +89,15 @@ with lib.plusultra;
       kitty
     ];
   };
+  virtualisation.oci-containers.backend = "docker";
+
+  system.activationScripts.mkIridiumNet = let
+    # docker = config.virtualisation.oci-containers.backend;
+    docker = "docker";
+    dockerBin = "${pkgs.${docker}}/bin/${docker}";
+  in ''
+    ${dockerBin} network inspect IridiumNet >/dev/null 2>&1 || ${dockerBin} network create IridiumNet --subnet 172.20.0.0/16
+  '';
 
   programs.dconf.enable = true;
 
