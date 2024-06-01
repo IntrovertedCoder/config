@@ -83,6 +83,7 @@ with lib.plusultra;
   };
 
   virtualisation.docker.enable = true;
+  virtualisation.docker.enableOnBoot = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.arik = {
