@@ -2,17 +2,18 @@
 
 with lib;
 with lib.plusultra;
-let cfg = config.plusultra.apps.server.template;
+let cfg = config.plusultra.apps.server.containerTemplate;
 in
 {
-  options.plusultra.apps.server.template = with types; {
-    enable = mkBoolOpt false "Whether or not to enable template container.";
+  options.plusultra.apps.server.containerTemplate = with types; {
+    enable = mkBoolOpt false "Whether or not to enable containerTemplate container.";
   };
 
   config = mkIf cfg.enable {
     virtualisation.oci-containers.containers = {
-      template = {
-        image = "owner/template:version";
+      containerTemplate = {
+        image = "owner/containerTemplate:version";
+        hostname = "containerTemplate";
         autoStart = true;
         ports = [
           "externalPort:internalPort"
