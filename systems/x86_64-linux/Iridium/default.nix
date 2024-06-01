@@ -10,6 +10,7 @@ with lib.plusultra;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.supportedFilesystems = [ "ntfs" ];
 
+  # When changing hostName be sure to replaca all since we cant access config.network.hostName in this file for some reason
   networking.hostName = "Iridium"; # Define your hostname.
   networking.defaultGateway = "192.168.0.1";
   networking.nameservers = [ "8.8.8.8" "8.8.4.4" ];
@@ -62,6 +63,11 @@ with lib.plusultra;
       };
       server = {
         samba = enabled;
+        pihole = {
+          enable = true;
+          network = "IridiumNet";
+          ip = "172.77.0.10";
+        };
       };
     };
     suites = {
