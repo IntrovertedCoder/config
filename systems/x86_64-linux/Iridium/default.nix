@@ -102,7 +102,7 @@ with lib.plusultra;
     docker = "docker";
     dockerBin = "${pkgs.${docker}}/bin/${docker}";
   in ''
-    ${dockerBin} network inspect IridiumNet >/dev/null 2>&1 || ${dockerBin} network create IridiumNet --subnet 172.20.0.0/16
+    ${dockerBin} network inspect IridiumNet >/dev/null 2>&1 || ${dockerBin} network create IridiumNet --subnet 172.77.0.0/16
   '';
 
   programs.dconf.enable = true;
