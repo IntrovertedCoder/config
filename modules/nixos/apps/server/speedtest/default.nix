@@ -36,7 +36,7 @@ in
           # variable = "string";
           TZ = "${config.time.timeZone}";
           PUID = "1000";
-          GUID = "1000";
+          GUID = "100";
         };
         volumes = [
           # "externalLocation:internalLocation"
