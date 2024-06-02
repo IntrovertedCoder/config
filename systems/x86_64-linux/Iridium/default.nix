@@ -77,6 +77,13 @@ with lib.plusultra;
           # https://hub.docker.com/r/mvance/unbound/tags
           version = "1.12.0";
         };
+        speedtest = {
+          enable = true;
+          network = "IridiumNet";
+          ip = "172.77.0.12";
+          # https://hub.docker.com/r/linuxserver/speedtest-tracker/tags
+          version = "0.19.0";
+        };
       };
     };
     suites = {
