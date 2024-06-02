@@ -26,10 +26,8 @@ in
         autoStart = true;
         # Can be any ip between 172.77.0.1 - 172.77.255.254
         extraOptions = [
-          "--network=IridiumNet"
-          "--ip=172.77.0.10"
-          "--dns=1.1.1.1"
-          "--dns=1.0.0.1"
+          "--network=${cfg.network}"
+          "--ip=${cfg.ip}"
         ];
         ports = [
           "53:53/tcp"
@@ -43,6 +41,7 @@ in
           PROXY_LOCATION = "pi.hole";
           FTLCONF_LOCAL_IPV4 = "192.168.0.77";
           WEBPASSWORD = "password";
+          PIHOLE_DNS_ = "1.1.1.1;1.0.0.1";
         };
         volumes = [
           # "externalLocation:internalLocation"
