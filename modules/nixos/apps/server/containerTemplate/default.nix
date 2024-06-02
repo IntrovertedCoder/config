@@ -19,7 +19,7 @@ in
     '';
     virtualisation.oci-containers.containers = {
       containerTemplate = {
-        image = "containerTemplate/containerTemplate:version";
+        image = "containerTemplate/containerTemplate:${cfg.version}";
         hostname = "containerTemplate";
         autoStart = true;
         # Can be any ip between 172.77.0.1 - 172.77.255.254
