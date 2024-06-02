@@ -41,7 +41,7 @@ in
           TZ = "${config.time.timeZone}";
           VIRTUAL_HOST = "pi.hole";
           PROXY_LOCATION = "pi.hole";
-          ServerIP = "192.168.0.77";
+          FTLCONF_LOCAL_IPV4 = "192.168.0.77";
           WEBPASSWORD = "password";
         };
         volumes = [
