@@ -2,9 +2,13 @@
 
 with lib;
 with lib.plusultra;
-let cfg = config.plusultra.apps.server.unbound;
+let
+  cfg = config.plusultra.apps.server.unbound;
+  unboundConf = pkgs.writeText "unbound.conf" (builtins.readFile ./unbound.conf);
+  piholeConf = pkgs.writeText "pi-hole.conf" (builtins.readFile ./pi-hole.conf);
+  namedRoot = pkgs.writeText "named.root" (builtins.readFile ./named.root);
 in
-{
+  {
   options.plusultra.apps.server.unbound = with types; {
     enable = mkBoolOpt false "Whether or not to enable unbound container.";
     network = mkOpt str "" "The network id to put this container in.";
@@ -29,8 +33,10 @@ in
         ];
         ports = [
           # "externalPort:internalPort";
-          "535:53/tcp"
-          "535:53/udp"
+          "5335:53/tcp"
+          "5335:53/udp"
+          "5336:5335/tcp"
+          "5336:5335/udp"
         ];
         environment = {
           # variable = "string";
@@ -38,6 +44,9 @@ in
         };
         volumes = [
           # "externalLocation:internalLocation"
+          "${unboundConf}:/opt/unbound/etc/unbound/unbound.conf"
+          # "${piholeConf}:/opt/unbound/etc/unbound/unbound.conf"
+          "${namedRoot}:/opt/unbound/etc/unbound/root.hints"
         ];
       };
     };
