@@ -68,6 +68,11 @@ with lib.plusultra;
           network = "IridiumNet";
           ip = "172.77.0.10";
         };
+        unbound = {
+          enable = true;
+          network = "IridiumNet";
+          ip = "172.77.0.11";
+        };
       };
     };
     suites = {
