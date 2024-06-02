@@ -84,6 +84,13 @@ with lib.plusultra;
           # https://hub.docker.com/r/linuxserver/speedtest-tracker/tags
           version = "0.19.0";
         };
+        smokeping = {
+          enable = true;
+          network = "IridiumNet";
+          ip = "172.77.0.13";
+          # https://hub.docker.com/r/linuxserver/smokeping/tags
+          version = "2.8.2";
+        };
       };
     };
     suites = {
