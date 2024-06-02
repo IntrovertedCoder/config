@@ -13,7 +13,7 @@ in
   };
 
   config = mkIf cfg.enable {
-    system.activationScripts.piholeFolder = ''
+    system.activationScripts.containerTemplateFolder = ''
       mkdir /data >/dev/null 2>&1 || true
       mkdir /data/containerTemplate >/dev/null 2>&1 || true
     '';
