@@ -9,6 +9,7 @@ in
     enable = mkBoolOpt false "Whether or not to enable containerTemplate container.";
     network = mkOpt str "" "The network id to put this container in.";
     ip = mkOpt str "" "The ip address to apply to the container.";
+    version = mkOpt str "" "The container version as found on hub.docker.com";
   };
 
   config = mkIf cfg.enable {

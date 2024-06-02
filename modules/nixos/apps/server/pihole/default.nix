@@ -9,6 +9,7 @@ in
     enable = mkBoolOpt false "Whether or not to enable pihole container.";
     network = mkOpt str "" "The network id to put this container in.";
     ip = mkOpt str "" "The ip address to apply to the container.";
+    version = mkOpt str "" "The container version as found on hub.docker.com";
   };
 
   config = mkIf cfg.enable {
@@ -20,7 +21,7 @@ in
     '';
     virtualisation.oci-containers.containers = {
       pihole = {
-        image = "pihole/pihole:2024.05.0";
+        image = "pihole/pihole:${cfg.version}";
         hostname = "pi.hole";
         autoStart = true;
         # Can be any ip between 172.77.0.1 - 172.77.255.254

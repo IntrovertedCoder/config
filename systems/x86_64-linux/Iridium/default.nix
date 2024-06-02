@@ -67,11 +67,15 @@ with lib.plusultra;
           enable = true;
           network = "IridiumNet";
           ip = "172.77.0.10";
+          # https://hub.docker.com/r/pihole/pihole/tags
+          version = "2024.05.0";
         };
         unbound = {
           enable = true;
           network = "IridiumNet";
           ip = "172.77.0.11";
+          # https://hub.docker.com/r/mvance/unbound/tags
+          version = "1.12.0";
         };
       };
     };
