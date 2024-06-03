@@ -13,6 +13,7 @@ in
   };
 
   config = mkIf cfg.enable {
+    networking.nameservers = [ "127.0.0.1" "1.1.1.1" ];
     system.activationScripts.piholeFolder = ''
       mkdir /data >/dev/null 2>&1 || true
       mkdir /data/pihole >/dev/null 2>&1 || true
