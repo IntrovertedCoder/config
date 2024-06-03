@@ -105,6 +105,17 @@ with lib.plusultra;
           # https://hub.docker.com/r/ngoduykhanh/wireguard-ui/tags
           version = "0.6.2";
         };
+        plex = {
+          enable = true;
+          network = "IridiumNet";
+          ip = "172.77.0.16";
+          serverIp = "192.168.0.77";
+          # https://hub.docker.com/r/plexinc/pms-docker/tags
+          # Make sure to read
+          # https://github.com/plexinc/pms-docker?tab=readme-ov-file#running-on-a-headless-server-with-container-using-host-networking
+          # Before first setup
+          version = "1.40.2.8395-c67dce28e";
+        };
       };
     };
     suites = {
