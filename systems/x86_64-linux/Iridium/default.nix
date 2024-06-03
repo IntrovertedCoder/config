@@ -91,6 +91,13 @@ with lib.plusultra;
           # https://hub.docker.com/r/linuxserver/smokeping/tags
           version = "2.8.2";
         };
+        wireguard = {
+          enable = true;
+          network = "IridiumNet";
+          ip = "172.77.0.14";
+          # https://hub.docker.com/r/linuxserver/wireguard/tags
+          version = "1.0.20210914";
+        };
       };
     };
     suites = {
