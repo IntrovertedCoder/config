@@ -98,6 +98,13 @@ with lib.plusultra;
           # https://hub.docker.com/r/linuxserver/wireguard/tags
           version = "1.0.20210914";
         };
+        wireguard-ui = {
+          enable = true;
+          network = "IridiumNet";
+          ip = "172.77.0.15";
+          # https://hub.docker.com/r/ngoduykhanh/wireguard-ui/tags
+          version = "0.6.2";
+        };
       };
     };
     suites = {
