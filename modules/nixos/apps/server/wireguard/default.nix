@@ -13,7 +13,7 @@ in
   };
 
   config = mkIf cfg.enable {
-    system.activationScripts.containerTemplateFolder = ''
+    system.activationScripts.wireguardFolder = ''
       mkdir /data >/dev/null 2>&1 || true
       mkdir /data/wireguard >/dev/null 2>&1 || true
     '';
