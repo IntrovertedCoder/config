@@ -63,6 +63,7 @@ with lib.plusultra;
       };
       server = {
         samba = enabled;
+        cockpit = enabled;
         pihole = {
           enable = true;
           network = "IridiumNet";
