@@ -202,11 +202,11 @@ in
               }; # }}}
               search = {
                 force = true;
-                default = "Google";
+                default = "SearXNG_Iridium";
                 engines = {
-                  "SearXNG_Rubidium" = {
+                  "SearXNG_Iridium" = {
                     urls = [{
-                      template = "http://192.168.0.37:8888/search";
+                      template = "http://192.168.0.77:7070/search";
                       params = [
                         { name = "q"; value = "{searchTerms}"; }
                       ];
