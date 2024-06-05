@@ -117,6 +117,17 @@ with lib.plusultra;
           # Before first setup
           version = "1.40.2.8395-c67dce28e";
         };
+        searxng = {
+          enable = true;
+          serverIp = "192.168.0.77";
+          network = "IridiumNet";
+          ip = "172.77.0.17";
+          # https://hub.docker.com/r/searxng/searxng/tags
+          version = "2024.5.31-18fb701be";
+          ipValkey = "172.77.0.18";
+          # https://hub.docker.com/r/valkey/valkey/tags
+          versionValkey = "7.2.5-alpine";
+        };
       };
     };
     suites = {
