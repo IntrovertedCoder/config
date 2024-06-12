@@ -48,6 +48,23 @@ with lib.plusultra;
     # Network Manager
       networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
       plusultra.user.extraGroups = [ "networkmanager" ];
+    # Wireguard
+    networking.wg-quick.interfaces = {
+      wg0 = {
+        address = [ "10.13.13.2" ];
+        dns = [ "172.77.0.10" ];
+        privateKeyFile = "/home/arik/wireguard/privatekey-peer_aLaptop";
+
+        peers = [
+          {
+            publicKey = "siNU/Rg80Nr3E6woNeiBFAbwYeQRYJ1MRDqRj3Yu8gg=";
+            presharedKeyFile = "/home/arik/wireguard/presharedkey-peer_aLaptop";
+            allowedIPs = [ "0.0.0.0/0" ];
+            endpoint = "216.229.90.51:51820";
+          }
+        ];
+      };
+    };
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
