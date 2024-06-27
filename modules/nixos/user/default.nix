@@ -91,7 +91,7 @@ in
             grim
             slurp
           # Bar
-            eww-wayland
+            eww
             python311
             radeontop
           # Brightnessc ontrol
