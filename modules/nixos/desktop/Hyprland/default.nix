@@ -133,9 +133,6 @@ in
 
       # Example per-device config
       # See https://wiki.hyprland.org/Configuring/Keywords/#executing for more
-      device:epic mouse V1 {
-          sensitivity = -0.5
-      }
 
       # Example windowrule v1
       # windowrule = float, ^(foot)$
