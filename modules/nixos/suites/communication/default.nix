@@ -14,8 +14,9 @@ in
     plusultra = {
       apps = {
         home = {
+          discord = enabled;
           # discord.Vencord = enabled;
-          discord.ASAR-Vencord = enabled;
+          # discord.ASAR-Vencord = enabled;
           element = enabled;
           signal = enabled;
           gomuks = enabled;
