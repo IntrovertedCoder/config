@@ -27,6 +27,7 @@ in
       mako.enable = true;
       gnomePolkit.enable = true;
       # kickoff.enable = true;
+      tofi.enable = true;
       pipewire.enable = true;
       AMDDriver.enable = true;
     };
@@ -157,7 +158,7 @@ in
       bind = $mainMod SHIFT, T , exec, firefox --private-window
       bind = $mainMod SHIFT, Q, killactive
       bind = $mainMod SHIFT, E, exit
-      # bind = $mainMod, D, exec, kickoff
+      bind = $mainMod, D, exec, launcher
       bind = ,Print, exec, grim -g "$(slurp)"
       ## Mouse control
       # G9
