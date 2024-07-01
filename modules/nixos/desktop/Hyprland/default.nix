@@ -246,6 +246,7 @@ in
       ## Window Rules
       ### Discord
       windowrulev2 = workspace 4 silent,class:(discord)
+      windowrulev2 = workspace 4 silent,class:(vesktop)
       ### Obsidian
       windowrulev2 = workspace 6 silent,class:(obsidian)
       windowrulev2 = size 711 453, class:(floating)
