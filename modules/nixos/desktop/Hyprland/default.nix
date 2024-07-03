@@ -28,6 +28,7 @@ in
       gnomePolkit.enable = true;
       # kickoff.enable = true;
       tofi.enable = true;
+      waybar.enable = true;
       pipewire.enable = true;
       AMDDriver.enable = true;
     };
@@ -50,8 +51,7 @@ in
       # See https://wiki.hyprland.org/Configuring/Keywords/ for more
 
       # Execute your favorite apps at launch
-      # exec-once = waybar & hyprpaper & firefox
-      exec-once = eww open mainMonitor
+      exec-once = bar
 
       # Some default env vars.
       env = XCURSOR_SIZE,24
