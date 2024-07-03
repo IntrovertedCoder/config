@@ -157,6 +157,7 @@ in
             height = 30;
             output = [
               "DP-2"
+              "eDP-1"
             ];
             modules-left = [ "hyprland/workspaces" "network" ];
             # modules-center = [ "hyprland/window" ];
