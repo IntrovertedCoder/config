@@ -133,6 +133,16 @@ in
             border-radius: 0px 20px 20px 0px;
           }
 
+          #battery {
+            background: ${config.plusultra.color.Yellow};
+            color: ${config.plusultra.color.Black};
+          }
+
+          #backlight {
+            background: ${config.plusultra.color.Yellow};
+            color: ${config.plusultra.color.Black};
+          }
+
           #clock {
             background: ${config.plusultra.color.Green};
             color: ${config.plusultra.color.Black};
