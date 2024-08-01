@@ -25,6 +25,9 @@ in
       Host Iridium
         HostName 192.168.0.78
         IdentityFile ~/.ssh/nixos
+      Host WGHost
+        HostName 172.17.0.1
+        IdentityFile ~/.ssh/nixos
     '';
   };
 }

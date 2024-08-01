@@ -27,6 +27,8 @@ in
       mako.enable = true;
       gnomePolkit.enable = true;
       # kickoff.enable = true;
+      tofi.enable = true;
+      waybar.enable = true;
       pipewire.enable = true;
       AMDDriver.enable = true;
     };
@@ -49,8 +51,7 @@ in
       # See https://wiki.hyprland.org/Configuring/Keywords/ for more
 
       # Execute your favorite apps at launch
-      # exec-once = waybar & hyprpaper & firefox
-      exec-once = eww open mainMonitor
+      exec-once = bar
 
       # Some default env vars.
       env = XCURSOR_SIZE,24
@@ -122,7 +123,7 @@ in
 
       master {
           # See https://wiki.hyprland.org/Configuring/Master-Layout/ for more
-          new_is_master = false
+          new_status = slave
           ${cfg.masterConfig}
       }
 
@@ -157,7 +158,7 @@ in
       bind = $mainMod SHIFT, T , exec, firefox --private-window
       bind = $mainMod SHIFT, Q, killactive
       bind = $mainMod SHIFT, E, exit
-      # bind = $mainMod, D, exec, kickoff
+      bind = $mainMod, D, exec, launcher
       bind = ,Print, exec, grim -g "$(slurp)"
       ## Mouse control
       # G9
@@ -245,6 +246,7 @@ in
       ## Window Rules
       ### Discord
       windowrulev2 = workspace 4 silent,class:(discord)
+      windowrulev2 = workspace 4 silent,class:(vesktop)
       ### Obsidian
       windowrulev2 = workspace 6 silent,class:(obsidian)
       windowrulev2 = size 711 453, class:(floating)

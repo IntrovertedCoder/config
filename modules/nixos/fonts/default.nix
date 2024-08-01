@@ -7,7 +7,7 @@ let
 in
 {
   options.plusultra.font = with types; {
-    Font = mkOpt str "Hack Regular Nerd Font Complete Mono" "Font";
+    Font = mkOpt str "Hack Nerd Font Mono" "Font";
   };
   config  = {
     environment.variables = {
