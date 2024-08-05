@@ -22,6 +22,7 @@ in
           signal = enabled;
           gomuks = enabled;
           teams = enabled;
+          zoom = enabled;
         };
       };
     };
