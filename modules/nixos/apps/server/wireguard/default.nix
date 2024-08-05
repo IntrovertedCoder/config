@@ -38,7 +38,7 @@ in
           # variable = "string";
           TZ = "${config.time.timeZone}";
           PEERDNS = "${config.plusultra.apps.server.pihole.ip}";
-          PEERS = "aLaptop,aPhone,extra";
+          PEERS = "aLaptop,aPhone,extra,user1,user2,user3";
           PUID = "1000";
           GUID = "100";
         };
