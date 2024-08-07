@@ -206,7 +206,8 @@ in
                 engines = {
                   "SearXNG_Iridium" = {
                     urls = [{
-                      template = "http://192.168.0.77:7070/search";
+                      # template = "http://192.168.0.77:7070/search";
+                      template = "https://searxng.trotnic.duckdns.org/search";
                       params = [
                         { name = "q"; value = "{searchTerms}"; }
                       ];
