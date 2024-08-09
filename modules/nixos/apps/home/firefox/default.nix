@@ -40,6 +40,7 @@ in
                 # Enable restore previous session
                 "browser.startup.page" = "3";
                 # https://brainfucksec.github.io/firefox-hardening-guide
+                "browser.startup.homepage" =                                       "https://glance.trotnic.duckdns.org";
                   # Startup Settings
                     # "browser.startup.page" = "1"; # I want this changed specifically
                     "browser.aboutConfig.showWarning" =                            "false";
