@@ -37,6 +37,7 @@ in
           TZ = "${config.time.timeZone}";
           PUID = "1000";
           GUID = "100";
+          APP_KEY = "base64:vwGqFYRRGiGgUKbIjzHNwmEBwoXAsseTDxZvuwpnwjk=";
         };
         volumes = [
           # "externalLocation:internalLocation"
