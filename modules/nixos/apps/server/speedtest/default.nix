@@ -38,6 +38,7 @@ in
           PUID = "1000";
           GUID = "100";
           APP_KEY = "base64:vwGqFYRRGiGgUKbIjzHNwmEBwoXAsseTDxZvuwpnwjk=";
+          SPEEDTEST_SCHEDULE = "0,30 * * * *";
         };
         volumes = [
           # "externalLocation:internalLocation"

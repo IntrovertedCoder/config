@@ -83,7 +83,7 @@ with lib.plusultra;
           network = "IridiumNet";
           ip = "172.77.0.12";
           # https://hub.docker.com/r/linuxserver/speedtest-tracker/tags
-          version = "0.21.0";
+          version = "0.21.1";
         };
         smokeping = {
           enable = true;
