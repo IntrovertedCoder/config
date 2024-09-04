@@ -135,6 +135,7 @@ in
           yazi = enabled;
           mullvad = enabled;
           RadarOmega = enabled;
+          zen = enabled;
         };
         flake = enabled;
       };
