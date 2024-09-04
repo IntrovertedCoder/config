@@ -13,7 +13,7 @@ with lib.plusultra;
   # When changing hostName be sure to replaca all since we cant access config.network.hostName in this file for some reason
   networking.hostName = "Iridium"; # Define your hostname.
   networking.defaultGateway = "192.168.0.1";
-  networking.nameservers = [ "8.8.8.8" "8.8.4.4" ];
+  # networking.nameservers = [ "8.8.8.8" "8.8.4.4" ];
   networking.interfaces.enp87s0.ipv4.addresses = [ {
     address = "192.168.0.77";
     prefixLength = 24;
