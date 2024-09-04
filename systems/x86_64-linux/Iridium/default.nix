@@ -14,6 +14,7 @@ with lib.plusultra;
   networking.hostName = "Iridium"; # Define your hostname.
   networking.defaultGateway = "192.168.0.1";
   networking.nameservers = [ "8.8.8.8" "8.8.4.4" ];
+  networking.firewall.allowedTCPPorts = [ 8840 ];
   networking.interfaces.enp87s0.ipv4.addresses = [ {
     address = "192.168.0.77";
     prefixLength = 24;
@@ -65,42 +66,42 @@ with lib.plusultra;
         samba = enabled;
         cockpit = enabled;
         pihole = {
-          enable = true;
+          # enable = true;
           network = "IridiumNet";
           ip = "172.77.0.10";
           # https://hub.docker.com/r/pihole/pihole/tags
           version = "2024.05.0";
         };
         unbound = {
-          enable = true;
+          # enable = true;
           network = "IridiumNet";
           ip = "172.77.0.11";
           # https://hub.docker.com/r/mvance/unbound/tags
           version = "1.12.0";
         };
         speedtest = {
-          enable = true;
+          # enable = true;
           network = "IridiumNet";
           ip = "172.77.0.12";
           # https://hub.docker.com/r/linuxserver/speedtest-tracker/tags
           version = "0.21.1";
         };
         smokeping = {
-          enable = true;
+          # enable = true;
           network = "IridiumNet";
           ip = "172.77.0.13";
           # https://hub.docker.com/r/linuxserver/smokeping/tags
           version = "2.8.2";
         };
         wireguard = {
-          enable = true;
+          # enable = true;
           network = "IridiumNet";
           ip = "172.77.0.14";
           # https://hub.docker.com/r/linuxserver/wireguard/tags
           version = "1.0.20210914";
         };
         wireguard-ui = {
-          enable = true;
+          # enable = true;
           network = "IridiumNet";
           ip = "172.77.0.15";
           # https://hub.docker.com/r/ngoduykhanh/wireguard-ui/tags
