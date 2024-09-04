@@ -10,6 +10,10 @@ in
   };
 
   config = mkIf cfg.enable {
-    services.udev.packages = with pkgs; [ vial ];
+    services.udev.packages = with pkgs; [
+      vial
+      qmk
+      qmk-udev-rules
+    ];
   };
 }
