@@ -115,6 +115,7 @@ in
 
       };
     };
+    services.flatpak.enable = true;
     plusultra = {
       apps = {
         home = {

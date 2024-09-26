@@ -154,8 +154,8 @@ in
       # bind = $mainMOD, , exec,
       ## General
       bind = $mainMod, return, exec, foot
-      bind = $mainMod, T, exec, zen
-      bind = $mainMod SHIFT, T , exec, zen --private-window
+      bind = $mainMod, T, exec, flatpak run io.github.zen_browser.zen
+      bind = $mainMod SHIFT, T , exec, flatpak run io.github.zen_browser.zen --private-window
       bind = $mainMod SHIFT, Q, killactive
       bind = $mainMod SHIFT, E, exit
       bind = $mainMod, D, exec, launcher
