@@ -256,6 +256,12 @@ in
       bindm = $mainMod, mouse:272, movewindow
       bindm = $mainMod, mouse:273, resizewindow
 
+      # Even Number workspaces are vertical stack
+      workspace = 2, layoutopt:orientation:top
+      workspace = 4, layoutopt:orientation:top
+      workspace = 6, layoutopt:orientation:top
+      workspace = 8, layoutopt:orientation:top
+      workspace = 0, layoutopt:orientation:top
 
       # Screensharing support
       exec-once=dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
