@@ -249,7 +249,15 @@ in
       windowrulev2 = workspace 4 silent,class:(vesktop)
       ### Obsidian
       windowrulev2 = workspace 6 silent,class:(obsidian)
+      ### Floating terminal windows
       windowrulev2 = size 711 453, class:(floating)
+      ### Picture in picture for firefox based browsers
+      windowrulev2 = float, title:(Picture-in-Picture)
+      windowrulev2 = pin, title:(Picture-in-Picture)
+      windowrulev2 = monitor 1, title:(Picture-in-Picture)
+      windowrulev2 = noinitialfocus, title:(Picture-in-Picture)
+      windowrulev2 = move 8 25%, title:(Picture-in-Picture)
+      windowrulev2 = size 1064 598, title:(Picture-in-Picture)
 
 
       # Move/resize windows with mainMod + LMB/RMB and dragging
