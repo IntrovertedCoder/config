@@ -89,6 +89,19 @@ with lib.plusultra;
           workspace=9, monitor:DP-1
           workspace=0, monitor:DP-2
           workspace = 11, monitor=DP-1
+
+
+          workspace = 2, layoutopt:orientation:bottom
+          workspace = 4, layoutopt:orientation:bottom
+          workspace = 6, layoutopt:orientation:bottom
+          workspace = 8, layoutopt:orientation:bottom
+          workspace = 0, layoutopt:orientation:bottom
+
+          workspace = 1, layoutopt:orientation:center
+          workspace = 3, layoutopt:orientation:center
+          workspace = 5, layoutopt:orientation:center
+          workspace = 7, layoutopt:orientation:center
+          workspace = 9, layoutopt:orientation:center
           bind = $mainMod, g, workspace, 11
           bind = $mainMod SHIFT, g, movetoworkspacesilent, 11
         '';
