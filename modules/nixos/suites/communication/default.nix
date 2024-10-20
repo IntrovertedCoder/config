@@ -15,7 +15,7 @@ in
       apps = {
         home = {
           # discord = enabled;
-          # discord.Vencord = enabled;
+          discord.Vencord = enabled;
           discord.Vesktop = enabled;
           # discord.ASAR-Vencord = enabled;
           element = enabled;
