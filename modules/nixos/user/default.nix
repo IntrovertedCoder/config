@@ -146,6 +146,11 @@ in
       };
     };
 
+    networking.hosts = {
+      "127.0.0.1" = ["wpad.*" "wpad"];
+      "::1" = ["wpad.*" "wpad"];
+    };
+
     users.users.${cfg.name} = {
       extraGroups = [ ] ++ cfg.extraGroups;
     };
