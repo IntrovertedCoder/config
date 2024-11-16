@@ -546,6 +546,8 @@ in
                 " Undotree
                   let g:undotree_WindowLayout=3
                   nnoremap <silent><leader>u :UndotreeToggle<CR> :wincmd h<CR> :vertical resize 86<CR>
+              " Repeat Macros
+                map , @@
 
               " Random
                 set visualbell
