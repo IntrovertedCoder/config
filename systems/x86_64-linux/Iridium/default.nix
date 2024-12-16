@@ -13,18 +13,14 @@ with lib.plusultra;
   # When changing hostName be sure to replaca all since we cant access config.network.hostName in this file for some reason
   networking.hostName = "Iridium"; # Define your hostname.
   networking.defaultGateway = "192.168.0.1";
-<<<<<<< HEAD
   networking.nameservers = [ "8.8.8.8" "8.8.4.4" ];
   networking.firewall.allowedTCPPorts = [ 8840 ];
-=======
-  # networking.nameservers = [ "8.8.8.8" "8.8.4.4" ];
->>>>>>> 3e49b8bc2706416a897f028a3cb23be24f3da2ca
   networking.interfaces.enp87s0.ipv4.addresses = [ {
     address = "192.168.0.77";
     prefixLength = 24;
   } ];
-  networking.interfaces.enp89s0.ipv4.addresses = [ {
-    address = "192.168.0.78";
+  networking.interfaces.enp90s0.ipv4.addresses = [ {
+    address = "192.168.2.77";
     prefixLength = 24;
   } ];
   networking.interfaces.wlp90s0.ipv4.addresses = [ {
@@ -61,6 +57,11 @@ with lib.plusultra;
 
   plusultra = {
     desktop.addons.greetd.enable = true;
+    desktop = {
+      Hyprland = {
+        enable = true;
+      };
+    };
     apps = {
       CUPS = enabled;
       ssh = enabled;
