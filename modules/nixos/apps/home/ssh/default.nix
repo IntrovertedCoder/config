@@ -23,7 +23,7 @@ in
         HostName 192.168.0.75
         IdentityFile ~/.ssh/nixos
       Host Iridium
-        HostName 192.168.0.78
+        HostName 192.168.2.77
         IdentityFile ~/.ssh/nixos
       Host WGHost
         HostName 172.17.0.1
