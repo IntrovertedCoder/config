@@ -51,13 +51,13 @@ with lib.plusultra;
     # Wireguard
     networking.wg-quick.interfaces = {
       wg0 = {
-        address = [ "10.13.13.2" ];
-        dns = [ "172.77.0.10" ];
+        address = [ "10.8.0.3" ];
+        dns = [ "172.77.0.51" ];
         privateKeyFile = "/home/arik/wireguard/privatekey-peer_aLaptop";
 
         peers = [
           {
-            publicKey = "siNU/Rg80Nr3E6woNeiBFAbwYeQRYJ1MRDqRj3Yu8gg=";
+            publicKey = "n7p60n0iXx42pEeh7WpnN7rGZqxgbbXkBOEE+6lVOC0=";
             presharedKeyFile = "/home/arik/wireguard/presharedkey-peer_aLaptop";
             allowedIPs = [ "0.0.0.0/0" ];
             endpoint = "216.229.90.51:51820";
