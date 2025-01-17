@@ -14,7 +14,7 @@ in
 {
   options.plusultra.nix = with types; {
     enable = mkBoolOpt true "Whether or not to manage nix configuration.";
-    package = mkOpt package pkgs.nixFlakes "Which nix package to use.";
+    package = mkOpt package pkgs.nixVersions.stable "Which nix package to use.";
 
     default-substituter = {
       url = mkOpt str "https://cache.nixos.org" "The url for the substituter.";

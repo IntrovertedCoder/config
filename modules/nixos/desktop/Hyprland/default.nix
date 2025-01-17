@@ -54,6 +54,9 @@ in
       exec-once = bar
 
       # Some default env vars.
+      env = HYPRCURSOR_THEME,Nordzy-cursors
+      env = HYPRCURSOR_SIZE,24
+      env = XCURSOR_THEME,Nordzy-cursors
       env = XCURSOR_SIZE,24
 
       # For all categories, see https://wiki.hyprland.org/Configuring/Variables/
@@ -90,10 +93,12 @@ in
 
           rounding = 2
 
-          drop_shadow = yes
-          shadow_range = 4
-          shadow_render_power = 3
-          col.shadow = rgba(${config.plusultra.color.darkGrayNum}FF)
+          shadow {
+            enabled = yes
+            range = 4
+            render_power = 3
+            color = rgba(${config.plusultra.color.darkGrayNum}FF)
+          }
           dim_inactive = true
           dim_strength = 0.3
       }
@@ -154,8 +159,8 @@ in
       # bind = $mainMOD, , exec,
       ## General
       bind = $mainMod, return, exec, foot
-      bind = $mainMod, T, exec, flatpak run io.github.zen_browser.zen
-      bind = $mainMod SHIFT, T , exec, flatpak run io.github.zen_browser.zen --private-window
+      bind = $mainMod, T, exec, flatpak run app.zen_browser.zen
+      bind = $mainMod SHIFT, T , exec, flatpak run app.zen_browser.zen --private-window
       bind = $mainMod SHIFT, Q, killactive
       bind = $mainMod SHIFT, E, exit
       bind = $mainMod, D, exec, launcher
@@ -218,8 +223,8 @@ in
       bind = $mainMod CONTROL, K, resizeactive,0 -10
       bind = $mainMod CONTROL, J, resizeactive,0 10
       ## Switch workspaces with mainMod + [0-9]
-      bind = $mainMod, 1, workspace, 1
-      bind = $mainMod, 2, workspace, 2
+      bind = $mainMod, 1, workspace, 2
+      bind = $mainMod, 2, workspace, 1
       bind = $mainMod, 3, workspace, 3
       bind = $mainMod, 4, workspace, 4
       bind = $mainMod, 5, workspace, 5
@@ -229,8 +234,8 @@ in
       bind = $mainMod, 9, workspace, 9
       bind = $mainMod, 0, workspace, 10
       ## Move active window to a workspace with mainMod + SHIFT + [0-9]
-      bind = $mainMod SHIFT, 1, movetoworkspacesilent, 1
-      bind = $mainMod SHIFT, 2, movetoworkspacesilent, 2
+      bind = $mainMod SHIFT, 1, movetoworkspacesilent, 2
+      bind = $mainMod SHIFT, 2, movetoworkspacesilent, 1
       bind = $mainMod SHIFT, 3, movetoworkspacesilent, 3
       bind = $mainMod SHIFT, 4, movetoworkspacesilent, 4
       bind = $mainMod SHIFT, 5, movetoworkspacesilent, 5
@@ -256,7 +261,7 @@ in
       windowrulev2 = pin, title:(Picture-in-Picture)
       windowrulev2 = monitor 1, title:(Picture-in-Picture)
       windowrulev2 = noinitialfocus, title:(Picture-in-Picture)
-      windowrulev2 = move 8 25%, title:(Picture-in-Picture)
+      windowrulev2 = move 8 60%, title:(Picture-in-Picture)
       windowrulev2 = size 1064 598, title:(Picture-in-Picture)
 
 
@@ -265,13 +270,13 @@ in
       bindm = $mainMod, mouse:273, resizewindow
 
       # Even Number workspaces are vertical stack
-      workspace = 2, layoutopt:orientation:bottom
+      workspace = 1, layoutopt:orientation:bottom
       workspace = 4, layoutopt:orientation:bottom
       workspace = 6, layoutopt:orientation:bottom
       workspace = 8, layoutopt:orientation:bottom
       workspace = 0, layoutopt:orientation:bottom
 
-      workspace = 1, layoutopt:orientation:center
+      workspace = 2, layoutopt:orientation:center
       workspace = 3, layoutopt:orientation:center
       workspace = 5, layoutopt:orientation:center
       workspace = 7, layoutopt:orientation:center
@@ -279,6 +284,7 @@ in
 
       # Screensharing support
       exec-once=dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+      exec-once=dconf write /org/gnome/desktop/interface/cursor-theme "'Nordzy-cursors'"
 
       # Extra config from flakes
       ${cfg.extraConfig}

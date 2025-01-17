@@ -10,14 +10,12 @@ in
   };
 
   config = mkIf cfg.enable {
-    hardware.opengl.extraPackages = with pkgs; [
-      rocm-opencl-icd
-      rocm-opencl-runtime
+    hardware.graphics.extraPackages = with pkgs; [
       amdvlk
       libvdpau-va-gl # Hardare Accelerated Video Playback
     ];
-    hardware.opengl.driSupport = true;
-    hardware.opengl.driSupport32Bit = true;
-    hardware.opengl.enable = true;
+    # hardware.opengl.driSupport = true;
+    hardware.graphics.enable32Bit = true;
+    hardware.graphics.enable = true;
   };
 }

@@ -43,6 +43,7 @@ in
 
   config = {
     environment.systemPackages = with pkgs; [
+      nordzy-cursor-theme
       propagatedIcon
         libnotify
         # Python Stuff
@@ -119,7 +120,7 @@ in
     plusultra = {
       apps = {
         home = {
-          firefox.enable = true;
+          # firefox.enable = true;
           mpd.enable = true;
           mpd-background.enable = true;
           ncmpcpp.enable = true;

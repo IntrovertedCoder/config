@@ -19,7 +19,7 @@ in
           # name = "Adwaita";
         # };
         theme = {
-          package = pkgs.gnome.adwaita-icon-theme;
+          package = pkgs.adwaita-icon-theme;
           name = "Adwaita";
         };
         gtk3.bookmarks = [

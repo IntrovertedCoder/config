@@ -78,8 +78,8 @@ with lib.plusultra;
           mfact = 0.5
         '';
         extraConfig3  = ''
-          workspace=1, monitor:DP-1
-          workspace=2, monitor:DP-2
+          workspace=2, monitor:DP-1
+          workspace=1, monitor:DP-2
           workspace=3, monitor:DP-1
           workspace=4, monitor:DP-2
           workspace=5, monitor:DP-1
@@ -91,13 +91,13 @@ with lib.plusultra;
           workspace = 11, monitor=DP-1
 
 
-          workspace = 2, layoutopt:orientation:bottom
+          workspace = 1, layoutopt:orientation:bottom
           workspace = 4, layoutopt:orientation:bottom
           workspace = 6, layoutopt:orientation:bottom
           workspace = 8, layoutopt:orientation:bottom
           workspace = 0, layoutopt:orientation:bottom
 
-          workspace = 1, layoutopt:orientation:center
+          workspace = 2, layoutopt:orientation:center
           workspace = 3, layoutopt:orientation:center
           workspace = 5, layoutopt:orientation:center
           workspace = 7, layoutopt:orientation:center
@@ -114,6 +114,7 @@ with lib.plusultra;
     # };
   };
   lib.home-manager = {
+    backupFileExtension = "bak";
   };
 
   virtualisation.docker.enable = true;
