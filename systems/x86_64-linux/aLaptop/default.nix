@@ -14,6 +14,7 @@ with lib.plusultra;
     };
     suites = {
       art.enable = true;
+      gaming = enabled;
     };
     user = {
       name = "arik";

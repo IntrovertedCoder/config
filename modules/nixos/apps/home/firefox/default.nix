@@ -26,7 +26,7 @@ in
                 firefox-color
                 decentraleyes
                 privacy-badger
-                markdownload
+                # markdownload
                 videospeed
               ];
               id = 0;
