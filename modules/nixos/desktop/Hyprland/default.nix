@@ -269,22 +269,10 @@ in
       bindm = $mainMod, mouse:272, movewindow
       bindm = $mainMod, mouse:273, resizewindow
 
-      # Even Number workspaces are vertical stack
-      workspace = 1, layoutopt:orientation:bottom
-      workspace = 4, layoutopt:orientation:bottom
-      workspace = 6, layoutopt:orientation:bottom
-      workspace = 8, layoutopt:orientation:bottom
-      workspace = 0, layoutopt:orientation:bottom
-
-      workspace = 2, layoutopt:orientation:center
-      workspace = 3, layoutopt:orientation:center
-      workspace = 5, layoutopt:orientation:center
-      workspace = 7, layoutopt:orientation:center
-      workspace = 9, layoutopt:orientation:center
-
       # Screensharing support
       exec-once=dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
       exec-once=dconf write /org/gnome/desktop/interface/cursor-theme "'Nordzy-cursors'"
+      exec-once=hyprpaper
 
       # Extra config from flakes
       ${cfg.extraConfig}
@@ -293,6 +281,25 @@ in
       ${cfg.extraConfig3}
       ${cfg.easyeffects}
     ''; # }}}
+
+    plusultra.home.extraOptions = {
+      home.packages = with pkgs; [
+        hyprpaper
+      ];
+      services.hyprpaper = {
+        enable = true;
+        settings = {
+          ipc = "on";
+          splan = true;
+          splash_offset = 2.0;
+          splash_color = config.plusultra.color.BlueNum;
+          preload = [ "/home/${config.plusultra.user.name}/Pictures/Wallpapers/nix-wallpaper-gear.png" ];
+          wallpaper = [
+            ", /home/${config.plusultra.user.name}/Pictures/Wallpapers/nix-wallpaper-gear.png"
+          ];
+        };
+      };
+    };
 
     programs.hyprland = {
       enable = true;
