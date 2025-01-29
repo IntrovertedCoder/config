@@ -41,6 +41,10 @@ with lib.plusultra;
     killall
     comma
   ];
+  programs.captive-browser = {
+    enable = true;
+    interface = "wlp2s0";
+  };
 
   # Networking
     # WPA_Supplicant
@@ -48,6 +52,7 @@ with lib.plusultra;
     # Network Manager
       networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
       plusultra.user.extraGroups = [ "networkmanager" ];
+      networking.useDHCP = lib.mkForce true;
     # Wireguard
     networking.wg-quick.interfaces = {
       wg0 = {
