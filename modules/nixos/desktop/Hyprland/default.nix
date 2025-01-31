@@ -247,6 +247,8 @@ in
       ## Toggle stuff with windows
       bind = $mainMod, SPACE, togglefloating
       bind = $mainMod, F, fullscreen
+      ## Locking keybind
+      bind = SUPER, L, exec, swaylock --screenshots --clock --indicator --effect-blur 10x10 --ring-color=0B68FF --text-color 68FF0B --ring-clear-color=7E599D --text-wrong-color=C7000C --text-color=EFEFEF --text-wrong-color=7E599D --fade-in=3
 
       ## Window Rules
       ### Discord
