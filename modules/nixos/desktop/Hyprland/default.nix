@@ -248,7 +248,8 @@ in
       bind = $mainMod, SPACE, togglefloating
       bind = $mainMod, F, fullscreen
       ## Locking keybind
-      bind = SUPER, L, exec, swaylock --screenshots --clock --indicator --effect-blur 10x10 --ring-color=0B68FF --text-color 68FF0B --ring-clear-color=7E599D --text-wrong-color=C7000C --text-color=EFEFEF --text-wrong-color=7E599D --fade-in=3
+      bind = SUPER, L, exec, swaylock --screenshots --clock --indicator --effect-blur 10x10 --ring-color=${config.plusultra.color.BlueNum} --text-color=${config.plusultra.color.brightGreenNum} --ring-clear-color=${config.plusultra.color.MagentaNum} --text-wrong-color=${config.plusultra.color.RedNum} --text-color=${config.plusultra.color.WhiteNum} --text-wrong-color=${config.plusultra.color.MagentaNum} --fade-in=3
+      bind = SUPER SHIFT, L, exec, swaylock --clock --indicator --effect-blur 10x10 --ring-color=${config.plusultra.color.BlueNum} --text-color=${config.plusultra.color.brightGreenNum} --ring-clear-color=${config.plusultra.color.MagentaNum} --text-wrong-color=${config.plusultra.color.RedNum} --text-color=${config.plusultra.color.WhiteNum} --text-wrong-color=${config.plusultra.color.MagentaNum} --fade-in=3 --color=${config.plusultra.color.BlackNum}
 
       ## Window Rules
       ### Discord
