@@ -8,6 +8,7 @@ with lib.plusultra;
     desktop.Hyprland.enable = true;
     desktop.addons.greetd.enable = true;
     desktop.addons.swaylock = enabled;
+    desktop.addons.hyprsunset = enabled;
     apps = {
       CUPS = enabled;
       waydroid = enabled;
