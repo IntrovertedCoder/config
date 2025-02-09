@@ -165,6 +165,7 @@ in
       bind = $mainMod SHIFT, E, exit
       bind = $mainMod, D, exec, launcher
       bind = ,Print, exec, grim -g "$(slurp)"
+      bind = SHIFT, Print, exec, grim -g "$(slurp)" - | zbarimg PNG:- | sed -e 's/QR-CODE://' | cut -c 9- | wl-copy
       ## Mouse control
       # G9
       bind = ,XF86Tools, exec, mpc prev
@@ -288,6 +289,9 @@ in
     plusultra.home.extraOptions = {
       home.packages = with pkgs; [
         hyprpaper
+        grim
+        slurp
+        zbar
       ];
       services.hyprpaper = {
         enable = true;
