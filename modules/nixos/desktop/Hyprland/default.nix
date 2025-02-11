@@ -193,6 +193,8 @@ in
       # Unbindable unless changed wayland's verson of xmodmap
       #
       bind = $mainMod SHIFT, F1, exec, mpc toggle
+      bind = $mainMod, period, exec, mpc next
+      bind = $mainMod, comma, exec, mpc prev
 
       ## Brightness
       bind = $mainMod, F11, exec, brightnessctl s 17-
