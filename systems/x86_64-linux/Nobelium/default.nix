@@ -52,6 +52,7 @@ with lib.plusultra;
 
   plusultra = {
     desktop.addons.greetd.enable = true;
+    desktop.addons.swaylock = enabled;
     apps = {
       CUPS = enabled;
       waydroid = disabled;
