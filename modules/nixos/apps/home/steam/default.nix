@@ -14,6 +14,7 @@ in
     plusultra.home.extraOptions.home.packages = with pkgs; [
       # steam
       gamemode
+      gamescope
     ];
     programs.steam = {
       enable = true;
