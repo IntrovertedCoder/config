@@ -18,6 +18,7 @@ in
     environment.systemPackages = with pkgs; [
       swaylock-effects
       swayidle
+      hypridle
     ];
     security.pam.services.swaylock = {};
   };
