@@ -14,6 +14,9 @@ in
       ncmpcpp = {
         enable = true;
         package = pkgs.ncmpcpp.override { visualizerSupport = true; };
+        settings = {
+          external_editor = "vim";
+        };
         bindings = [
           { key = "j"; command = "scroll_down"; }
           { key = "k"; command = "scroll_up"; }
