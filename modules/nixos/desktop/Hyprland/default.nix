@@ -167,6 +167,10 @@ in
       bind = ,Print, exec, grim -g "$(slurp)"
       bind = ALT, Print, exec, grim -g "$(slurp)" - | zbarimg PNG:- | sed -e 's/QR-CODE://' | cut -c 9- | wl-copy
       bind = SHIFT, Print, exec, grim -g "$(slurp)" - | tesseract stdin stdout quiet | wl-copy
+      bind = , XF86AudioRaiseVolume, exec, pactl set-sink-volume @DEFAULT_SINK@ +5%
+      bind = , XF86AudioLowerVolume, exec, pactl set-sink-volume @DEFAULT_SINK@ -5%
+      bind = SHIFT, XF86AudioRaiseVolume, exec, pactl set-sink-volume @DEFAULT_SINK@ +10%
+      bind = SHIFT, XF86AudioLowerVolume, exec, pactl set-sink-volume @DEFAULT_SINK@ -10%
       ## Mouse control
       # G9
       bind = ,XF86Tools, exec, mpc prev
@@ -296,6 +300,7 @@ in
         slurp
         zbar
         tesseract4
+        pulseaudio
       ];
       services.hyprpaper = {
         enable = true;
