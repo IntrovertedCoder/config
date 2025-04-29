@@ -20,6 +20,7 @@ in
     masterConfig = mkOpt str "" "Additional configuration for the Hyprland config file.";
     easyeffects = mkOpt str "" "Additional configuration for the Hyprland config file.";
     pulsemixer = mkOpt str "" "Additional configuration for the Hyprland config file.";
+    ncpamixer = mkOpt str "" "Additional configuration for the Hyprland config file.";
   };
 
   config = mkIf cfg.enable {
@@ -293,9 +294,10 @@ in
       ${cfg.extraConfig3}
       ${cfg.easyeffects}
       ${cfg.pulsemixer}
+      ${cfg.ncpamixer}
     ''; # }}}
     plusultra.apps.home = {
-      pulsemixer = enabled;
+      ncpamixer = enabled;
     };
 
     plusultra.home.extraOptions = {
