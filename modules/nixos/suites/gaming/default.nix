@@ -19,6 +19,7 @@ in
           mangohud = enabled;
           lutris = enabled;
           wine = enabled;
+          bar = enabled;
         };
       };
     };
