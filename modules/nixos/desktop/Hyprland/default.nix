@@ -213,6 +213,7 @@ in
       bind = $mainMod, F3, exec, foot -o colors.alpha=0.5 --app-id floating,ncmpcpp -e ncmpcpp
       bind = $mainMod SHIFT, F3, exec, foot -o colors.alpha=0.5 --app-id floating,ncmpcpp -e ncmpcpp -p 6601
       bind = $mainMod, F4, exec, eww open --toggle dock && eww open --toggle dock-closer
+      bind = $mainMod SHIFT, return, exec, foot -o colors.alpha=0.5 --app-id floating,foot
 
       ### Screenkey
 
