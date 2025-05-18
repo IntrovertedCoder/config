@@ -12,7 +12,6 @@ in
 {
   options.plusultra.desktop.Hyprland = with types; {
     enable = mkBoolOpt false "Whether or not to enable Hyprland.";
-    wallpaper = mkOpt (nullOr package) null "The wallpaper to display.";
     extraConfig = mkOpt str "" "Additional configuration for the Hyprland config file.";
     extraConfig1 = mkOpt str "" "Additional configuration for the Hyprland config file.";
     extraConfig2 = mkOpt str "" "Additional configuration for the Hyprland config file.";
@@ -21,6 +20,7 @@ in
     easyeffects = mkOpt str "" "Additional configuration for the Hyprland config file.";
     pulsemixer = mkOpt str "" "Additional configuration for the Hyprland config file.";
     ncpamixer = mkOpt str "" "Additional configuration for the Hyprland config file.";
+    wallpaper = mkOpt str "" "Additional configuration for the Hyprland config file.";
   };
 
   config = mkIf cfg.enable {
@@ -286,7 +286,6 @@ in
       # Screensharing support
       exec-once=dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
       exec-once=dconf write /org/gnome/desktop/interface/cursor-theme "'Nordzy-cursors'"
-      exec-once=hyprpaper
 
       # Extra config from flakes
       ${cfg.extraConfig}
@@ -296,6 +295,7 @@ in
       ${cfg.easyeffects}
       ${cfg.pulsemixer}
       ${cfg.ncpamixer}
+      ${cfg.wallpaper}
     ''; # }}}
     plusultra.apps.home = {
       ncpamixer = enabled;
@@ -303,26 +303,12 @@ in
 
     plusultra.home.extraOptions = {
       home.packages = with pkgs; [
-        hyprpaper
         grim
         slurp
         zbar
         tesseract4
         pulseaudio
       ];
-      services.hyprpaper = {
-        enable = true;
-        settings = {
-          ipc = "on";
-          splan = true;
-          splash_offset = 2.0;
-          splash_color = config.plusultra.color.BlueNum;
-          preload = [ "/home/${config.plusultra.user.name}/Pictures/Wallpapers/nix-wallpaper-gear.png" ];
-          wallpaper = [
-            ", /home/${config.plusultra.user.name}/Pictures/Wallpapers/nix-wallpaper-gear.png"
-          ];
-        };
-      };
     };
 
     programs.hyprland = {
