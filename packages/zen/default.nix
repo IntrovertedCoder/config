@@ -6,8 +6,8 @@ let
   name = "${pname}-${version}";
 
   src = pkgs.fetchurl {
-    url = "https://github.com/zen-browser/desktop/releases/download/1.0.0-a.35/zen-specific.AppImage";
-    sha256 = "975dd885be29453d6288443e237bdae3544aca5d7bf830c0b89120cf6b98e9f6";
+    url = "https://github.com/zen-browser/desktop/releases/download/1.12.8b/zen-x86_64.AppImage";
+    sha256 = "f7be27f1b7899c94c2802edafe3c3203b303ba1918d8589d5f48a2993a885488";
   };
 
   appimageContents = pkgs.appimageTools.extractType2 { inherit pname version src; };
@@ -16,7 +16,6 @@ pkgs.appimageTools.wrapType2 rec {
   inherit pname version src;
 
   extraInstallCommands = ''
-    mv $out/bin/${name} $out/bin/${pname}
 
     install -m 444 -D ${appimageContents}/${pname}.png $out/share/icons/hicolor/512x512/apps/${pname}.png
 

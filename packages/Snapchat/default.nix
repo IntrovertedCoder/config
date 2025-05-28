@@ -16,7 +16,6 @@ pkgs.appimageTools.wrapType2 rec {
   inherit pname src version;
 
   extraInstallCommands = ''
-    mv $out/bin/${pname} $out/bin/${pname}
 
       install -m 444 -D ${appimageContents}/snapchat.png $out/share/icons/hicolor/512x512/apps/${pname}.png
 
