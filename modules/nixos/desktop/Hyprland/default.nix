@@ -144,11 +144,11 @@ in
 
       # Example windowrule v1
       # windowrule = float, ^(foot)$
-      windowrule = float, floating
-      windowrule = size 720 450, floating
-      windowrule = center, floating
-      windowrule = float, xfce-polkit
       # Example windowrule v2
+      windowrulev2 = float, class:.*floating.*
+      windowrulev2 = size 720 450, class:.*floating.*
+      windowrulev2 = center, class:.*floating.*
+      windowrulev2 = float, class:.*xfce-polkit.*
       # windowrulev2 = float,class:^(foot)$,title:^(foot)$
       # See https://wiki.hyprland.org/Configuring/Window-Rules/ for more
 
