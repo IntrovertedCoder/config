@@ -18,15 +18,17 @@ in
     '';
     plusultra.home.extraOptions.services = {
       mako = { # {{{
-        enable = true;
-        anchor = "top-right";
-        backgroundColor = config.plusultra.color.Black;
-        borderColor = config.plusultra.color.Blue;
-        borderRadius = 1;
-        borderSize = 2;
-        defaultTimeout = 5000;
-        font = config.plusultra.font.Font;
-        textColor = config.plusultra.color.White;
+        settings = {
+          enable = true;
+          anchor = "top-right";
+          backgroundColor = config.plusultra.color.Black;
+          borderColor = config.plusultra.color.Blue;
+          borderRadius = 1;
+          borderSize = 2;
+          defaultTimeout = 5000;
+          font = config.plusultra.font.Font;
+          textColor = config.plusultra.color.White;
+        };
       }; # }}}
     };
   };

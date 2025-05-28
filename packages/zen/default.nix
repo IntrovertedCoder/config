@@ -10,10 +10,10 @@ let
     sha256 = "975dd885be29453d6288443e237bdae3544aca5d7bf830c0b89120cf6b98e9f6";
   };
 
-  appimageContents = pkgs.appimageTools.extractType2 { inherit name src; };
+  appimageContents = pkgs.appimageTools.extractType2 { inherit pname version src; };
 in
 pkgs.appimageTools.wrapType2 rec {
-  inherit name src;
+  inherit pname version src;
 
   extraInstallCommands = ''
     mv $out/bin/${name} $out/bin/${pname}
