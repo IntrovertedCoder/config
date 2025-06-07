@@ -41,9 +41,10 @@ in
       # Desktop Displays
       monitor=HDMI-A-1,1920x1080,1080x420,1
       workspace=HDMI-A-1,2
-      monitor=DP-2,1920x1080@75,0x0,1
+      monitor=DP-1,3440x1440@144,0x480,1
+      monitor=DP-2,1920x1080@75,3440x0,1
       workspace=DP-2,1
-      monitor=DP-2,transform,3
+      monitor=DP-2,transform,1
       # Laptop Display
       monitor=eDP-1,1920x1080@60,0x0,1
       # For running hypr in a x11 session
