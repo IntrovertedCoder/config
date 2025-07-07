@@ -10,13 +10,12 @@ let
     sha256 = "b83cdf6d9fa7eca0f2100e2f55dcd2a313a6acb55c95263e2852b396d8595c3f";
   };
 
-  appimageContents = pkgs.appimageTools.extractType2 { inherit name src; };
+  appimageContents = pkgs.appimageTools.extractType2 { inherit pname version src; };
 in
 pkgs.appimageTools.wrapType2 rec {
-  inherit name src;
+  inherit pname version src;
 
   extraInstallCommands = ''
-    mv $out/bin/${name} $out/bin/${pname}
 
     install -m 444 -D ${appimageContents}/${pname}.png $out/share/icons/hicolor/512x512/apps/${pname}.png
 

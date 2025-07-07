@@ -12,7 +12,6 @@ in
 {
   options.plusultra.desktop.Hyprland = with types; {
     enable = mkBoolOpt false "Whether or not to enable Hyprland.";
-    wallpaper = mkOpt (nullOr package) null "The wallpaper to display.";
     extraConfig = mkOpt str "" "Additional configuration for the Hyprland config file.";
     extraConfig1 = mkOpt str "" "Additional configuration for the Hyprland config file.";
     extraConfig2 = mkOpt str "" "Additional configuration for the Hyprland config file.";
@@ -21,6 +20,7 @@ in
     easyeffects = mkOpt str "" "Additional configuration for the Hyprland config file.";
     pulsemixer = mkOpt str "" "Additional configuration for the Hyprland config file.";
     ncpamixer = mkOpt str "" "Additional configuration for the Hyprland config file.";
+    wallpaper = mkOpt str "" "Additional configuration for the Hyprland config file.";
   };
 
   config = mkIf cfg.enable {
@@ -41,9 +41,10 @@ in
       # Desktop Displays
       monitor=HDMI-A-1,1920x1080,1080x420,1
       workspace=HDMI-A-1,2
-      monitor=DP-2,1920x1080@75,0x0,1
+      monitor=DP-1,3440x1440@144,0x480,1
+      monitor=DP-2,1920x1080@75,3440x0,1
       workspace=DP-2,1
-      monitor=DP-2,transform,3
+      monitor=DP-2,transform,1
       # Laptop Display
       monitor=eDP-1,1920x1080@60,0x0,1
       # For running hypr in a x11 session
@@ -144,11 +145,11 @@ in
 
       # Example windowrule v1
       # windowrule = float, ^(foot)$
-      windowrule = float, floating
-      windowrule = size 720 450, floating
-      windowrule = center, floating
-      windowrule = float, xfce-polkit
       # Example windowrule v2
+      windowrulev2 = float, class:.*floating.*
+      windowrulev2 = size 720 450, class:.*floating.*
+      windowrulev2 = center, class:.*floating.*
+      windowrulev2 = float, class:.*xfce-polkit.*
       # windowrulev2 = float,class:^(foot)$,title:^(foot)$
       # See https://wiki.hyprland.org/Configuring/Window-Rules/ for more
 
@@ -213,6 +214,7 @@ in
       bind = $mainMod, F3, exec, foot -o colors.alpha=0.5 --app-id floating,ncmpcpp -e ncmpcpp
       bind = $mainMod SHIFT, F3, exec, foot -o colors.alpha=0.5 --app-id floating,ncmpcpp -e ncmpcpp -p 6601
       bind = $mainMod, F4, exec, eww open --toggle dock && eww open --toggle dock-closer
+      bind = $mainMod SHIFT, return, exec, foot -o colors.alpha=0.5 --app-id floating,foot
 
       ### Screenkey
 
@@ -285,7 +287,6 @@ in
       # Screensharing support
       exec-once=dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
       exec-once=dconf write /org/gnome/desktop/interface/cursor-theme "'Nordzy-cursors'"
-      exec-once=hyprpaper
 
       # Extra config from flakes
       ${cfg.extraConfig}
@@ -295,6 +296,7 @@ in
       ${cfg.easyeffects}
       ${cfg.pulsemixer}
       ${cfg.ncpamixer}
+      ${cfg.wallpaper}
     ''; # }}}
     plusultra.apps.home = {
       ncpamixer = enabled;
@@ -302,26 +304,12 @@ in
 
     plusultra.home.extraOptions = {
       home.packages = with pkgs; [
-        hyprpaper
         grim
         slurp
         zbar
         tesseract4
         pulseaudio
       ];
-      services.hyprpaper = {
-        enable = true;
-        settings = {
-          ipc = "on";
-          splan = true;
-          splash_offset = 2.0;
-          splash_color = config.plusultra.color.BlueNum;
-          preload = [ "/home/${config.plusultra.user.name}/Pictures/Wallpapers/nix-wallpaper-gear.png" ];
-          wallpaper = [
-            ", /home/${config.plusultra.user.name}/Pictures/Wallpapers/nix-wallpaper-gear.png"
-          ];
-        };
-      };
     };
 
     programs.hyprland = {

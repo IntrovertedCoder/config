@@ -28,6 +28,10 @@ in
       Host WGHost
         HostName 172.17.0.1
         IdentityFile ~/.ssh/nixos
+      Host 10.123.*.*
+        IdentityFile ~/.ssh/nixos
+        User arik
+        IdentitiesOnly yes
     '';
   };
 }

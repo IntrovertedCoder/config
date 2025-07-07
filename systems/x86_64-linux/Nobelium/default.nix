@@ -51,6 +51,7 @@ with lib.plusultra;
   # }; # }}}
 
   plusultra = {
+    desktop.addons.hyprpaper.enable = true;
     desktop.addons.greetd.enable = true;
     desktop.addons.swaylock = enabled;
     apps = {
@@ -152,5 +153,5 @@ with lib.plusultra;
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "23.05"; # Did you read the comment?
-  system.autoUpgrade.channel = "https://nixos.org/channels/nixos-23.11";
+  system.autoUpgrade.channel = "https://nixos.org/channels/nixos-25.05";
 }

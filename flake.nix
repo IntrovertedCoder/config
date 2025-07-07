@@ -2,15 +2,15 @@
   description = "flake for aLaptop";
 
   inputs = {
-    # NixPkgs (nixos-23.11)
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
+    # NixPkgs (nixos-25.05)
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
 
     # NixPkgs Unstable (nixos-unstable)
     unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
 
-    # Home Manager (release-22.11)
-    home-manager.url = "github:nix-community/home-manager/release-24.11";
+    # Home Manager (release-25.05)
+    home-manager.url = "github:nix-community/home-manager/release-25.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
 

@@ -17,7 +17,8 @@ in
     environment.systemPackages = with pkgs; [ font-manager ];
     fonts.packages = with pkgs;
     [
-      (nerdfonts.override { fonts = [ "Hack" ]; })
+      nerd-fonts.hack
+      # (nerdfonts.override { fonts = [ "Hack" ]; })
     ];
   };
 }
