@@ -54,8 +54,14 @@ with lib.plusultra;
       # networking.wireless.enable = true;
     # Network Manager
       networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
+      # networking.networkmanager.wifi.macAddress = "96:a9:fd:21:da:3a";
+      # networking.networkmanager.wifi.macAddress = "B5:02:C4:EF:69:D0";
+      # networking.networkmanager.wifi.macAddress = "random";
+      networking.networkmanager.wifi.macAddress = "40:23:43:13:0F:57";
+      networking.resolvconf.dnsExtensionMechanism = false;
       plusultra.user.extraGroups = [ "networkmanager" ];
       networking.useDHCP = lib.mkForce true;
+      networking.firewall.allowedTCPPorts = [ 8080 ];
     # Wireguard
     networking.wg-quick.interfaces = {
       wg0 = {
