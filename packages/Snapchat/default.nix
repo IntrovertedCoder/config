@@ -7,7 +7,7 @@ let
 
   src = pkgs.fetchurl {
     url = "https://gitlab.com/linuxbombay/snapchatdesktop/binaries/1.0.4/-/raw/main/Snapchat-x64.AppImage?ref_type=heads";
-    sha256 = "285dae3f7c4235f420b9ec9090aea36aee059ccb4fe5612cc70933c1d988fb6d";
+    sha256 = "8db8dca1bdb5077a5f014f480094d27c4ce351f2b914da882c4e126b64d1d104";
   };
 
   appimageContents = pkgs.appimageTools.extractType2 { inherit pname src version; };
