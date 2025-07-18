@@ -65,16 +65,17 @@ with lib.plusultra;
     # Wireguard
     networking.wg-quick.interfaces = {
       wg0 = {
-        address = [ "10.8.0.3" ];
-        dns = [ "172.77.0.51" ];
+        address = [ "10.8.0.4" ];
+        dns = [ "10.123.123.100" ];
         privateKeyFile = "/home/arik/wireguard/privatekey-peer_aLaptop";
 
         peers = [
           {
-            publicKey = "n7p60n0iXx42pEeh7WpnN7rGZqxgbbXkBOEE+6lVOC0=";
-            presharedKeyFile = "/home/arik/wireguard/presharedkey-peer_aLaptop";
+            publicKey = "MQ98fEk5/023cmaDa180Gh7pi2xHaJtnXE0YtmRyLD0=";
+            # presharedKeyFile = "/home/arik/wireguard/presharedkey-peer_aLaptop";
             allowedIPs = [ "0.0.0.0/0" ];
-            endpoint = "216.229.90.51:51820";
+            # endpoint = "216.106.75.41:51820";
+            endpoint = "10.123.123.102:51820";
           }
         ];
       };
