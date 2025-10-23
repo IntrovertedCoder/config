@@ -21,6 +21,8 @@ in
         unrar-wrapper
         unzip
         p7zip
+        lolcat
+        figlet
       ];
       programs.fish = { # {{{
         enable = true;
@@ -45,12 +47,26 @@ in
 
             # Custom keybinds {{{
               # Bind F2 to insert sudo to beginning of line
-              bind -k f2 __fish_prepend_sudo
+              bind f2 __fish_prepend_sudo
               # Bind F3 to open command in EDITOR/VISUAL
-              bind -k f3 edit_command_buffer
+              bind f3 edit_command_buffer
             # }}}
 
-            fortune -s
+            # Center function (only define once)
+            function center
+              set termwidth (tput cols)
+              awk -v termwidth=$termwidth '{ pad=(termwidth - length($0))/2; printf "%*s%s\n", pad, "", $0 }'
+            end
+            if status is-interactive
+              set host (hostname | sed 's/\b\(.\)/\u\1/g')
+              set username (whoami | sed 's/\b\(.\)/\u\1/g')
+              begin
+                figlet "Welcome     $username" | center
+                figlet "To     $host" | center
+                fortune -s | center
+              end | lolcat
+            end
+
           end
 
           function ex --description "Extract bundled & compressed files"
