@@ -62,6 +62,10 @@ with lib.plusultra;
       plusultra.user.extraGroups = [ "networkmanager" ];
       networking.useDHCP = lib.mkForce true;
       networking.firewall.allowedTCPPorts = [ 8080 ];
+
+    # Set your time zone.
+    time.timeZone = "America/Denver";
+
     # Wireguard
     networking.wg-quick.interfaces = {
       wg0 = {
@@ -74,8 +78,8 @@ with lib.plusultra;
             publicKey = "MQ98fEk5/023cmaDa180Gh7pi2xHaJtnXE0YtmRyLD0=";
             # presharedKeyFile = "/home/arik/wireguard/presharedkey-peer_aLaptop";
             allowedIPs = [ "0.0.0.0/0" ];
-            # endpoint = "216.106.75.41:51820";
-            endpoint = "10.123.123.102:51820";
+            endpoint = "216.106.75.41:51820";
+            # endpoint = "10.123.123.102:51820";
           }
         ];
       };
