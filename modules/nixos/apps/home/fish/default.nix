@@ -63,7 +63,7 @@ in
               begin
                 figlet "Welcome     $username" | center
                 figlet "To     $host" | center
-                fortune -s | center
+                fortune -s | sed 's/^[ \t]*//' | center
               end | lolcat
             end
 
