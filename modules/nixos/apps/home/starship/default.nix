@@ -10,9 +10,11 @@ in
   };
 
   config = mkIf cfg.enable {
+    plusultra.home.extraOptions.programs.bash.enable = true; # Needed otherwise line 17 doesn't work
     plusultra.home.extraOptions.programs.starship = {
        enable = true;
        enableFishIntegration = true;
+       enableBashIntegration = true;
        settings = {
          add_newline = false;
 
