@@ -16,23 +16,48 @@ in
           enable = true;
           profiles = { # {{{
             email1 = { # {{{
-              extensions = with pkgs.nur.repos.rycee.firefox-addons; [
+              extensions.packages = with pkgs.nur.repos.rycee.firefox-addons; [
                 ublock-origin
                 bitwarden
                 darkreader
                 auto-tab-discard
-                enhancer-for-youtube
-                onetab
                 firefox-color
+                # onetab
                 decentraleyes
                 privacy-badger
-                # markdownload
                 videospeed
+                sponsorblock
+                sidebery
               ];
               id = 0;
               isDefault = true;
               name = "email1";
+              userChrome = ''
+                /*
+                Hides the native TabsToolbar when Sidebery is active.
+                Requires Sidebery setting: "Add preface to the browser window's title if Sidebery sidebar is active"
+                Preface value must be set to "[Sidebery]" or whatever you use below.
+                */
+                #main-window[titlepreface*="[Sidebery]"] #TabsToolbar {
+                  visibility: collapse !important;
+                }
+
+                #main-window[titlepreface*="[Sidebery]"] #tabbrowser-tabs {
+                  visibility: collapse !important;
+                }
+
+                #main-window[titlepreface*="[Sidebery]"] #sidebar-main {
+                  visibility: collapse !important;
+                }
+
+                /* Optional: Hides the sidebar header when Sidebery is open */
+                #main-window[titlepreface*="[Sidebery]"] #sidebar-header {
+                  visibility: collapse !important;
+                }
+              '';
               settings = { # {{{
+                "sidebar.revamp" =                                                "true";
+                "sidebar.verticalTabs" =                                          "true";
                 "media.hardware-video-decoding.force-enabled" =                   "true";
                 "browser.gesture.swipe.left" =                                    "\"\"";
                 "browser.gesture.swipe.right" =                                   "\"\"";
@@ -40,7 +65,7 @@ in
                 # Enable restore previous session
                 "browser.startup.page" = "3";
                 # https://brainfucksec.github.io/firefox-hardening-guide
-                "browser.startup.homepage" =                                       "https://glance.trotnic.duckdns.org";
+                # "browser.startup.homepage" =                                       "https://glance.trotnic.duckdns.org";
                   # Startup Settings
                     # "browser.startup.page" = "1"; # I want this changed specifically
                     "browser.aboutConfig.showWarning" =                            "false";
@@ -58,8 +83,9 @@ in
                   # Geolocation
                     # Not doing this one because no mozilla api key
                     # "geo.provider.network.url" = "https://location.services.mozilla.com/v1/geolocate?key=%MOZILLA_API_KEY%";
+                    "geo.enabled" =                                                "false";
                     "geo.provider.use_gpsd" =                                      "false";
-                    "geo.provider.use_geoclue" =                                    "false";
+                    "geo.provider.use_geoclue" =                                   "false";
                   # Language/Locale
                     "intl.accept_languages" =                                      "en-US, en";
                     "javascript.use_us_english_locale" =                           "true";
@@ -193,17 +219,21 @@ in
                     # I'm not going to touch these since I plan on using this profile as my main
                   # Fingerprinting (RFP)
                     "privacy.resistFingerprinting" =                               "true";
-                    "privacy.window.maxInnerWidth" =                               "1600";
-                    "privacy.window.maxInnerHeight" =                              "900";
+                    # "privacy.window.maxInnerWidth" =                               "1600";
+                    # "privacy.window.maxInnerHeight" =                              "900";
                     "privacy.resistFingerprinting.block_mozAddonManager" =         "true";
                     "browser.display.use_system_colors" =                          "false";
                   # Hardware Video Acceleration
                     "gfx.webrender.all" =                                          "true";
                     "media.ffmpeg.vaapi.enabled" =                                 "true";
+
+
+                    # Replaces Do Not Track with GPC
+                    "privacy.globalprivacycontrol.enable" =                        "true";
               }; # }}}
               search = {
                 force = true;
-                default = "SearXNG_Iridium";
+                # default = "SearXNG_Iridium";
                 engines = {
                   "SearXNG_Iridium" = {
                     urls = [{

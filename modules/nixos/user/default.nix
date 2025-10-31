@@ -119,7 +119,7 @@ in
     plusultra = {
       apps = {
         home = {
-          # firefox.enable = true;
+          firefox.enable = true;
           mpd.enable = true;
           mpd-background.enable = true;
           ncmpcpp.enable = true;
