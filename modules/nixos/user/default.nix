@@ -43,7 +43,6 @@ in
 
   config = {
     environment.systemPackages = with pkgs; [
-      nordzy-cursor-theme
       propagatedIcon
         libnotify
         # Python Stuff

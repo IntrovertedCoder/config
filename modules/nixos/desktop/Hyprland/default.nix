@@ -309,6 +309,7 @@ in
         zbar
         tesseract4
         pulseaudio
+        nordzy-cursor-theme
       ];
     };
 
