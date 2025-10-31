@@ -69,6 +69,7 @@ with lib.plusultra;
     # Wireguard
     networking.wg-quick.interfaces = {
       wg0 = {
+        autostart = false;
         address = [ "10.8.0.4" ];
         dns = [ "10.123.123.100" ];
         privateKeyFile = "/home/arik/wireguard/privatekey-peer_aLaptop";
