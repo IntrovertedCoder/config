@@ -137,7 +137,7 @@ in
           mullvad = enabled;
           RadarOmega = enabled;
           Snapchat = enabled;
-          zen = enabled;
+          # zen = enabled;
         };
         flake = enabled;
       };
