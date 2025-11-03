@@ -162,8 +162,8 @@ in
       # bind = $mainMOD, , exec,
       ## General
       bind = $mainMod, return, exec, foot
-      bind = $mainMod, T, exec, flatpak run app.zen_browser.zen
-      bind = $mainMod SHIFT, T , exec, flatpak run app.zen_browser.zen --private-window
+      bind = $mainMod, T, exec, firefox
+      bind = $mainMod SHIFT, T , exec, firefox --private-window
       bind = $mainMod SHIFT, Q, killactive
       bind = $mainMod SHIFT, E, exit
       bind = $mainMod, D, exec, launcher
