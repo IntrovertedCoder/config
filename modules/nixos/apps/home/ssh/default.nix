@@ -32,6 +32,10 @@ in
         IdentityFile ~/.ssh/nixos
         User arik
         IdentitiesOnly yes
+      Host orangepi
+        IdentityFile ~/.ssh/nixos
+        User orangepi
+        IdentitiesOnly yes
     '';
   };
 }

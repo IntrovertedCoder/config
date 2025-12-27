@@ -54,6 +54,7 @@ with lib.plusultra;
     desktop.addons.hyprpaper.enable = true;
     desktop.addons.greetd.enable = true;
     desktop.addons.swaylock = enabled;
+    desktop.addons.tailscale = enabled;
     apps = {
       CUPS = enabled;
       waydroid = disabled;
