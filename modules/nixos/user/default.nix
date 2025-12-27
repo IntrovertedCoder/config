@@ -44,6 +44,7 @@ in
   config = {
     environment.systemPackages = with pkgs; [
       propagatedIcon
+      feh
         libnotify
         # Python Stuff
           python311

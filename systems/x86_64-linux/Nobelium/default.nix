@@ -130,7 +130,7 @@ with lib.plusultra;
     isNormalUser = true;
     extraGroups = [ "wheel" "video" "audio" "docker" ];
     packages = with pkgs; [
-      firefox
+      # firefox
       # alacritty
       kitty
     ];
