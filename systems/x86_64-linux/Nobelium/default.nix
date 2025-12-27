@@ -12,15 +12,17 @@ with lib.plusultra;
 
   networking.hostName = "Nobelium"; # Define your hostname.
 
-  networking.nameservers = [ "192.168.0.77" "1.1.1.1" "1.1.2.2" ];
-  networking.resolvconf.enable = pkgs.lib.mkForce false;
-  networking.dhcpcd.extraConfig = "nohook resolv.conf";
-  networking.networkmanager.dns = "none";
-  services.resolved.enable = false;
+  # networking.nameservers = [ "10.123.123.100" "10.123.123.101" "1.1.1.1" "1.1.2.2" ];
+  # networking.resolvconf.enable = pkgs.lib.mkForce false;
+  # networking.dhcpcd.extraConfig = "nohook resolv.conf";
+  # networking.networkmanager.dns = "none";
+  # services.resolved.enable = false;
+  networking.firewall.allowedTCPPorts = [ 7575 46287 ];
+  # networking.firewall.enable = false;
 
   # networking.interfaces.enp14s0.ipv4.addresses = [ {
-    # address = "192.168.0.102";
-    # prefixLength = 24;
+    # address = "10.123.0.102";
+    # prefixLength = 16;
   # } ];
 
   time.timeZone = "America/Chicago";
