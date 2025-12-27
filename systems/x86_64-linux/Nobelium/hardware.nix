@@ -30,14 +30,15 @@
     options = [ "rw" "relatime" "ssd" "discard=async" "space_cache=v2"];
   };
 
-  fileSystems."/mnt/Storage" = {
-    device = "/dev/disk/by-uuid/a4731065-6480-4c3a-85b4-6d2c16b5d350";
-    fsType = "btrfs";
-    options = [ "acl" "autodefrag" "nossd" "usebackuproot" "datacow" ];
-  };
+  # fileSystems."/mnt/Storage" = {
+    # device = "/dev/disk/by-uuid/a4731065-6480-4c3a-85b4-6d2c16b5d350";
+    # fsType = "btrfs";
+    # options = [ "acl" "autodefrag" "nossd" "usebackuproot" "datacow" ];
+  # };
 
-  swapDevices =
-    [ { device = "/dev/disk/by-uuid/171215ac-67e1-4f39-aa3e-85d296d7ecb0"; }
+  swapDevices = [
+      { device = "/dev/disk/by-uuid/171215ac-67e1-4f39-aa3e-85d296d7ecb0"; }
+      { device = "/dev/disk/by-uuid/983c5f2d-bee1-4469-9d3a-3a7f5ac39269"; }
     ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
