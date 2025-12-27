@@ -147,7 +147,7 @@ with lib.plusultra;
   # Networking
     # Network Manager
       networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
-      plusultra.user.extraGroups = [ "networkmanager" ];
+      plusultra.user.extraGroups = [ "networkmanager" "dialout" ];
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
