@@ -2,5 +2,5 @@
 
 final: prev:
 {
-  inherit (flake-checker.packages.${prev.system}) flake-checker;
+  inherit (flake-checker.packages.${prev.stdenv.hostPlatform.system}) flake-checker;
 }

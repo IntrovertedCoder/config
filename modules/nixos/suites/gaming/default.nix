@@ -15,7 +15,7 @@ in
       apps = {
         home = {
           steam = enabled;
-          heroic = enabled;
+          # heroic = enabled;
           mangohud = enabled;
           lutris = enabled;
           wine = enabled;
