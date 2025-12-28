@@ -76,6 +76,7 @@ with lib.plusultra;
       # home = "/home/${name}";
     };
     desktop = {
+      mangowc.enable = true;
       Hyprland = {
         enable = true;
         masterConfig = ''

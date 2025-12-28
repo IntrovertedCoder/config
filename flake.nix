@@ -99,6 +99,16 @@
       url = "github:suchipi/Bibata_Cursor";
       flake = false;
     };
+
+    mango = {
+      url = "github:DreamMaoMao/mango";
+      inputs.nixpkgs.follows = "unstable";
+    };
+
+    dms = {
+      url = "github:AvengeMedia/DankMaterialShell/stable";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs: let
@@ -135,6 +145,8 @@
       systems.modules.nixos = with inputs; [
         home-manager.nixosModules.home-manager
         vault-service.nixosModules.nixos-vault-service
+        mango.nixosModules.mango
+        inputs.dms.nixosModules.dankMaterialShell
       ];
 
       deploy = lib.mkDeploy {inherit (inputs) self;};
