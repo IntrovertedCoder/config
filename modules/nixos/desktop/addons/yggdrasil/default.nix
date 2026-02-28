@@ -83,23 +83,32 @@ in
       ${mkPrivateRules "udp" cfg.privateUDPPorts}
     '';
 
+    # Define the Fail2ban filter file explicitly
+    environment.etc."fail2ban/filter.d/yggdrasil-proto.conf".text = ''
+      [Definition]
+      failregex = ^.*YGG-DROP: .* SRC=<ADDR> .*$
+      ignoreregex =
+    '';
+
     services.fail2ban = {
       enable = true;
       maxretry = 5;
-      ignoreIP = [ "::1" "fe80::/10" ] ++ cfg.privatePeers; # Don't ban yourself or your private peers
-      jails = {
-        # Custom jail to watch the Yggdrasil interface specifically
-        yggdrasil-proto = ''
-          enabled = true
-          port = 0:65535
-          filter = nosshd
-          logpath = /var/log/messages
-          backend = systemd
-          maxretry = 10
-          findtime = 600
-          bantime = 3600
-        '';
+      ignoreIP = [ "::1" "fe80::/10" ] ++ cfg.privatePeers;
+
+      jails.yggdrasil-proto = {
+        settings = {
+          enabled = true;
+          port = "0:65535";
+          # The failregex is removed from here.
+          # Fail2ban will automatically use the filter.d/yggdrasil-proto.conf file we defined above.
+          logpath = "/var/log/messages";
+          backend = "systemd";
+          maxretry = 10;
+          findtime = 600;
+          bantime = 3600;
+        };
       };
     };
+
   };
 }
