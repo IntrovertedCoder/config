@@ -13,7 +13,11 @@ in
     services.printing.enable = true;
     services.avahi.enable = true;
     services.avahi.nssmdns4 = true;
-    services.avahi.openFirewall = true;
+    services.avahi.openFirewall = false;
     services.printing.drivers = [ pkgs.brlaser ];
+    networking.firewall.interfaces = lib.plusultra.openOnLan config {
+      tcp = [ 631 ];
+      udp = [ 631 5353 ];
+    };
   };
 }

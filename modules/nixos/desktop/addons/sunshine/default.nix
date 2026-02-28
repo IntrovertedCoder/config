@@ -15,8 +15,12 @@ in
     services.sunshine = {
       enable = true;
       autoStart = true;
-      openFirewall = true;
+      openFirewall = false;
       capSysAdmin = true;
+    };
+    networking.firewall.interfaces = lib.plusultra.openOnLan config {
+      tcp = [ 47984 47989 47990 48010 ];
+      udp = [ 47998 47999 48000 8000 8001 8002 8003 8004 8005 8006 8007 8008 8010 ];
     };
     # plusultra.desktop.Hyprland.sunshine = "exec-once = while true do; sunshine; end";
     systemd.user.services.sunshine = {

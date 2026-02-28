@@ -13,7 +13,11 @@ in
     # environment.systemPackages = with pkgs; [ packagekit ];
     services.cockpit = {
       enable = true;
-      openFirewall = true;
+      openFirewall = false;
+    };
+    networking.firewall.interfaces = lib.plusultra.openOnLan config {
+      tcp = [ 9090 ];
+      # udp = [ 80 ];
     };
   };
 }

@@ -11,11 +11,15 @@ in
 
   config = mkIf cfg.enable {
     # environment.systemPackages = with pkgs; [ samba];
+    networking.firewall.interfaces = lib.plusultra.openOnLan config {
+      tcp = [ 139 445 ];
+      udp = [ 137 138 ];
+    };
     services.samba = {
       enable = true;
       package = pkgs.sambaFull;
       securityType = "user";
-      openFirewall = true;
+      openFirewall = false;
       extraConfig = ''
         server string = ${config.networking.hostName}
         netbios name = ${config.networking.hostName}

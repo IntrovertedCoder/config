@@ -1,4 +1,4 @@
-{ pkgs, lib, nixos-hardware, ... }:
+{ pkgs, lib, nixos-hardware, config, ... }:
 
 with lib;
 with lib.plusultra;
@@ -17,9 +17,13 @@ with lib.plusultra;
   # networking.dhcpcd.extraConfig = "nohook resolv.conf";
   # networking.networkmanager.dns = "none";
   # services.resolved.enable = false;
-  networking.firewall.allowedTCPPorts = [ 7575 46287 ];
+  networking.firewall.interfaces = lib.plusultra.openOnLan config {
+    # tcp = [ 7575 46287 ];
+    # udp = [ 631 5353 ];
+  };
   # networking.firewall.enable = false;
 
+  networking.interfaces.enp14s0 = { }; # Declaring for openOnLan to work
   # networking.interfaces.enp14s0.ipv4.addresses = [ {
     # address = "10.123.0.102";
     # prefixLength = 16;
@@ -57,6 +61,20 @@ with lib.plusultra;
     desktop.addons.greetd.enable = true;
     desktop.addons.swaylock = enabled;
     desktop.addons.tailscale = enabled;
+
+    desktop.addons.yggdrasil = {
+      enable = true;
+      peers = [ "tls://ygg.jjolly.dev:3443" "tls://ygg8.mk16.de:1338?key=0000000b0683e38d8cb3085cfbf217edf0f0b2de76bb5ac7f02a94cd42a3fed9" "tls://sto01.yggdrasil.hosted-by.skhron.eu:8884" "tls://185.181.60.111:1513?key=00defa4b4b243547f2d5641ac5235ff1e35d393c576e4bb9cd45baefc81e48d9" "tls://ygg-hel-1.wgos.org:45171" ];
+      # Available to any yggdrasil machine
+      # allowedTCPPorts = [ 9998 ];
+
+      # Only available to the specified yggdrasil IPs
+      privatePeers = [
+        "204:6d:9661:179c:9102:e01d:92c4:1707" # Phone
+      ];
+      privateTCPPorts = [ 9999 ];
+    };
+
     apps = {
       CUPS = enabled;
       waydroid = disabled;
