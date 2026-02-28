@@ -11,7 +11,6 @@ in
 
   config = mkIf cfg.enable {
     hardware.graphics.extraPackages = with pkgs; [
-      amdvlk
       libvdpau-va-gl # Hardare Accelerated Video Playback
     ];
     # hardware.opengl.driSupport = true;

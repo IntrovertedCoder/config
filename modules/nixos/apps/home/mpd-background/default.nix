@@ -39,7 +39,7 @@ in
   };
 
   config = mkIf cfg.enable {
-    plusultra.home.extraOptions.home.packages = with pkgs; [ mpc-cli ];
+    plusultra.home.extraOptions.home.packages = with pkgs; [ mpc ];
     systemd.user.services.mpd-background = {
       enable = true;
       description = "A second mpd service";

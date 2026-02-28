@@ -10,7 +10,7 @@ in
   };
 
   config = mkIf cfg.enable {
-    plusultra.home.extraOptions.home.packages = with pkgs; [ mpc-cli ];
+    plusultra.home.extraOptions.home.packages = with pkgs; [ mpc ];
     plusultra.home.extraOptions.services = {
       mpd = {
         enable = true;

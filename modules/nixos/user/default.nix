@@ -55,7 +55,7 @@ in
         # GUI Text editors
           sublime
         # Office Stuff
-          onlyoffice-bin
+          onlyoffice-desktopeditors
         # Terminal Tools
           fend            # Calculator            # fend
           bottom          # Terminal task manager # btm
@@ -69,8 +69,6 @@ in
           lolcat
         # Phone stuff
           scrcpy
-        # Video
-          libsForQt5.koko
         # Audio
           audacity
           helvum
@@ -130,7 +128,7 @@ in
           zathura.enable = true;
           obsidian.enable = true;
           gparted.enable = true;
-          parsec = enabled;
+          # parsec = enabled;
           easyeffects = enabled;
           ssh = enabled;
           vlc = enabled;
