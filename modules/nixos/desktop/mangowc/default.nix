@@ -22,7 +22,8 @@ in
 
   config = mkIf cfg.enable {
     plusultra.desktop.addons = {
-      dms.enable = true;
+      # dms.enable = true;
+      gammastep.enable = true;
     };
     programs.mango.enable = true;
 
