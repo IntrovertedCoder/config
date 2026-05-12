@@ -115,6 +115,36 @@ in
             end
           end
 
+          function sshr --description "SSH with automatic host-key refreshing"
+            set -l target_ip $argv[1]
+
+            if test -z "$target_ip"
+              echo "Usage: sshr <ip_address>"
+              return 1
+            end
+
+            # Attempt to SSH
+            ssh $target_ip
+
+            # SSH returns 255 on connection/key errors
+            if test $status -eq 255
+              echo -e "\n---"
+              set_color yellow; echo "⚠️  SSH failed. Possible host key mismatch."; set_color normal
+
+              # Read user confirmation (Fish style)
+              read -l -P "Remove $target_ip from known_hosts and retry? [y/N] " confirm
+
+              if string match -iq "y*" "$confirm"
+                # Use the full path from the nix store via your pkgs
+                ${pkgs.openssh}/bin/ssh-keygen -R "$target_ip"
+                echo "✅ Old key removed. Retrying..."
+                ssh $target_ip
+              else
+                echo "❌ Operation cancelled."
+              end
+            end
+          end
+
           ${cfg.extraConfig}
           ${cfg.extraConfig1}
           ${cfg.extraConfig2}
