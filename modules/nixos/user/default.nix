@@ -43,6 +43,7 @@ in
 
   config = {
     environment.systemPackages = with pkgs; [
+      anki
       propagatedIcon
       feh
         libnotify
