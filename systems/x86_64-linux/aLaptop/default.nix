@@ -6,10 +6,27 @@ with lib.plusultra;
   imports = [ ./hardware.nix ./configuration.nix];
   plusultra = {
     desktop.Hyprland.enable = true;
+    desktop.addons.hyprpaper.enable = true;
     desktop.addons.greetd.enable = true;
     desktop.addons.swaylock = enabled;
     desktop.addons.sunshine = enabled;
     desktop.addons.hyprsunset = enabled;
+
+    desktop.addons.tailscale = enabled;
+    desktop.addons.yggdrasil = {
+      enable = true;
+      peers = [ "tls://ygg.jjolly.dev:3443" "tls://ygg8.mk16.de:1338?key=0000000b0683e38d8cb3085cfbf217edf0f0b2de76bb5ac7f02a94cd42a3fed9" "tls://sto01.yggdrasil.hosted-by.skhron.eu:8884" "tls://185.181.60.111:1513?key=00defa4b4b243547f2d5641ac5235ff1e35d393c576e4bb9cd45baefc81e48d9" "tls://ygg-hel-1.wgos.org:45171" ];
+      # Available to any yggdrasil machine
+      # allowedTCPPorts = [ 9998 ];
+
+      # Only available to the specified yggdrasil IPs
+      privatePeers = [
+        "204:6d:9661:179c:9102:e01d:92c4:1707" # Phone
+        "200:7c2e:4344:a59a:3b59:b1ee:e87:c7a1" # aLaptop
+      ];
+      privateTCPPorts = [ 9999 ];
+    };
+
     apps = {
       CUPS = enabled;
       waydroid = enabled;

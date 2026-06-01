@@ -71,6 +71,7 @@ with lib.plusultra;
       # Only available to the specified yggdrasil IPs
       privatePeers = [
         "204:6d:9661:179c:9102:e01d:92c4:1707" # Phone
+        "200:7c2e:4344:a59a:3b59:b1ee:e87:c7a1" # aLaptop
       ];
       privateTCPPorts = [ 9999 ];
     };
